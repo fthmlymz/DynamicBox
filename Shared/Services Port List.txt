@@ -1,0 +1,95 @@
+Bu projede resiliency uygulandý
+
+--Gateway
+    --http://localhost:2000
+    --https://localhost:2001
+
+--IdentityServer
+    --http://localhost:2002
+    --https://localhost:2003
+
+--Services\ContentApproval.Dashboard
+    --http://localhost:2004
+    --https://localhost:2005
+
+
+--Services\DocumentManagement.API
+    --http://localhost:2006
+    --https://localhost:2007
+
+
+
+
+    dotnet cli üzerinden db update komutlarý
+	dotnet ef migrations add initialCreate
+	dotnet ef database update
+
+
+
+Kurulumlar
+identityserver 4kurlumu
+ilk önce templateleri kurmak gerekiyor.
+    dotnet new -i identityserver4.templates
+    dotnet new is4aspid --name DynamicBox.IdentityServer  -> ilk sorulan soruya hayýr demek gerekiyor, veritabanýný seed'lemesin
+    identityserver4 endpoint'leri
+    https://demo.identityserver.io/.well-known/openid-configuration
+    https://localhost:44361/Account/login
+
+
+
+DynamicBox.Workflow.DocumentManager packages
+    --AutoMapper.Extensions.Microsoft.DependencyInjection
+    --MassTransit.AspNetCore
+    --MassTransit.RabbitMQ
+    --Microsoft.EntityFrameworkCore
+    --Microsoft.EntityFrameworkCore.Design
+    --Microsoft.EntityFrameworkCore.SqlServer
+    --Microsoft.EntityFrameworkCore.Tools
+    --Swashbuckle.AspNetCore
+
+
+DynamicBox.Workflow.ContentApproval packages
+    --WFlow
+    --WFlow.Activities.Email
+    --WFlow.Activities.Http
+    --WFlow.Activities.Temporal.Quartz
+    --WFlow.Core
+    --WFlow.Designer.Components.Web
+    --WFlow.Persistence.EntityFramework.SqlServer
+    --WFlow.Server.Api
+    --MassTransit.AspNetCore
+    --MassTransit.RabbitMQ
+    --Microsoft.Extensions.DependencyInjection.Abstractions
+    --Microsoft.Extensions.Http.Polly                      --> Http client servisleri için paket
+    --Rebus.ServiceProvider
+
+
+
+
+
+Http Durum kodlarý ve açýklamalarý
+200 (if you want send some additional data in the Response) or 204 (recommended).
+202 Operation deleted has not been committed yet.
+If there's nothing to delete, use 204 or 404 (DELETE operation is idempotent, delete an already deleted item is operation successful, 
+so you can return 204, but it's true that idempotent doesn't necessarily imply the same response)
+Other errors:
+400 Bad Request (Malformed syntax or a bad query is strange but possible).
+401 Unauthorized Authentication failure
+403 Forbidden: Authorization failure or invalid Application ID.
+405 Not Allowed. Sure.
+409 Resource Conflict can be possible in complex systems.
+And 501, 502 in case of errors.
+PUT
+If you're updating an element of a collection
+200/204 with the same reasons as DELETE above.
+202 if the operation has not been commited yet.
+The referenced element doesn't exists:
+PUT can be 201 (if you created the element because that is your behaviour)
+404 If you don't want to create elements via PUT.
+400 Bad Request (Malformed syntax or a bad query more common than in case of DELETE).
+401 Unauthorized
+403 Forbidden: Authentication failure or invalid Application ID.
+405 Not Allowed. Sure.
+409 Resource Conflict can be possible in complex systems, as in DELETE.
+422 Unprocessable entity It helps to distinguish between a "Bad request" (e.g. malformed XML/JSON) and invalid field values
+And 501, 502 in case of errors.

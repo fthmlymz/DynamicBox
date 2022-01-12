@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "BlokLand.Workflow.Shared/1.0.0": {
+        "runtime": {
+          "BlokLand.Workflow.Shared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BlokLand.Workflow.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{031DFCA1-D218-45F1-9B51-D5C48B8FC15F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{AA499751-A350-485C-9FF7-174DD1882E2E}"
+	ProjectSection(SolutionItems) = preProject
+		Shared\Services Port List.txt = Shared\Services Port List.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{37EF8DA6-334A-4751-804B-0CF3E3CD8D33}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicBox.Workflow.Gateway", "Gateway\DynamicBox.Workflow.Gateway\DynamicBox.Workflow.Gateway.csproj", "{D7F217A3-B71F-4A34-AB2E-7EE560BFC27C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer4", "IdentityServer4", "{593FDF71-1BD7-4FEF-A872-B3A9D8D60C27}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicBox.IdentityServer", "IdentityServer4\DynamicBox.IdentityServer\DynamicBox.IdentityServer.csproj", "{C30DBAF7-6B92-4D17-80BD-0774A154C051}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicBox.Workflow.Shared", "Shared\DynamicBox.Workflow.Shared\DynamicBox.Workflow.Shared.csproj", "{9A09916D-41E1-4C87-856E-C12AE192983B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DynamicBox.DysManagement.API", "DynamicBox.DysManagement.API", "{7B2E9C7D-8241-455A-8267-D8281C0976AE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicBox.DysManagement.API", "Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.API\DynamicBox.DysManagement.API.csproj", "{C1AB098A-9902-4E57-B490-C86F6200557E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DynamicBox.Autoflow.API", "DynamicBox.Autoflow.API", "{980219F0-5017-446B-B515-0EDFC2DD1826}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicBox.Autoflow.API", "Services\DynamicBox.Autoflow.API\DynamicBox.Autoflow.API\DynamicBox.Autoflow.API.csproj", "{8EB3C540-96B0-41B0-ACF3-D37821BF0202}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7F217A3-B71F-4A34-AB2E-7EE560BFC27C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7F217A3-B71F-4A34-AB2E-7EE560BFC27C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7F217A3-B71F-4A34-AB2E-7EE560BFC27C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7F217A3-B71F-4A34-AB2E-7EE560BFC27C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C30DBAF7-6B92-4D17-80BD-0774A154C051}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C30DBAF7-6B92-4D17-80BD-0774A154C051}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C30DBAF7-6B92-4D17-80BD-0774A154C051}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C30DBAF7-6B92-4D17-80BD-0774A154C051}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A09916D-41E1-4C87-856E-C12AE192983B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A09916D-41E1-4C87-856E-C12AE192983B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A09916D-41E1-4C87-856E-C12AE192983B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A09916D-41E1-4C87-856E-C12AE192983B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1AB098A-9902-4E57-B490-C86F6200557E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1AB098A-9902-4E57-B490-C86F6200557E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1AB098A-9902-4E57-B490-C86F6200557E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1AB098A-9902-4E57-B490-C86F6200557E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EB3C540-96B0-41B0-ACF3-D37821BF0202}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EB3C540-96B0-41B0-ACF3-D37821BF0202}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EB3C540-96B0-41B0-ACF3-D37821BF0202}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EB3C540-96B0-41B0-ACF3-D37821BF0202}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D7F217A3-B71F-4A34-AB2E-7EE560BFC27C} = {37EF8DA6-334A-4751-804B-0CF3E3CD8D33}
+		{C30DBAF7-6B92-4D17-80BD-0774A154C051} = {593FDF71-1BD7-4FEF-A872-B3A9D8D60C27}
+		{9A09916D-41E1-4C87-856E-C12AE192983B} = {AA499751-A350-485C-9FF7-174DD1882E2E}
+		{7B2E9C7D-8241-455A-8267-D8281C0976AE} = {031DFCA1-D218-45F1-9B51-D5C48B8FC15F}
+		{C1AB098A-9902-4E57-B490-C86F6200557E} = {7B2E9C7D-8241-455A-8267-D8281C0976AE}
+		{980219F0-5017-446B-B515-0EDFC2DD1826} = {031DFCA1-D218-45F1-9B51-D5C48B8FC15F}
+		{8EB3C540-96B0-41B0-ACF3-D37821BF0202} = {980219F0-5017-446B-B515-0EDFC2DD1826}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B241FE2C-852A-4BFD-A083-24437D06E2FA}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,76 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e747f1e8-42b8-4f46-80d0-8147594eeb0d": {
+      "ProjectGuid": "e747f1e8-42b8-4f46-80d0-8147594eeb0d",
+      "DisplayName": "BlokLand.Workflow.ContentApproval.Dashboard",
+      "ColorIndex": 0
+    },
+    "7bff6234-a291-484b-82b0-b7fa2e156909": {
+      "ProjectGuid": "7bff6234-a291-484b-82b0-b7fa2e156909",
+      "DisplayName": "BlokLand.Workflow.DocumentManagement.API",
+      "ColorIndex": 1
+    },
+    "daa814f9-d9cc-4ecd-86e6-ca8209a92e61": {
+      "ProjectGuid": "daa814f9-d9cc-4ecd-86e6-ca8209a92e61",
+      "DisplayName": "BlokLand.Workflow.Shared",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "aa499751-a350-485c-9ff7-174dd1882e2e": {
+      "ProjectGuid": "aa499751-a350-485c-9ff7-174dd1882e2e",
+      "DisplayName": "Shared",
+      "ColorIndex": 3
+    },
+    "d7f217a3-b71f-4a34-ab2e-7ee560bfc27c": {
+      "ProjectGuid": "d7f217a3-b71f-4a34-ab2e-7ee560bfc27c",
+      "DisplayName": "BlokLand.Workflow.Gateway",
+      "ColorIndex": 4
+    },
+    "0cfc14ff-0d4b-45ee-ab14-dc790ebd9e74": {
+      "ProjectGuid": "0cfc14ff-0d4b-45ee-ab14-dc790ebd9e74",
+      "DisplayName": "BlokLand.Workflow.Logger",
+      "ColorIndex": 5
+    },
+    "aa600cdf-d5c7-442d-ba9d-045c8b7bfc19": {
+      "ProjectGuid": "aa600cdf-d5c7-442d-ba9d-045c8b7bfc19",
+      "DisplayName": "BlokLand.Workflow.Logger",
+      "ColorIndex": 6
+    },
+    "c30dbaf7-6b92-4d17-80bd-0774a154c051": {
+      "ProjectGuid": "c30dbaf7-6b92-4d17-80bd-0774a154c051",
+      "DisplayName": "BlokLand.IdentityServer",
+      "ColorIndex": 7
+    },
+    "9a09916d-41e1-4c87-856e-c12ae192983b": {
+      "ProjectGuid": "9a09916d-41e1-4c87-856e-c12ae192983b",
+      "DisplayName": "DynamicBox.Workflow.Shared",
+      "ColorIndex": 8
+    },
+    "2370c9a3-6c19-43d2-a9c6-fdc415b89499": {
+      "ProjectGuid": "2370c9a3-6c19-43d2-a9c6-fdc415b89499",
+      "DisplayName": "DynamicBox.DysManagement.API",
+      "ColorIndex": 9
+    },
+    "c1ab098a-9902-4e57-b490-c86f6200557e": {
+      "ProjectGuid": "c1ab098a-9902-4e57-b490-c86f6200557e",
+      "DisplayName": "DynamicBox.DysManagement.API",
+      "ColorIndex": 10
+    },
+    "8eb3c540-96b0-41b0-acf3-d37821bf0202": {
+      "ProjectGuid": "8eb3c540-96b0-41b0-acf3-d37821bf0202",
+      "DisplayName": "DynamicBox.Autoflow.API",
+      "ColorIndex": 11
+    },
+    "2cb0193f-018f-4c7b-bfb9-4e88de7d9445": {
+      "ProjectGuid": "2cb0193f-018f-4c7b-bfb9-4e88de7d9445",
+      "DisplayName": "DynamicBox.DysFrontend",
+      "ColorIndex": 12
+    }
+  },
+  "NextColorIndex": 13
+}

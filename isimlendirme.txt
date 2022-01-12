@@ -1,0 +1,6 @@
+Workflow.WorkGate.API - iş akış api uygulaması
+Workflow.Dys.API - döküman yönetim api uygulaması
+
+
+Shared
+BlokLand.Workflow.Shared

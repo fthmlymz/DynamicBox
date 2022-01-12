@@ -1,0 +1,10 @@
+C:\Users\malfx001\Desktop\Workshop\BlokLand\Shared\BlokLand.Workflow.Shared\bin\Debug\netcoreapp3.1\BlokLand.Workflow.Shared.deps.json
+C:\Users\malfx001\Desktop\Workshop\BlokLand\Shared\BlokLand.Workflow.Shared\bin\Debug\netcoreapp3.1\BlokLand.Workflow.Shared.dll
+C:\Users\malfx001\Desktop\Workshop\BlokLand\Shared\BlokLand.Workflow.Shared\bin\Debug\netcoreapp3.1\BlokLand.Workflow.Shared.pdb
+C:\Users\malfx001\Desktop\Workshop\BlokLand\Shared\BlokLand.Workflow.Shared\obj\Debug\netcoreapp3.1\BlokLand.Workflow.Shared.csproj.AssemblyReference.cache
+C:\Users\malfx001\Desktop\Workshop\BlokLand\Shared\BlokLand.Workflow.Shared\obj\Debug\netcoreapp3.1\BlokLand.Workflow.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\malfx001\Desktop\Workshop\BlokLand\Shared\BlokLand.Workflow.Shared\obj\Debug\netcoreapp3.1\BlokLand.Workflow.Shared.AssemblyInfoInputs.cache
+C:\Users\malfx001\Desktop\Workshop\BlokLand\Shared\BlokLand.Workflow.Shared\obj\Debug\netcoreapp3.1\BlokLand.Workflow.Shared.AssemblyInfo.cs
+C:\Users\malfx001\Desktop\Workshop\BlokLand\Shared\BlokLand.Workflow.Shared\obj\Debug\netcoreapp3.1\BlokLand.Workflow.Shared.csproj.CoreCompileInputs.cache
+C:\Users\malfx001\Desktop\Workshop\BlokLand\Shared\BlokLand.Workflow.Shared\obj\Debug\netcoreapp3.1\BlokLand.Workflow.Shared.dll
+C:\Users\malfx001\Desktop\Workshop\BlokLand\Shared\BlokLand.Workflow.Shared\obj\Debug\netcoreapp3.1\BlokLand.Workflow.Shared.pdb
