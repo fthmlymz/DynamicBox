@@ -12,6 +12,7 @@ namespace DynamicBox.IdentityServer
         {
             new ApiResource("resource_elsaserver"){Scopes={ "elsa_server_fullpermission" } },
             new ApiResource("resource_documentmanagement"){Scopes={ "documentmanagement_fullpermission" } },
+            new ApiResource("resource_purchasingmanagement"){Scopes={"purchasing_management_fullpermission"}},
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
         public static IEnumerable<IdentityResource> IdentityResources =>
@@ -34,50 +35,53 @@ namespace DynamicBox.IdentityServer
             {
             new ApiScope("elsa_server_fullpermission", "Elsa Server için full erişim"),
             new ApiScope("documentmanagement_fullpermission",  "Döküman yonetim için tam yetki"),
+            new ApiScope("purchasing_management_fullpermission", "Satın alma yönetim uygulaması tam yetki"),
             new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
             };
 
         public static IEnumerable<Client> Clients =>
             new Client[] {
-                new Client
-                {
-                    ClientName = "DynamicBox Workflow IdentityServer",
-                    ClientId = "DynamicBoxWorkflow",
-                    ClientSecrets = {new Secret("6E7179457315DB81CBFB9BFAA3C8BB729B".Sha256())},
-                    AllowedGrantTypes= GrantTypes.ClientCredentials,
-                    AllowedScopes =
-                    {
-                        "elsa_server_fullpermission",
-                        "documentmanagement_fullpermission",
-                        IdentityServerConstants.LocalApi.ScopeName
-                    }
-                },
+                //new Client
+                //{
+                //    ClientName = "DynamicBox Workflow IdentityServer",
+                //    ClientId = "DynamicBoxWorkflow",
+                //    ClientSecrets = {new Secret("6E7179457315DB81CBFB9BFAA3C8BB729B".Sha256())},
+                //    AllowedGrantTypes= GrantTypes.ClientCredentials,
+                //    AllowedScopes =
+                //    {
+                //        "elsa_server_fullpermission",
+                //        "documentmanagement_fullpermission",
+                //        "purchasing_management_fullpermission",
+                //        IdentityServerConstants.LocalApi.ScopeName
+                //    }
+                //},
 
-                new Client
-                {
-                    ClientName = "DynamicBox Workflow IdentityServer",
-                    ClientId = "DynamicBoxWorkflowForUser",
-                    AllowOfflineAccess=true,
-                    ClientSecrets = {new Secret("6E7179457315DB81CBFB9BFAA3C8BB729B".Sha256())},
-                    AllowedGrantTypes= GrantTypes.ResourceOwnerPassword,
-                    AllowedScopes = {
-                        IdentityServerConstants.LocalApi.ScopeName,
-                        IdentityServerConstants.StandardScopes.Email,
-                        IdentityServerConstants.StandardScopes.OpenId,
-                        IdentityServerConstants.StandardScopes.Profile,
-                        IdentityServerConstants.StandardScopes.Phone,
-                        IdentityServerConstants.StandardScopes.Address,
-                        IdentityServerConstants.StandardScopes.OfflineAccess, //refresh token üretebilmek için
-                        "roles",
+                //new Client
+                //{
+                //    ClientName = "DynamicBox Workflow IdentityServer",
+                //    ClientId = "DynamicBoxWorkflowForUser",
+                //    AllowOfflineAccess=true,
+                //    ClientSecrets = {new Secret("6E7179457315DB81CBFB9BFAA3C8BB729B".Sha256())},
+                //    AllowedGrantTypes= GrantTypes.ResourceOwnerPassword,
+                //    AllowedScopes = {
+                //        IdentityServerConstants.LocalApi.ScopeName,
+                //        IdentityServerConstants.StandardScopes.Email,
+                //        IdentityServerConstants.StandardScopes.OpenId,
+                //        IdentityServerConstants.StandardScopes.Profile,
+                //        IdentityServerConstants.StandardScopes.Phone,
+                //        IdentityServerConstants.StandardScopes.Address,
+                //        IdentityServerConstants.StandardScopes.OfflineAccess, //refresh token üretebilmek için
+                //        "roles",
 
-                        "elsa_server_fullpermission",
-                        "documentmanagement_fullpermission",
-                    },
-                    AccessTokenLifetime=3600, //1*60*60,
-                    RefreshTokenExpiration=TokenExpiration.Absolute,
-                    AbsoluteRefreshTokenLifetime=(int)(DateTime.Now.AddDays(60)-DateTime.Now).TotalSeconds,
-                    RefreshTokenUsage = TokenUsage.ReUse
-                },
+                //        "elsa_server_fullpermission",
+                //        "documentmanagement_fullpermission",
+                //        "purchasing_management_fullpermission",
+                //    },
+                //    AccessTokenLifetime=3600, //1*60*60,
+                //    RefreshTokenExpiration=TokenExpiration.Absolute,
+                //    AbsoluteRefreshTokenLifetime=(int)(DateTime.Now.AddDays(60)-DateTime.Now).TotalSeconds,
+                //    RefreshTokenUsage = TokenUsage.ReUse
+                //},
 
 
 
@@ -109,6 +113,7 @@ namespace DynamicBox.IdentityServer
 
                         "elsa_server_fullpermission",
                         "documentmanagement_fullpermission",
+                        "purchasing_management_fullpermission",
                     },
                     AccessTokenLifetime=3600, //1*60*60,
                     RefreshTokenExpiration=TokenExpiration.Absolute,
@@ -119,3 +124,5 @@ namespace DynamicBox.IdentityServer
             };
     }
 }
+
+

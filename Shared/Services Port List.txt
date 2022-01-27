@@ -8,6 +8,7 @@ Bu projede resiliency uygulandý
     --http://localhost:2002
     --https://localhost:2003
 
+
 --Services\ContentApproval.Dashboard
     --http://localhost:2004
     --https://localhost:2005
@@ -16,6 +17,14 @@ Bu projede resiliency uygulandý
 --Services\DocumentManagement.API
     --http://localhost:2006
     --https://localhost:2007
+
+
+--Services\DynamicBox.PurchasingRequestManagement.API
+    --http://localhost:2008
+    --http://localhost:2009
+
+
+
 
 
 
@@ -93,3 +102,40 @@ PUT can be 201 (if you created the element because that is your behaviour)
 409 Resource Conflict can be possible in complex systems, as in DELETE.
 422 Unprocessable entity It helps to distinguish between a "Bad request" (e.g. malformed XML/JSON) and invalid field values
 And 501, 502 in case of errors.
+
+
+
+
+
+
+
+OK => returns the 200 status code
+NotFound => returns the 404 status code
+BadRequest => returns the 400 status code
+NoContent => returns the 204 status code
+Created, CreatedAtRoute, CreatedAtAction => returns the 201 status code
+Unauthorized => returns the 401 status code
+Forbid => returns the 403 status code
+StatusCode => returns the status code we provide as input
+
+
+100 information success
+200 success responses 
+300 redirect message
+400 client error response
+500 server erros
+
+
+
+
+
+
+add-migration initial
+update-database
+
+
+Angular
+
+Yeni proje oluþturma: ng new PurchasingManagement   routing yapýlsýn ve scss seçilsin
+Proje çalýþtýrma    : ng serve -o
+Proje build etme    : ng build

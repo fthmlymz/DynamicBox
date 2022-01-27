@@ -2154,7 +2154,10 @@
         },
         "runtime": {
           "bin/placeholder/DynamicBox.Workflow.Shared.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },

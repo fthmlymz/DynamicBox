@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "pI1EpijA4ANbdAnuM/PHNc+gujMGQgWOgRz20Z7Od2M=",
+  "Source": "DynamicBox.PurchasingRequestManagement.API",
+  "BasePath": "_content/DynamicBox.PurchasingRequestManagement.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

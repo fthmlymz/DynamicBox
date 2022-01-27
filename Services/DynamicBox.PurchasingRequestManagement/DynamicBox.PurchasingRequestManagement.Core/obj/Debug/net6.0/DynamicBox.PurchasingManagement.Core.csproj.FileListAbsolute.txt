@@ -1,0 +1,12 @@
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingManagement\DynamicBox.PurchasingManagement.Core\bin\Debug\net6.0\DynamicBox.PurchasingManagement.Core.deps.json
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingManagement\DynamicBox.PurchasingManagement.Core\bin\Debug\net6.0\DynamicBox.PurchasingManagement.Core.dll
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingManagement\DynamicBox.PurchasingManagement.Core\bin\Debug\net6.0\ref\DynamicBox.PurchasingManagement.Core.dll
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingManagement\DynamicBox.PurchasingManagement.Core\bin\Debug\net6.0\DynamicBox.PurchasingManagement.Core.pdb
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingManagement\DynamicBox.PurchasingManagement.Core\obj\Debug\net6.0\DynamicBox.PurchasingManagement.Core.csproj.AssemblyReference.cache
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingManagement\DynamicBox.PurchasingManagement.Core\obj\Debug\net6.0\DynamicBox.PurchasingManagement.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingManagement\DynamicBox.PurchasingManagement.Core\obj\Debug\net6.0\DynamicBox.PurchasingManagement.Core.AssemblyInfoInputs.cache
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingManagement\DynamicBox.PurchasingManagement.Core\obj\Debug\net6.0\DynamicBox.PurchasingManagement.Core.AssemblyInfo.cs
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingManagement\DynamicBox.PurchasingManagement.Core\obj\Debug\net6.0\DynamicBox.PurchasingManagement.Core.csproj.CoreCompileInputs.cache
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingManagement\DynamicBox.PurchasingManagement.Core\obj\Debug\net6.0\DynamicBox.PurchasingManagement.Core.dll
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingManagement\DynamicBox.PurchasingManagement.Core\obj\Debug\net6.0\ref\DynamicBox.PurchasingManagement.Core.dll
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingManagement\DynamicBox.PurchasingManagement.Core\obj\Debug\net6.0\DynamicBox.PurchasingManagement.Core.pdb

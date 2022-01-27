@@ -15,15 +15,26 @@ namespace DynamicBox.Workflow.Shared.Dtos
         public bool IsSuccessful { get; private set; }
 
 
+
         //static factory method
         public static ServiceResponse<T> Success(T data, int statusCode)
         {
-            return new ServiceResponse<T> { Data = data, StatusCode = statusCode, IsSuccessful = true };
+            return new ServiceResponse<T>
+            {
+                Data = data,
+                StatusCode = statusCode,
+                IsSuccessful = true
+            };
         }
 
         public static ServiceResponse<T> Success(int statusCode)
         {
-            return new ServiceResponse<T> { Data = default, StatusCode = statusCode, IsSuccessful = true };
+            return new ServiceResponse<T>
+            {
+                Data = default,
+                StatusCode = statusCode,
+                IsSuccessful = true
+            };
         }
 
 

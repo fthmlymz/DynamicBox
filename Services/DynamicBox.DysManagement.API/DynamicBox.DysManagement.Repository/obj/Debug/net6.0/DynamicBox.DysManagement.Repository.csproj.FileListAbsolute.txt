@@ -1,0 +1,17 @@
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.Repository\bin\Debug\net6.0\DynamicBox.DysManagement.Repository.deps.json
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.Repository\bin\Debug\net6.0\DynamicBox.DysManagement.Repository.runtimeconfig.json
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.Repository\bin\Debug\net6.0\DynamicBox.DysManagement.Repository.dll
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.Repository\bin\Debug\net6.0\ref\DynamicBox.DysManagement.Repository.dll
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.Repository\bin\Debug\net6.0\DynamicBox.DysManagement.Repository.pdb
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.Repository\bin\Debug\net6.0\DynamicBox.DysManagement.Core.dll
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.Repository\bin\Debug\net6.0\DynamicBox.DysManagement.Core.pdb
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.Repository\obj\Debug\net6.0\DynamicBox.DysManagement.Repository.csproj.AssemblyReference.cache
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.Repository\obj\Debug\net6.0\DynamicBox.DysManagement.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.Repository\obj\Debug\net6.0\DynamicBox.DysManagement.Repository.AssemblyInfoInputs.cache
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.Repository\obj\Debug\net6.0\DynamicBox.DysManagement.Repository.AssemblyInfo.cs
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.Repository\obj\Debug\net6.0\DynamicBox.DysManagement.Repository.csproj.CoreCompileInputs.cache
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.Repository\obj\Debug\net6.0\DynamicBox.DysManagement.Repository.csproj.CopyComplete
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.Repository\obj\Debug\net6.0\DynamicBox.DysManagement.Repository.dll
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.Repository\obj\Debug\net6.0\ref\DynamicBox.DysManagement.Repository.dll
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.Repository\obj\Debug\net6.0\DynamicBox.DysManagement.Repository.pdb
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.Repository\obj\Debug\net6.0\DynamicBox.DysManagement.Repository.genruntimeconfig.cache

@@ -1,12 +1,16 @@
-using DynamicBox.DysManagement.API.Data;
-using DynamicBox.DysManagement.API.Services.DocumentService;
-using MassTransit;
+using DynamicBox.DysManagement.Core.Repositories;
+using DynamicBox.DysManagement.Core.Services;
+using DynamicBox.DysManagement.Core.UnitOfWorks;
+using DynamicBox.DysManagement.Repository;
+using DynamicBox.DysManagement.Repository.Repositories;
+using DynamicBox.DysManagement.Repository.UnitOfWork;
+using DynamicBox.DysManagement.Services.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using System.Reflection;
+using DynamicBox.DysManagement.Services.Mapping;
 
 var builder = WebApplication.CreateBuilder(args);
-
-//IApplicationBuilder app
 
 
 
@@ -16,14 +20,29 @@ builder.Services.AddSwaggerGen();
 
 
 
-#region Sql Server Connection
-builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DocumentManagementDBConnection"), options =>
-{
-    options.EnableRetryOnFailure(); //Resiliency kullanıldı
-}));
+#region Dependencies
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddScoped(typeof(IService<>), typeof(Service<>));
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 #endregion
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-//services.AddAutoMapper(typeof(Startup));
+
+
+
+#region Sql Server Connection
+builder.Services.AddDbContext<DataContext>(x =>
+{
+    x.UseSqlServer(builder.Configuration.GetConnectionString("DysManagementDbConnection"),options =>
+    {
+        options.MigrationsAssembly(Assembly.GetAssembly(typeof(DataContext)).GetName().Name);
+    });
+});
+#endregion
+
+
+
+
+
 
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen(c =>
@@ -31,36 +50,6 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "DynamicBox.Workflow.DocumentManagement.API", Version = "v1" });
 });
 
-
-
-#region Models
-builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-builder.Services.AddScoped<IDocumentService, DocumentService>();
-#endregion
-
-
-#region RabbitMQ settings
-builder.Services.AddMassTransit(mass =>
-{
-    //Consumer tanımlamaları
-    //mass.AddConsumer<CreatedDocumentConsumer>();
-
-    mass.UsingRabbitMq((context, cfg) =>
-    {
-        cfg.Host(builder.Configuration["RabbitMQ:Host"], "/", host =>
-        {
-            host.Username(builder.Configuration["RabbitMQ:Username"]);
-            host.Password(builder.Configuration["RabbitMQ:Password"]);
-        });
-
-        //cfg.ReceiveEndpoint($"queue:{RabbitMQSettingsConst.DocumentExecutedCreatedCompleted}", e =>
-        //{
-        //    e.ConfigureConsumer<CreatedDocumentConsumer>(context);
-        //});
-    });
-});
-builder.Services.AddMassTransitHostedService();
-#endregion
 
 
 
@@ -72,7 +61,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "DynamicBox.Workflow.DocumentManagement.API v1"));
 }
-
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
@@ -82,6 +70,6 @@ app.UseEndpoints(endpoints =>
     endpoints.MapControllers();
 });
 app.UseHttpsRedirection();
-
-
 app.Run();
+
+

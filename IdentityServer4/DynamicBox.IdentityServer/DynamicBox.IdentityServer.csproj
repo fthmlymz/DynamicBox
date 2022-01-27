@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="IdentityServer.LdapExtension" Version="3.1.0" />
     <PackageReference Include="IdentityServer4.AspNetIdentity" Version="4.0.0" />
 

@@ -58,7 +58,11 @@ namespace DynamicBox.IdentityServer
 
             builder.AddResourceOwnerValidator<IdentityResourceOwnerPasswordValidator>();
             builder.AddDeveloperSigningCredential();
+            //builder.AddLdapUsers<OpenLdapAppUser>(Configuration.GetSection("LdapServer"), UserStore.InMemory); // OpenLDAP
 
+
+            //builder.AddSigningCredential(); //LDAP doğrulama için
+            builder.AddLdapUsers<ActiveDirectoryAppUser>(Configuration.GetSection("LdapServer"), UserStore.InMemory);
 
             services.AddAuthentication()
                 .AddGoogle(options =>
@@ -69,8 +73,6 @@ namespace DynamicBox.IdentityServer
                 });
 
 
-            //builder.AddSigningCredential(); //LDAP doğrulama için
-            builder.AddLdapUsers<ActiveDirectoryAppUser>(Configuration.GetSection("LdapServer"), UserStore.InMemory);
             builder.AddDeveloperSigningCredential();
         }
 

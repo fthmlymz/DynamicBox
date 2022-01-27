@@ -1,0 +1,12 @@
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingManagement\DynamicBox.PurchasingManagement.Caching\bin\Debug\net6.0\DynamicBox.PurchasingManagement.Caching.deps.json
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingManagement\DynamicBox.PurchasingManagement.Caching\bin\Debug\net6.0\DynamicBox.PurchasingManagement.Caching.dll
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingManagement\DynamicBox.PurchasingManagement.Caching\bin\Debug\net6.0\ref\DynamicBox.PurchasingManagement.Caching.dll
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingManagement\DynamicBox.PurchasingManagement.Caching\bin\Debug\net6.0\DynamicBox.PurchasingManagement.Caching.pdb
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingManagement\DynamicBox.PurchasingManagement.Caching\obj\Debug\net6.0\DynamicBox.PurchasingManagement.Caching.csproj.AssemblyReference.cache
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingManagement\DynamicBox.PurchasingManagement.Caching\obj\Debug\net6.0\DynamicBox.PurchasingManagement.Caching.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingManagement\DynamicBox.PurchasingManagement.Caching\obj\Debug\net6.0\DynamicBox.PurchasingManagement.Caching.AssemblyInfoInputs.cache
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingManagement\DynamicBox.PurchasingManagement.Caching\obj\Debug\net6.0\DynamicBox.PurchasingManagement.Caching.AssemblyInfo.cs
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingManagement\DynamicBox.PurchasingManagement.Caching\obj\Debug\net6.0\DynamicBox.PurchasingManagement.Caching.csproj.CoreCompileInputs.cache
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingManagement\DynamicBox.PurchasingManagement.Caching\obj\Debug\net6.0\DynamicBox.PurchasingManagement.Caching.dll
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingManagement\DynamicBox.PurchasingManagement.Caching\obj\Debug\net6.0\ref\DynamicBox.PurchasingManagement.Caching.dll
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingManagement\DynamicBox.PurchasingManagement.Caching\obj\Debug\net6.0\DynamicBox.PurchasingManagement.Caching.pdb

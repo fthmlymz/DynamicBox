@@ -70,7 +70,132 @@
       "ProjectGuid": "2cb0193f-018f-4c7b-bfb9-4e88de7d9445",
       "DisplayName": "DynamicBox.DysFrontend",
       "ColorIndex": 12
+    },
+    "2e13353b-a934-42ff-aab5-03d92a863fba": {
+      "ProjectGuid": "2e13353b-a934-42ff-aab5-03d92a863fba",
+      "DisplayName": "DynamicBox.Workflow.Gateway",
+      "ColorIndex": 13
+    },
+    "0d031b50-b49a-4fcc-a772-1a687855c472": {
+      "ProjectGuid": "0d031b50-b49a-4fcc-a772-1a687855c472",
+      "DisplayName": "DynamicBox.DysManagement.API",
+      "ColorIndex": 14
+    },
+    "cbd57860-a08f-42a9-8236-9d02ae377c88": {
+      "ProjectGuid": "cbd57860-a08f-42a9-8236-9d02ae377c88",
+      "DisplayName": "DynamicBox.DysManagement.Application",
+      "ColorIndex": 15
+    },
+    "b47f85f0-1ad4-4f43-b2dd-9d936c9435e1": {
+      "ProjectGuid": "b47f85f0-1ad4-4f43-b2dd-9d936c9435e1",
+      "DisplayName": "DynamicBox.DysManagement.Application",
+      "ColorIndex": 0
+    },
+    "946aad72-2a4a-4dbf-a5e2-6f676b82e411": {
+      "ProjectGuid": "946aad72-2a4a-4dbf-a5e2-6f676b82e411",
+      "DisplayName": "DynamicBox.DysManagement.Domain",
+      "ColorIndex": 1
+    },
+    "1dd2221c-a34d-4f5f-a486-a370548dd968": {
+      "ProjectGuid": "1dd2221c-a34d-4f5f-a486-a370548dd968",
+      "DisplayName": "DynamicBox.DysManagement.Core",
+      "ColorIndex": 2
+    },
+    "9ae689c5-2fea-4759-821d-a677b48e8623": {
+      "ProjectGuid": "9ae689c5-2fea-4759-821d-a677b48e8623",
+      "DisplayName": "DynamicBox.DysManagement.Domain.Core",
+      "ColorIndex": 3
+    },
+    "3e359d3e-4a2f-48be-931e-5cc9ce10b66b": {
+      "ProjectGuid": "3e359d3e-4a2f-48be-931e-5cc9ce10b66b",
+      "DisplayName": "DynamicBox.DysManagement.Infrastructure",
+      "ColorIndex": 4
+    },
+    "65c110e6-0e3a-497f-b43e-4656bc884ef5": {
+      "ProjectGuid": "65c110e6-0e3a-497f-b43e-4656bc884ef5",
+      "DisplayName": "DynamicBox.DysManagement.API",
+      "ColorIndex": 5
+    },
+    "986ff0eb-b17a-42cf-bf19-de11318b3511": {
+      "ProjectGuid": "986ff0eb-b17a-42cf-bf19-de11318b3511",
+      "DisplayName": "DynamicBox.DysManagement.Domain",
+      "ColorIndex": 6
+    },
+    "787ea968-6175-48e4-86b1-022769fc37db": {
+      "ProjectGuid": "787ea968-6175-48e4-86b1-022769fc37db",
+      "DisplayName": "DynamicBox.DysManagement.API",
+      "ColorIndex": 7
+    },
+    "d9fbdf82-b60c-4db5-aba2-92acf50594c5": {
+      "ProjectGuid": "d9fbdf82-b60c-4db5-aba2-92acf50594c5",
+      "DisplayName": "DynamicBox.DysManagement.Core",
+      "ColorIndex": 8
+    },
+    "e54bd9c9-a13b-4b48-b2d4-22b77a73a023": {
+      "ProjectGuid": "e54bd9c9-a13b-4b48-b2d4-22b77a73a023",
+      "DisplayName": "DynamicBox.DysManagement.Data",
+      "ColorIndex": 9
+    },
+    "b39649cd-425c-4bdd-92ed-8d70ad028c90": {
+      "ProjectGuid": "b39649cd-425c-4bdd-92ed-8d70ad028c90",
+      "DisplayName": "DynamicBox.DysManagement.Services",
+      "ColorIndex": 10
+    },
+    "6d4e6998-7211-4649-b920-d1f7894ed0f6": {
+      "ProjectGuid": "6d4e6998-7211-4649-b920-d1f7894ed0f6",
+      "DisplayName": "DynamicBox.DysManagement.Repository",
+      "ColorIndex": 11
+    },
+    "38189370-acba-4527-a5b0-858fdd93472a": {
+      "ProjectGuid": "38189370-acba-4527-a5b0-858fdd93472a",
+      "DisplayName": "DynamicBox.DysManagement.Caching",
+      "ColorIndex": 12
+    },
+    "9baca2c3-4ed6-44a8-9b16-a416caf2dffa": {
+      "ProjectGuid": "9baca2c3-4ed6-44a8-9b16-a416caf2dffa",
+      "DisplayName": "DynamicBox.PurchasingRequestManagement.Caching",
+      "ColorIndex": 13
+    },
+    "425a5ae9-589d-41be-84dc-dcd9b2f856ac": {
+      "ProjectGuid": "425a5ae9-589d-41be-84dc-dcd9b2f856ac",
+      "DisplayName": "DynamicBox.PurchasingManagement.Core",
+      "ColorIndex": 14
+    },
+    "395b4a3a-02e4-4b93-8af3-24958353439f": {
+      "ProjectGuid": "395b4a3a-02e4-4b93-8af3-24958353439f",
+      "DisplayName": "DynamicBox.PurchasingManagement.Repository",
+      "ColorIndex": 15
+    },
+    "648d98c9-e273-4a4b-9a37-d588bbcd8706": {
+      "ProjectGuid": "648d98c9-e273-4a4b-9a37-d588bbcd8706",
+      "DisplayName": "DynamicBox.PurchasingManagement.Services",
+      "ColorIndex": 0
+    },
+    "9ef36127-59f3-432e-8207-e0bb9d8f870d": {
+      "ProjectGuid": "9ef36127-59f3-432e-8207-e0bb9d8f870d",
+      "DisplayName": "DynamicBox.PurchasingManagement.Repository",
+      "ColorIndex": 1
+    },
+    "3773bbe9-64a4-4033-b488-306adc831692": {
+      "ProjectGuid": "3773bbe9-64a4-4033-b488-306adc831692",
+      "DisplayName": "DynamicBox.PurchasingManagement.Services",
+      "ColorIndex": 2
+    },
+    "c1a3602f-eb04-43a3-8bc4-f1592dbb1b53": {
+      "ProjectGuid": "c1a3602f-eb04-43a3-8bc4-f1592dbb1b53",
+      "DisplayName": "DynamicBox.PurchasingRequestManagement.Core",
+      "ColorIndex": 3
+    },
+    "9869db34-90b6-4203-b1d2-d1ff02ed4363": {
+      "ProjectGuid": "9869db34-90b6-4203-b1d2-d1ff02ed4363",
+      "DisplayName": "DynamicBox.PurchasingRequestManagement.API",
+      "ColorIndex": 4
+    },
+    "7d9fe5f5-cb21-4dad-9bea-b961db4a36c5": {
+      "ProjectGuid": "7d9fe5f5-cb21-4dad-9bea-b961db4a36c5",
+      "DisplayName": "DynamicBox.IdentiyServer",
+      "ColorIndex": 5
     }
   },
-  "NextColorIndex": 13
+  "NextColorIndex": 6
 }
