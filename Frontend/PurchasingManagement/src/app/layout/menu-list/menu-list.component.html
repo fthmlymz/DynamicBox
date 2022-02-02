@@ -1,0 +1,17 @@
+<button mat-button [matMenuTriggerFor]="aboveMenu">Talep işlemleri</button>
+<mat-menu #aboveMenu="matMenu" yPosition="above">
+  <button mat-menu-item routerLink="[material-demands">Taleplerim</button>
+  <button mat-menu-item>Onayda bekleyen talepler</button>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="belowMenu">Below</button>
+<mat-menu #belowMenu="matMenu" yPosition="below">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="beforeMenu">Before</button>
+<mat-menu #beforeMenu="matMenu" xPosition="before">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>

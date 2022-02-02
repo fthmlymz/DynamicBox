@@ -9,5 +9,10 @@ namespace DynamicBox.PurchasingRequestManagement.Core.Services
     {
         Task<CustomResponseDto<List<MaterialDemandWithCompanyDto>>> GetMaterialDemandsWithCompany();
         Task<CustomResponseDto<List<MaterialDemandsWithDetailsDto>>> MaterialDemandsWithDetails(long id);
+
+        //Task<CustomResponseDto<List<MaterialDemandDto>>> GetMaterialDemandList(int page, int pageSize);
+
+        //Task<CustomResponseDto<List<MaterialDemand>>> GetMaterialDemandList(int page, int pageSize);//, out int totalCount);
+        Task<CustomResponseDto<List<MaterialDemandDto>>> GetMaterialDemandList(int page, int pageSize); //, out int totalCount);
     }
 }

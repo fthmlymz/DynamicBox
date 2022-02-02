@@ -1,0 +1,33 @@
+<mat-nav-list>
+  <a mat-list-item routerLink="/material-demands" >
+    <mat-icon> Home </mat-icon><span class="nav-caption"></span>
+  </a>
+
+  <a mat-list-item routerLink="/material-demands" >
+    <mat-icon> Home </mat-icon><span class="nav-caption"></span>
+  </a>
+
+  <a mat-list-item routerLink="/material-demands" >
+    <mat-icon> Fome </mat-icon><span class="nav-caption"></span>
+  </a>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item  routerLink="/material-demands-list">Malzeme taleplerim</button>
+  </mat-menu>
+
+
+  <mat-list-item [matMenuTriggerFor]="menu">
+    <mat-icon>unfolded_more</mat-icon>
+    <a matLine>Raporlar</a>
+  </mat-list-item>
+
+  <mat-menu #menu="matMenu">
+    <button
+      mat-menu-item
+      routerLink="/material-demands-list"
+      [ngClass]="menu"
+    >View profile</button>
+  </mat-menu>
+
+
+</mat-nav-list>

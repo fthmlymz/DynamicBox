@@ -43,13 +43,8 @@ builder.Services.AddSwaggerGen();
 //#endregion
 
 
-builder.Services.AddCors(opt =>
-{
-    opt.AddDefaultPolicy(x =>
-    {
-        x.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().AllowCredentials();
-    });
-});
+builder.Services.AddCors();
+
 
 
 #region Dependencies
@@ -83,7 +78,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors();
+app.UseCors(x => x
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .SetIsOriginAllowed(origin => true) // allow any origin
+                .AllowCredentials());
 app.UseStaticFiles(); //api tarafýnda statik dosya tutmak için
 app.UseHttpsRedirection();
 

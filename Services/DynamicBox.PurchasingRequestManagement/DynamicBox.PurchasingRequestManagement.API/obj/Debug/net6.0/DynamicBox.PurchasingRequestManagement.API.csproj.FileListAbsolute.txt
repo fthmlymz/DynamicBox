@@ -71,3 +71,4 @@ C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequ
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.API\obj\Debug\net6.0\ref\DynamicBox.PurchasingRequestManagement.API.dll
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.API\obj\Debug\net6.0\DynamicBox.PurchasingRequestManagement.API.pdb
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.API\obj\Debug\net6.0\DynamicBox.PurchasingRequestManagement.API.genruntimeconfig.cache
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.API\obj\Debug\net6.0\DynamicBox.PurchasingRequestManagement.API.MvcApplicationPartsAssemblyInfo.cs

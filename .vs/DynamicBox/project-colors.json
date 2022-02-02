@@ -195,7 +195,12 @@
       "ProjectGuid": "7d9fe5f5-cb21-4dad-9bea-b961db4a36c5",
       "DisplayName": "DynamicBox.IdentiyServer",
       "ColorIndex": 5
+    },
+    "f119a22b-394f-415b-8263-12ae4cb6427e": {
+      "ProjectGuid": "f119a22b-394f-415b-8263-12ae4cb6427e",
+      "DisplayName": "Solution Items",
+      "ColorIndex": 6
     }
   },
-  "NextColorIndex": 6
+  "NextColorIndex": 7
 }

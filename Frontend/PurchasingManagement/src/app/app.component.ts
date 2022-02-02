@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'PurchasingManagement';
+  title = 'Satın Alma talep yönetim uygulaması';
+  opened = false;
 }

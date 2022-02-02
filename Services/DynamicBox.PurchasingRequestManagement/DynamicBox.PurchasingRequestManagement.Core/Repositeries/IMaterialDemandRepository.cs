@@ -1,4 +1,5 @@
 ﻿using DynamicBox.PurchasingManagement.Core.Repositeries;
+using DynamicBox.PurchasingRequestManagement.Core.DTOs.Material.MaterialDemand;
 using DynamicBox.PurchasingRequestManagement.Core.Models.MaterialDemand;
 
 namespace DynamicBox.PurchasingRequestManagement.Core.Repositeries
@@ -7,5 +8,10 @@ namespace DynamicBox.PurchasingRequestManagement.Core.Repositeries
     {
         Task<List<MaterialDemand>> GetMaterialDemandsWithCompany();
         Task<List<MaterialDemand>> GetMaterialDemandsWithDetails(long id);
+
+
+
+        //Task<(List<MaterialDemand>, int)> GetMaterialDemandList(int page, int pageSize);
+        Task<(List<MaterialDemand>, int)> GetMaterialDemandList(int page, int pageSize);
     }
 }

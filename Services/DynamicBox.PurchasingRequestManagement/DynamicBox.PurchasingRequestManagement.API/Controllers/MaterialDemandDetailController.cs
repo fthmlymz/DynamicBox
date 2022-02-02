@@ -12,9 +12,9 @@ namespace DynamicBox.PurchasingManagement.API.Controllers
     {
         private readonly IMapper _mapper;
         private readonly IService<MaterialDemandDetail> _service;
-        private readonly ILogger<MaterialDemandController> _logger;
+        private readonly ILogger<MaterialDemandsController> _logger;
 
-        public MaterialDemandDetailController(IMapper mapper, IService<MaterialDemandDetail> service, ILogger<MaterialDemandController> logger)
+        public MaterialDemandDetailController(IMapper mapper, IService<MaterialDemandDetail> service, ILogger<MaterialDemandsController> logger)
         {
             _mapper = mapper;
             _service = service;

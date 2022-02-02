@@ -13,14 +13,14 @@ namespace DynamicBox.PurchasingManagement.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class MaterialDemandController : CustomBaseController //ControllerBase
+    public class MaterialDemandsController : CustomBaseController //ControllerBase
     {
 
         private readonly IMapper _mapper;
         private readonly IService<MaterialDemand> _service;
-        private readonly ILogger<MaterialDemandController> _logger;
+        private readonly ILogger<MaterialDemandsController> _logger;
         private readonly IMaterialDemandService _materialService;
-        public MaterialDemandController(IMapper mapper, IService<MaterialDemand> service, ILogger<MaterialDemandController> logger, IMaterialDemandService materialService)
+        public MaterialDemandsController(IMapper mapper, IService<MaterialDemand> service, ILogger<MaterialDemandsController> logger, IMaterialDemandService materialService)
         {
             _mapper = mapper;
             _service = service;
@@ -29,15 +29,26 @@ namespace DynamicBox.PurchasingManagement.API.Controllers
         }
 
 
-        [HttpGet]
-        public async Task<IActionResult> MaterialDemands()
+        //[HttpGet]
+        //public async Task<IActionResult> MaterialDemands()
+        //{
+        //    var material = await _service.GetAllAsync();
+        //    var materialDto = _mapper.Map<List<MaterialDemandDto>>(material.ToList());
+        //    //return Ok(materialDto); //standart
+        //    //return Ok(CustomResponseDto<List<MaterialDemandDto>>.Success(200, materialDto));
+        //    return CreateActionResult(CustomResponseDto<List<MaterialDemandDto>>.Success(200, materialDto));
+        //}
+        //[HttpGet("{page}/{pageSize}")]
+        [HttpGet("{page}/{pageSize}")]
+        public async Task<IActionResult> MaterialDemands(int page, int pageSize)
         {
-            var material = await _service.GetAllAsync();
-            var materialDto = _mapper.Map<List<MaterialDemandDto>>(material.ToList());
-            //return Ok(materialDto); //standart
-            //return Ok(CustomResponseDto<List<MaterialDemandDto>>.Success(200, materialDto));
-            return CreateActionResult(CustomResponseDto<List<MaterialDemandDto>>.Success(200, materialDto));
+            return CreateActionResult(await _materialService.GetMaterialDemandList(page, pageSize));
         }
+
+
+
+
+
 
 
         //[ServiceFilter(typeof(NotFoundFilter<MaterialDemand>))]

@@ -134,8 +134,31 @@ add-migration initial
 update-database
 
 
+
+________________________________________________________________________________________________________________________________________________________________________________
 Angular
 
 Yeni proje oluþturma: ng new PurchasingManagement   routing yapýlsýn ve scss seçilsin
 Proje çalýþtýrma    : ng serve -o
 Proje build etme    : ng build
+Component oluþturma : ng generate component home
+
+Modül oluþturma     : ng generate module home
+Ana klasör altýna Modül  oluþturma : ng generate module material-demand --flat   yazýldýðýnda direkt klasör içine oluþturur
+Servis oluþturma    : ng generate service servisadi
+Model oluþturma     : ng generate class modeladi
+________________________________________________________________________________________________________________________________________________________________________________
+
+
+
+
+
+Eksiklikler
+1. MateridlDemandRepository içerisinde GetMaterialDemandList() için async methodu geniþletilecek
+//Sayfalamada async methodu eklenecek. Ek olarak sayfa sayýsýný cliente göndereceðiz.
+public async Task<List<MaterialDemand>> GetMaterialDemandList(int page, int pageSize)
+
+
+
+
+________________________________________________________________________________________________________________________________________________________________________________

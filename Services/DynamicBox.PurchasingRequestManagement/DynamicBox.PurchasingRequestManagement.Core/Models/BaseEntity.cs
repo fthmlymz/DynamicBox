@@ -7,6 +7,6 @@
         public DateTime? CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
 
-        public string? BusinessCode { get; set; } //= null!;
-    }
+        public string? BusinessCode { get; set; }
+}
 }

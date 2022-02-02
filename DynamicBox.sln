@@ -38,8 +38,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicBox.DysManagement.Ca
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DynamicBox.PurchasingRequestManagement", "DynamicBox.PurchasingRequestManagement", "{87825AC2-70D8-401B-A57B-CAD7554E289B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicBox.PurchasingRequestManagement.Caching", "Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.Caching\DynamicBox.PurchasingRequestManagement.Caching.csproj", "{9BACA2C3-4ED6-44A8-9B16-A416CAF2DFFA}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicBox.PurchasingRequestManagement.API", "Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.API\DynamicBox.PurchasingRequestManagement.API.csproj", "{9869DB34-90B6-4203-B1D2-D1FF02ED4363}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicBox.PurchasingRequestManagement.Core", "Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.Core\DynamicBox.PurchasingRequestManagement.Core.csproj", "{C1A3602F-EB04-43A3-8BC4-F1592DBB1B53}"
@@ -95,10 +93,6 @@ Global
 		{38189370-ACBA-4527-A5B0-858FDD93472A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38189370-ACBA-4527-A5B0-858FDD93472A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38189370-ACBA-4527-A5B0-858FDD93472A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9BACA2C3-4ED6-44A8-9B16-A416CAF2DFFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9BACA2C3-4ED6-44A8-9B16-A416CAF2DFFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9BACA2C3-4ED6-44A8-9B16-A416CAF2DFFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9BACA2C3-4ED6-44A8-9B16-A416CAF2DFFA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9869DB34-90B6-4203-B1D2-D1FF02ED4363}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9869DB34-90B6-4203-B1D2-D1FF02ED4363}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9869DB34-90B6-4203-B1D2-D1FF02ED4363}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -132,7 +126,6 @@ Global
 		{6D4E6998-7211-4649-B920-D1F7894ED0F6} = {A117A844-F533-4DD8-8F12-86157A4A4A6D}
 		{38189370-ACBA-4527-A5B0-858FDD93472A} = {A117A844-F533-4DD8-8F12-86157A4A4A6D}
 		{87825AC2-70D8-401B-A57B-CAD7554E289B} = {031DFCA1-D218-45F1-9B51-D5C48B8FC15F}
-		{9BACA2C3-4ED6-44A8-9B16-A416CAF2DFFA} = {87825AC2-70D8-401B-A57B-CAD7554E289B}
 		{9869DB34-90B6-4203-B1D2-D1FF02ED4363} = {87825AC2-70D8-401B-A57B-CAD7554E289B}
 		{C1A3602F-EB04-43A3-8BC4-F1592DBB1B53} = {87825AC2-70D8-401B-A57B-CAD7554E289B}
 		{9EF36127-59F3-432E-8207-E0BB9D8F870D} = {87825AC2-70D8-401B-A57B-CAD7554E289B}
