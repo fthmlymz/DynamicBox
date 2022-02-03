@@ -29,12 +29,14 @@ namespace DynamicBox.PurchasingManagement.Services.Mapping
             CreateMap<MaterialDemand, MaterialDemandDetailDto>().ReverseMap();
             CreateMap<MaterialDemand, MaterialDemandWithCompanyDto>().ReverseMap(); //MaterialDemandWithCompanyDto
             CreateMap<MaterialDemand, MaterialDemandsWithDetailsDto>().ReverseMap();
+
             #endregion
 
 
             #region MaterialRequirementList
             CreateMap<MaterialDemandDetail, MaterialDemandDetailDto>().ReverseMap();
             #endregion
+
         }
 
 

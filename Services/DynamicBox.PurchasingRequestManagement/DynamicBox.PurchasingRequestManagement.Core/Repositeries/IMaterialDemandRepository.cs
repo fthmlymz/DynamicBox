@@ -12,6 +12,6 @@ namespace DynamicBox.PurchasingRequestManagement.Core.Repositeries
 
 
         //Task<(List<MaterialDemand>, int)> GetMaterialDemandList(int page, int pageSize);
-        Task<(List<MaterialDemand>, int)> GetMaterialDemandList(int page, int pageSize);
+        Task<List<MaterialDemandDto>> GetMaterialDemandList(int page, int pageSize);
     }
 }

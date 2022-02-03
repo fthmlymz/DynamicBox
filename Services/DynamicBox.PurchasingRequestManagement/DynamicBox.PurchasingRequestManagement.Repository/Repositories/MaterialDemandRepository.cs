@@ -1,6 +1,5 @@
 ﻿using DynamicBox.PurchasingManagement.Repository;
 using DynamicBox.PurchasingManagement.Repository.Repositories;
-using DynamicBox.PurchasingRequestManagement.Core.DTOs;
 using DynamicBox.PurchasingRequestManagement.Core.DTOs.Material.MaterialDemand;
 using DynamicBox.PurchasingRequestManagement.Core.Models.MaterialDemand;
 using DynamicBox.PurchasingRequestManagement.Core.Repositeries;
@@ -16,59 +15,31 @@ namespace DynamicBox.PurchasingRequestManagement.Repository.Repositories
 
         }
 
-
-
-        public async Task<(List<MaterialDemand>, int)> GetMaterialDemandList(int page, int pageSize)
+        public async Task<List<MaterialDemandDto>> GetMaterialDemandList(int page, int pageSize)
         {
             IQueryable<MaterialDemand> query;
             query = _context.MaterialDemands
                                         .Include(c => c.MaterialDemandDetails)
                                         .OrderByDescending(x => x.CreatedDate);
-            int totalCount2 = query.Count();
-            return (await query.Skip((pageSize * (page - 1))).Take(pageSize).ToListAsync(), totalCount2);
+            int totalCount = query.Count();
+            var response = await query.Skip((pageSize * (page - 1)))
+                                       .Take(pageSize)
+                                       .Select(x => new MaterialDemandDto()
+                                       {
+                                           Id = x.Id,
+                                           Description = x.Description,
+                                           BusinessCode = x.BusinessCode,
+                                           CompanyId = x.CompanyId,
+                                           CreatedDate = x.CreatedDate,
+                                           CreatedUserId = x.CreatedUserId,
+                                           CreatedUserName = x.CreatedUserName,
+                                           Status = x.Status,
+                                           UpdatedDate = x.UpdatedDate,
+                                           TotalCount = totalCount,
+                                       })
+                                       .ToListAsync();
+            return response;
         }
-
-        //public async Task<MaterialDemand> GetMaterialDemandList(int page, int pageSize)
-        //{
-        //    MaterialDemandDto response = new MaterialDemandDto();
-        //    IQueryable<MaterialDemand> query;
-
-
-        //    query = _context.MaterialDemands
-        //                                    .Include(c => c.MaterialDemandDetails)
-        //                                    .OrderByDescending(x => x.CreatedDate);
-        //    response.TotalCount = query.Count();
-        //    response.MaterialDemands = <MaterialDemand>(query.Skip((pageSize * (page - 1))).Take(pageSize).ToListAsync());
-        //    return response;
-        //}
-
-
-
-
-
-
-
-
-
-
-
-        ////Sayfalamada async methodu eklenecek. Ek olarak sayfa sayısını cliente göndereceğiz.
-        //public async Task<(List<MaterialDemand>,int)> GetMaterialDemandList(int page, int pageSize)
-        //{
-        //    IQueryable<MaterialDemand> query;
-
-        //    query = _context.MaterialDemands
-        //                                    .Include(c => c.MaterialDemandDetails)
-        //                                    .OrderByDescending(x => x.CreatedDate);
-        //    int totalCount = query.Count();
-
-        //    return await query.Skip((pageSize * (page - 1))).Take(pageSize).ToListAsync();
-        //}
-
-
-
-
-
 
 
         public async Task<List<MaterialDemand>> GetMaterialDemandsWithCompany()
@@ -84,18 +55,5 @@ namespace DynamicBox.PurchasingRequestManagement.Repository.Repositories
                                                  .OrderByDescending(x => x.CreatedDate)
                                                  .ToListAsync();
         }
-
-
     }
-
-
-    public class MyCustomType
-    {
-
-        public int TotalAccount { get; set; }
-        public List<MaterialDemand> MaterialDemands { get; set; }
-    }
-
-
-
 }

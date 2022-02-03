@@ -24,48 +24,9 @@ namespace DynamicBox.PurchasingRequestManagement.Services.Services
         public async Task<CustomResponseDto<List<MaterialDemandDto>>> GetMaterialDemandList(int page, int pageSize)
         {
             var materialList = await _repository.GetMaterialDemandList(page, pageSize);
-            
-            
-
-            var materialDemandsListDto = _mapper.Map<List<MaterialDemandDto>>(materialList.Item1);
-            
-            return CustomResponseDto<List<MaterialDemandDto>>.Success(200, materialDemandsListDto);
-
-
-
-
-
-
-            //    MaterialDemandDto response = new MaterialDemandDto();
-            //    IQueryable<MaterialDemand> query;
-
-
-            //    query = _context.MaterialDemands
-            //                                    .Include(c => c.MaterialDemandDetails)
-            //                                    .OrderByDescending(x => x.CreatedDate);
-            //    response.TotalCount = query.Count();
-            //    response.MaterialDemands = <MaterialDemand>(query.Skip((pageSize * (page - 1))).Take(pageSize).ToListAsync());
-            //    return response;
-
-
-
-
+            //var materialDemandsListDto = _mapper.Map<List<MaterialDemandDto>>(materialList);
+            return CustomResponseDto<List<MaterialDemandDto>>.Success(200, materialList);
         }
-
-
-
-
-
-
-        ////public async Task<CustomResponseDto<List<MaterialDemandDto>>> GetMaterialDemandList(int page, int pageSize)
-        //public async Task<CustomResponseDto<(List<MaterialDemandDto>, int)>> GetMaterialDemandList(int page, int pageSize)
-        //{
-        //    var materialList = await _repository.GetMaterialDemandList(page, pageSize);
-        //    var materialDemandsListDto = _mapper.Map<List<MaterialDemandDto>>(materialList);
-
-
-        //    return CustomResponseDto<List<MaterialDemandDto>>.Success(200, materialDemandsListDto);
-        //}
 
 
 
@@ -86,8 +47,4 @@ namespace DynamicBox.PurchasingRequestManagement.Services.Services
 
 
     }
-
-
-  
-
 }
