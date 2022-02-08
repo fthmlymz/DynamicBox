@@ -9,7 +9,6 @@ namespace DynamicBox.PurchasingRequestManagement.Repository.Repositories
 {
     public class MaterialDemandRepository : GenericRepository<MaterialDemand>, IMaterialDemandRepository
     {
-
         public MaterialDemandRepository(DataContext context) : base(context)
         {
 

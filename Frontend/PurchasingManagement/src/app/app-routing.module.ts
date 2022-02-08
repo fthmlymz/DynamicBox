@@ -8,9 +8,9 @@ const routes: Routes = [
     loadChildren: () => import("./home/home/home.module").then(m => m.HomeModule)
   },*/
   {
-    path: "material-demands/:page/:pageSize",
+    path: "material-demands",
     loadChildren: () => import("./components/MaterialDemand/material-demand.module").then(m => m.MaterialDemandModule)
-  },
+  }
 ];
 
 @NgModule({

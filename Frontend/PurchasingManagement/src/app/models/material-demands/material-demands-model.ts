@@ -3,10 +3,11 @@ import {MaterialDemandDetail} from "../material-demand-detail/material-demand-de
 export class MaterialDemandsModel {
   id: number | undefined;
   description: string | undefined;
-  CreatedUserId: string | undefined;
-  CreatedUserName: string | undefined;
-  Status: string | undefined;
-  CompanyId: string | undefined;
+  createdUserId: string | undefined;
+  createdUserName: string | undefined;
+  status: string | undefined;
+  companyId: string | undefined;
+  totalCount: number | undefined;
 
   details: MaterialDemandDetail[] | undefined
 

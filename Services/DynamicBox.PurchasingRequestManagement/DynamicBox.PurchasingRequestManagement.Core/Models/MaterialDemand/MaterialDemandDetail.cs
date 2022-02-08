@@ -2,15 +2,18 @@
 {
     public class MaterialDemandDetail : BaseEntity
     {
-        public string StockNo { get; set; } = null!;
-        public string StockName { get; set; } = null!;
-        public long Total { get; set; }
-        public decimal Price { get; set; }
+        public long TotalDemand { get; set; }
+        public string StockName { get; set; }
 
 
 
-
+        #region Relation Ship
         public long MaterialDemandId { get; set; }
         public MaterialDemand MaterialDemands { get; set; } = null!;
+
+        public long ProductId { get; set; }
+        public Product.Product Products { get; set; }
+
+        #endregion
     }
 }

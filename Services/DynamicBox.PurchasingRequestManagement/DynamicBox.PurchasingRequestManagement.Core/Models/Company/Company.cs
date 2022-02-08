@@ -1,5 +1,6 @@
 ﻿using DynamicBox.PurchasingRequestManagement.Core.Models;
 using DynamicBox.PurchasingRequestManagement.Core.Models.MaterialDemand;
+using DynamicBox.PurchasingRequestManagement.Core.Models.Product;
 
 namespace DynamicBox.PurchasingManagement.Core.Models.Company
 {
@@ -11,5 +12,6 @@ namespace DynamicBox.PurchasingManagement.Core.Models.Company
 
 
         public ICollection<MaterialDemand> MaterialDemands { get; set; } = new List<MaterialDemand>();
+        public ICollection<Product> Products { get; set; } = new List<Product>();
     }
 }

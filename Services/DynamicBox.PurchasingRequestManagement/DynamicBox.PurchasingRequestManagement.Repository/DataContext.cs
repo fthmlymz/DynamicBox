@@ -1,6 +1,7 @@
 ﻿using DynamicBox.PurchasingManagement.Core.Models.Company;
 using DynamicBox.PurchasingRequestManagement.Core.Models;
 using DynamicBox.PurchasingRequestManagement.Core.Models.MaterialDemand;
+using DynamicBox.PurchasingRequestManagement.Core.Models.Product;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
@@ -19,9 +20,9 @@ namespace DynamicBox.PurchasingManagement.Repository
         }
 
         public DbSet<Company> Companies { get; set; }
-        public DbSet<MaterialList> MaterialLists { get; set; }
         public DbSet<MaterialDemand> MaterialDemands { get; set; }
         public DbSet<MaterialDemandDetail> MaterialDemandDetails { get; set; }
+        public DbSet<Product> Products { get; set; }
 
 
 
@@ -30,6 +31,12 @@ namespace DynamicBox.PurchasingManagement.Repository
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
             base.OnModelCreating(modelBuilder);
+
+            ////Many-to-many relationship cascade properties
+            //foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
+            //{
+            //    relationship.DeleteBehavior = DeleteBehavior.NoAction;
+            //}
         }
 
 

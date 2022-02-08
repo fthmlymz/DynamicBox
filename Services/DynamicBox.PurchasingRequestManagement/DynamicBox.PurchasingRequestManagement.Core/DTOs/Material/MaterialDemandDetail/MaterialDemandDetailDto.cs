@@ -2,12 +2,11 @@
 {
     public class MaterialDemandDetailDto: BaseDto
     {
-        public string StockNo { get; set; } = null!;
-        public string StockName { get; set; } = null!;
-        public long Total { get; set; }
-        public decimal Price { get; set; }
+        public string StockName { get; set; }
+        public long TotalDemand { get; set; }
 
 
         public long MaterialDemandId { get; set; }
+        public long ProductId { get; set; }
     }
 }

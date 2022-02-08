@@ -1,97 +1,111 @@
-<div class="material-demands">
-  <ngx-spinner
-    bdColor="rgba(51,51,51,0.8)"
-    size="medium"
-    color="#fff"
-    type="ball-scale-multiple"
-  >
-    <p style="font-size: 20px; color: white">Yükleniyor...</p>
-  </ngx-spinner>
-
-  <table mat-table [dataSource]="materialDemands" class="mat-elevation-z8">
-
-    <!-- Position Column -->
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef> Id </th>
-      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-    </ng-container>
-
-    <!-- Name Column -->
-    <ng-container matColumnDef="description">
-      <th mat-header-cell *matHeaderCellDef> Açıklama </th>
-      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
-    </ng-container>
-
-    <!-- Weight Column -->
-    <ng-container matColumnDef="createdUserId">
-      <th mat-header-cell *matHeaderCellDef> Oluşturan Id </th>
-      <td mat-cell *matCellDef="let element"> {{element.createdUserId}} </td>
-    </ng-container>
-
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="createdUserName">
-      <th mat-header-cell *matHeaderCellDef> Oluşturan Adı </th>
-      <td mat-cell *matCellDef="let element"> {{element.createdUserName}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="status">
-      <th mat-header-cell *matHeaderCellDef> Durum </th>
-      <td mat-cell *matCellDef="let element"> {{element.status}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="companyId">
-      <th mat-header-cell *matHeaderCellDef> Şirket kodu </th>
-      <td mat-cell *matCellDef="let element"> {{element.companyId}} </td>
-    </ng-container>
-
-
-    <!-- Action Column-->
-    <ng-container matColumnDef="actions">
-      <mat-header-cell  *matHeaderCellDef > Actions </mat-header-cell>
-      <mat-cell *matCellDef="let row" >
-
-        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-          <mat-icon>more_vert</mat-icon>
-        </button>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item
-                  (click)="clickedRows.add(row)"
-                  [class.demo-row-is-clicked]="clickedRows.has(row)"
-          >
-            <mat-icon>dialpad</mat-icon>
-            <span>Detaylara Git</span>
-          </button>
-
-          <button mat-menu-item disabled>
-            <mat-icon>voicemail</mat-icon>
-            <span>Sil</span>
-          </button>
-        </mat-menu>
-
-      </mat-cell>
-    </ng-container>
-
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="onRowClicked(row)"></tr>
-    <!--
-    <mat-row mat-row *matRowDef="let row; columns: displayedColumns;" (click)="onRowClicked(row)"></mat-row>
-    !-->
-  </table>
-
-  <mat-paginator [pageSizeOptions]="[5, 10, 20]"
-                 showFirstLastButtons
-                 aria-label="Select page of periodic elements">
-  </mat-paginator>
-
-
-  <ul>
-    <li *ngFor="let clickedRow of clickedRows">
-      Clicked on {{clickedRow.description}}
-    </li>
-  </ul>
+<!--loading check spinner show -->
+<div class="material-demands-query"
+     *ngIf="demandsService.loading else spinnerHideLoaded"
+     [hidden]="spinnerTransition.spinner.show()">
 </div>
 
+<!--loading check spinner hide -->
+<ng-template #spinnerHideLoaded>
+  <div [hidden]="spinnerTransition.spinner.hide()"></div>
+</ng-template>
+<app-ngx-general-spinner></app-ngx-general-spinner>
+
+
+<!--emptyTemplate - horizontalTemplate check -->
+<div *ngIf="totalCount > 0; else emptyTemplate">
+  <ng-container *ngTemplateOutlet="horizontalTemplate" ></ng-container>
+</div>
+
+
+<!-- Empty Template -->
+<ng-template #emptyTemplate>
+  <mat-card>
+    <div class="alert-danger" role="alert" *ngIf="!demandsService.loading">
+      <mat-card-title>Herhangi bir talepte bulunmadınız...</mat-card-title>
+    </div>
+    <mat-card-actions>
+      <button type="button"
+              class="btn btn-primary">Yeni talep oluştur
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</ng-template>
+
+
+
+<!-- Horizontal Template -->
+<ng-template #horizontalTemplate>
+  <div>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+
+      <!-- Id Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+      <!-- Description Column -->
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef> Açıklama </th>
+        <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+      </ng-container>
+
+      <!-- Created User Id Column -->
+      <ng-container matColumnDef="createdUserId">
+        <th mat-header-cell *matHeaderCellDef> Oluşturan Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.createdUserId}} </td>
+      </ng-container>
+
+      <!-- Created User Name Column -->
+      <ng-container matColumnDef="createdUserName">
+        <th mat-header-cell *matHeaderCellDef> Oluşturan Adı </th>
+        <td mat-cell *matCellDef="let element"> {{element.createdUserName}} </td>
+      </ng-container>
+
+      <!-- Status Column -->
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef> Durum </th>
+        <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+      </ng-container>
+
+      <!-- Company Id Column -->
+      <ng-container matColumnDef="companyId">
+        <th mat-header-cell *matHeaderCellDef> Şirket kodu </th>
+        <td mat-cell *matCellDef="let element"> {{element.companyId}} </td>
+      </ng-container>
+
+      <!-- Actions Column -->
+      <ng-container matColumnDef="actions">
+        <mat-header-cell  *matHeaderCellDef > Actions </mat-header-cell>
+        <mat-cell *matCellDef="let row" >
+
+          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item
+                    (click)="onRowClicked(row)"
+                    [routerLink]="['details', row.id]">
+              <mat-icon>dialpad</mat-icon> <span>Detaylara Git</span> </button>
+
+            <button mat-menu-item disabled> <mat-icon>voicemail</mat-icon> <span>Sil</span> </button>
+          </mat-menu>
+
+        </mat-cell>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="onRowClicked(row)"></tr>
+    </table>
+    <mat-paginator #paginator
+                   [pageSize]="pageSize"
+                   [pageSizeOptions]="pageSizeOptions"
+                   [length]="totalCount"
+                   (page)="onChangePage($event)"
+                   aria-label="Sayfa seçimi">
+    </mat-paginator>
+  </div>
+</ng-template>
 
 
 <router-outlet></router-outlet>

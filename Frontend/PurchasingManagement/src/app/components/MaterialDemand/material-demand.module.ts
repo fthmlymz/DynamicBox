@@ -8,10 +8,15 @@ import {MatTableModule} from "@angular/material/table";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatSortModule} from "@angular/material/sort";
 import {MatIconModule} from "@angular/material/icon";
-import {NgxSpinnerModule} from "ngx-spinner";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatButtonModule} from "@angular/material/button";
 import { NgxPaginationModule } from "ngx-pagination";
+import {SharedModuleModule} from "../shared-components/shared-module.module";
+import {MatCardModule} from "@angular/material/card";
+import {MatTabsModule} from "@angular/material/tabs";
+
+
+
 
 const routes: Routes = [
   {
@@ -45,17 +50,19 @@ const routes: Routes = [
     MaterialDetailsComponent,
     MaterialHistoryComponent
   ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes),
-    NgxPaginationModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatIconModule,
-    NgxSpinnerModule,
-    MatMenuModule,
-    MatButtonModule
-  ]
+    imports: [
+        CommonModule,
+        RouterModule.forChild(routes),
+        NgxPaginationModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatSortModule,
+        MatIconModule,
+        MatMenuModule,
+        MatButtonModule,
+        SharedModuleModule,
+        MatCardModule,
+        MatTabsModule
+    ]
 })
 export class MaterialDemandModule { }

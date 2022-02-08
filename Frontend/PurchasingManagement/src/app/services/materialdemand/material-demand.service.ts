@@ -8,23 +8,31 @@ import {tap} from "rxjs/operators";
 @Injectable({
   providedIn: 'root'
 })
+
 export class MaterialDemandService {
-  private apiUrl:string = `${environment.baseUrl}/api/materialdemands`;
-  public loading:boolean = true;
+  private apiUrl: string = `${environment.baseUrl}/api`;
+  public loading: boolean = true;
 
 
   constructor(
-    private httpClient:HttpClient
+    private httpClient: HttpClient
   ) {
 
   }
 
+  //https://localhost:2009/api/materialdemands/1/10  birinci sayfadan 10 tane getir
   public getMaterialDemands (page: number, pageSize: number) {
-    let api=`${this.apiUrl}/${page}/${pageSize}`;
-    console.log("Burası servis : " ,{page, pageSize});
+    let api=`${this.apiUrl}/materialdemands/${page}/${pageSize}`;
     return this.httpClient.get<{data: MaterialDemandsModel[]}>(api).pipe(tap(x =>{
       this.loading = false;
+    }));
+  }
 
+  //https://localhost:2009/api/MaterialDemands/GetMaterialDemandsWithDetails?id=23   numaralı kaydın detaylarını getir
+  public getMaterialDemandsWithDetails(id:number){
+    let api = `${this.apiUrl}/MaterialDemands/GetMaterialDemandsWithDetails?id=${id}`;
+    return this.httpClient.get<{data: MaterialDemandsModel[]}>(api).pipe(tap(x => {
+      this.loading = false;
     }));
   }
 

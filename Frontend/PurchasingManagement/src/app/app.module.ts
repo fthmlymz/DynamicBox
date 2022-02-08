@@ -18,26 +18,27 @@ import { MenuListComponent } from './layout/menu-list/menu-list.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     SideNavListComponent,
     MenuListComponent
   ],
-    imports: [
-      BrowserModule,
-      AppRoutingModule,
-      BrowserAnimationsModule,
-      MatSidenavModule,
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSidenavModule,
 
-      MatListModule,
-      MatIconModule,
-      MatMenuModule,
-      MatToolbarModule,
+    MatListModule,
+    MatIconModule,
+    MatMenuModule,
+    MatToolbarModule,
 
-      HttpClientModule,
-      MatButtonModule
-    ],
+    HttpClientModule,
+    MatButtonModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

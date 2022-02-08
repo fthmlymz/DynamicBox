@@ -18,9 +18,8 @@ namespace DynamicBox.PurchasingRequestManagement.Core.Models.MaterialDemand
 
 
 
-
         public ICollection<MaterialDemandDetail> MaterialDemandDetails { get; set; } = new List<MaterialDemandDetail>();
-        public ICollection<MaterialDemandHistory> MaterialDemandHistories { get; set; } 
+        public ICollection<MaterialDemandHistory> MaterialDemandHistories { get; set; }
         #endregion
     }
 }
