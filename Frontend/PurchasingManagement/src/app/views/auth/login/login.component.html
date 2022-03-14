@@ -1,0 +1,13 @@
+<div class="text-center border border-light p-5">
+
+  <p class="h4 mb-7">Sign in</p>
+
+  <input #emailInput matInput placeholder="Kullanıcı adı" class="form-control mb-2">
+
+  <input #passwordInput matInput placeholder="Şifre" class="form-control mb-2">
+
+  <button mat-raised-button
+          color="primary"
+          (click)="login(emailInput.value, passwordInput.value)">Giriş Yap</button>
+
+</div>

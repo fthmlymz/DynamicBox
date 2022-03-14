@@ -2,6 +2,7 @@
 using DynamicBox.PurchasingManagement.Core.Services;
 using DynamicBox.PurchasingRequestManagement.Core.DTOs.Material.MaterialDemandDetail;
 using DynamicBox.PurchasingRequestManagement.Core.Models.MaterialDemand;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DynamicBox.PurchasingManagement.API.Controllers
@@ -23,7 +24,7 @@ namespace DynamicBox.PurchasingManagement.API.Controllers
 
 
 
-
+        [Authorize(Policy = "UpdateOrCreate")]
         [HttpGet]
         public async Task<IActionResult> GetList()
         {

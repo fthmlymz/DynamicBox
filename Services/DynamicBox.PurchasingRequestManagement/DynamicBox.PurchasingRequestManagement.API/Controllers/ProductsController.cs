@@ -4,21 +4,20 @@ using DynamicBox.PurchasingRequestManagement.Core.DTOs;
 using DynamicBox.PurchasingRequestManagement.Core.DTOs.Product;
 using DynamicBox.PurchasingRequestManagement.Core.Models.Product;
 using DynamicBox.PurchasingRequestManagement.Core.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DynamicBox.PurchasingRequestManagement.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductController : CustomBaseController
+    public class ProductsController : CustomBaseController
     {
         private readonly IMapper _mapper;
         private readonly IService<Product> _service;
-        private readonly ILogger<ProductController> _logger;
+        private readonly ILogger<ProductsController> _logger;
         private readonly IProductService _productService;
 
-        public ProductController(IMapper mapper, IService<Product> service, ILogger<ProductController> logger, IProductService productService)
+        public ProductsController(IMapper mapper, IService<Product> service, ILogger<ProductsController> logger, IProductService productService)
         {
             _mapper = mapper;
             _service = service;
@@ -38,9 +37,10 @@ namespace DynamicBox.PurchasingRequestManagement.API.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProductById(int id)
         {
-            var product = await _productService.GetProductById(id);
-            var productDto = _mapper.Map<GetProductDto>(product);
-            return CreateActionResult(CustomResponseDto<GetProductDto>.Success(200, productDto));
+            //var product = await _productService.GetProductById(id);
+            //var productDto = _mapper.Map<List<GetProductDto>>(product);
+            //return CreateActionResult(CustomResponseDto<List<GetProductDto>>.Success(200, productDto));
+            return CreateActionResult(await _productService.GetProductById(id));
         }
 
 

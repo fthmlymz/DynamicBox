@@ -1,14 +1,19 @@
-import {MaterialDemandDetail} from "../material-demand-detail/material-demand-detail";
-
 export class MaterialDemandsModel {
   id: number | undefined;
-  description: string | undefined;
-  createdUserId: string | undefined;
-  createdUserName: string | undefined;
-  status: string | undefined;
-  companyId: string | undefined;
+  description!: string | undefined;
+  ldapId!: string | undefined;
+  sAMAAccountName!: string | undefined;
+  objectGuid!: string | undefined;
+  email!: string | undefined;
+  prefferedUserName!: string | undefined;
+  manager!: string | undefined;
+
+  companyName!: string | undefined;
+  status!: string | undefined;
+  companyId!: number | undefined;
   totalCount: number | undefined;
-
-  details: MaterialDemandDetail[] | undefined
-
+  workflowId!: string | undefined;
+  workflowDefinitionId!: string | undefined;
+  workflowName!: string | undefined;
+  workflowVersion!: number | undefined;
 }

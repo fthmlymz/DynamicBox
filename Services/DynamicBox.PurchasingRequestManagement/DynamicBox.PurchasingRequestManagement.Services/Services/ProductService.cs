@@ -28,7 +28,7 @@ namespace DynamicBox.PurchasingRequestManagement.Services.Services
             return CustomResponseDto<List<GetProductDto>>.Success(200, productsListDto);
         }
 
-        public async Task<CustomResponseDto<List<GetProductDto>>> GetProductById(int id)
+        public async Task<CustomResponseDto<List<GetProductDto>>> GetProductById(long id)
         {
             var product = await _repository.GetProductById(id);
             var productDto = _mapper.Map<List<GetProductDto>>(product);

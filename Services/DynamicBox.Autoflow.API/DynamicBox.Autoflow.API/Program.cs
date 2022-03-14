@@ -10,6 +10,9 @@ using Microsoft.AspNetCore.Mvc.Authorization;
 using System.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+
 ConfigurationManager configuration = builder.Configuration;
 IWebHostEnvironment environment = builder.Environment;
 
@@ -86,6 +89,18 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 
 
 
+#region Cors
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      builder =>
+                      {
+                          builder.WithOrigins("*",
+                                              "http://localhost:4200",
+                                              "https://localhost:4200");
+                      });
+});
+#endregion
 
 
 
@@ -96,6 +111,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "MainDashboard.API v1"));
 }
+
+app.UseCors(MyAllowSpecificOrigins);
+
+
 app.UseStaticFiles();
 app.UseRouting();
 app.UseCors();

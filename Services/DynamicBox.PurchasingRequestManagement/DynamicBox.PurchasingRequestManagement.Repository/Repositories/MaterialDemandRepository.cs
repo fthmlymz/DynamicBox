@@ -27,18 +27,27 @@ namespace DynamicBox.PurchasingRequestManagement.Repository.Repositories
                                        {
                                            Id = x.Id,
                                            Description = x.Description,
-                                           BusinessCode = x.BusinessCode,
-                                           CompanyId = x.CompanyId,
-                                           CreatedDate = x.CreatedDate,
-                                           CreatedUserId = x.CreatedUserId,
-                                           CreatedUserName = x.CreatedUserName,
+                                           LdapId = x.LdapId,
+                                           sAMAAccountName = x.sAMAAccountName,
+                                           ObjectGuid = x.ObjectGuid,
+                                           Email = x.Email,
+                                           PrefferedUserName = x.PrefferedUserName,
+                                           Manager = x.Manager,
                                            Status = x.Status,
+                                           WorkflowId = x.WorkflowId,
+                                           WorkflowDefinitionId = x.WorkflowDefinitionId,
+                                           WorkflowName = x.WorkflowName,
+                                           WorkflowVersion = x.WorkflowVersion,
+                                           CompanyId = x.CompanyId,
+                                           CompanyName = x.CompanyName,
+                                           CreatedDate = x.CreatedDate,
                                            UpdatedDate = x.UpdatedDate,
                                            TotalCount = totalCount,
                                        })
                                        .ToListAsync();
             return response;
         }
+
 
 
         public async Task<List<MaterialDemand>> GetMaterialDemandsWithCompany()

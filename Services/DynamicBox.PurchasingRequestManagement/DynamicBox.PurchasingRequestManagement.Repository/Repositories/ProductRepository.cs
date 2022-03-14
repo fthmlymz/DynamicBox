@@ -1,6 +1,5 @@
 ﻿using DynamicBox.PurchasingManagement.Repository;
 using DynamicBox.PurchasingManagement.Repository.Repositories;
-using DynamicBox.PurchasingRequestManagement.Core.DTOs.Product;
 using DynamicBox.PurchasingRequestManagement.Core.Models.Product;
 using DynamicBox.PurchasingRequestManagement.Core.Repositeries;
 using Microsoft.EntityFrameworkCore;
@@ -18,10 +17,9 @@ namespace DynamicBox.PurchasingRequestManagement.Repository.Repositories
             return await _context.Products.OrderByDescending(x => x.ProductName).ToListAsync();
         }
 
-        public async Task<List<Product>> GetProductById(int id)
+        public async Task<List<Product>> GetProductById(long id)
         {
             return await _context.Products.Where(x => x.Id == id)
-                                          .OrderByDescending(x => x.ProductName)
                                           .ToListAsync();
         }
     }

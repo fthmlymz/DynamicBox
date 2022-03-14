@@ -16,12 +16,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers(options =>
 {
     options.Filters.Add(new ValidateFilterAttribute());
-    //options.Filters.Add(new AuthorizeFilter()); //tüm kontrollerde authorize attribute etkinleþtirilmiþ olacak
+    //options.Filters.Add(new AuthorizeFilter()); //tï¿½m kontrollerde authorize attribute etkinleï¿½tirilmiï¿½ olacak
 }).AddFluentValidation(x =>
 {
     x.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 });
-//Filteryi özelleþtir.
+//Filteryi ozellestir.
 builder.Services.Configure<ApiBehaviorOptions>(options =>
 {
     options.SuppressModelStateInvalidFilter = true;
@@ -31,19 +31,48 @@ builder.Services.AddSwaggerGen();
 
 
 
-
+#region Cors
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy",
+        builder => builder.WithOrigins("https://localhost:4200", "http://localhost:4200", "https://localhost:2001", "http://localhost:2000") //"https://localhost:4200", "http://localhost:4200", "https://localhost:2001", "http://localhost:2000"
+        .AllowAnyMethod()
+        .AllowAnyHeader()
+        .WithMethods("Get", "Post", "Put", "Delete", "Options"));
+});
+#endregion
 
 
 //#region IdentityServer configuration
 //builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
 //{
-//    options.Authority = builder.Configuration["IdentityServerUrl"]; //token daðýtan identity server adresi verilecek
+//    options.Authority = builder.Configuration["IdentityServerUrl"]; //token daï¿½ï¿½tan identity server adresi verilecek
 //    options.Audience = "resource_purchasingmanagement";
 //});
 //#endregion
 
+#region Authorization
+//builder.Services.AddAuthorization(opts =>
+//{
+//    opts.AddPolicy("ReadPurchasingManagement", policy =>
+//    {
+//        policy.RequireClaim("scope", new[] { "purchasing.read" });
+//    });
 
-builder.Services.AddCors();
+//    opts.AddPolicy("UpdateOrCreate", policy =>
+//    {
+//        policy.RequireClaim("scope", new[] { "purchasing.create", "purchasing.update" });
+//    });
+
+//    opts.AddPolicy("DeletePurchasing", policy =>
+//    {
+//        policy.RequireClaim("scope", new[] { "purchasing.delete" });
+//    });
+//});
+#endregion
+
+
+
 
 
 
@@ -78,20 +107,19 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors(x => x
-                .AllowAnyMethod()
-                .AllowAnyHeader()
-                .SetIsOriginAllowed(origin => true) // allow any origin
-                .AllowCredentials());
-app.UseStaticFiles(); //api tarafýnda statik dosya tutmak için
+app.UseCors("CorsPolicy");
+
+
+app.UseStaticFiles(); //api tarafï¿½nda statik dosya tutmak iï¿½in
 app.UseHttpsRedirection();
 
 //Custom middleware
 app.UseCustomException();
 
 
-app.UseAuthorization();
 app.UseAuthentication();
+app.UseAuthorization();
+
 
 app.MapControllers();
 

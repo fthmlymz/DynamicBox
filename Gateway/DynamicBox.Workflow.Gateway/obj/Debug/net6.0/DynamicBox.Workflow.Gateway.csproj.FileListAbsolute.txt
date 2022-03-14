@@ -31,7 +31,6 @@ C:\Users\malfx001\Desktop\Workshop\Ahl.DynamicBox\Gateway\DynamicBox.Workflow.Ga
 C:\Users\malfx001\Desktop\Workshop\Ahl.DynamicBox\Gateway\DynamicBox.Workflow.Gateway\obj\Debug\net6.0\ref\DynamicBox.Workflow.Gateway.dll
 C:\Users\malfx001\Desktop\Workshop\Ahl.DynamicBox\Gateway\DynamicBox.Workflow.Gateway\obj\Debug\net6.0\DynamicBox.Workflow.Gateway.pdb
 C:\Users\malfx001\Desktop\Workshop\Ahl.DynamicBox\Gateway\DynamicBox.Workflow.Gateway\obj\Debug\net6.0\DynamicBox.Workflow.Gateway.genruntimeconfig.cache
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\Gateway\DynamicBox.Workflow.Gateway\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Gateway\DynamicBox.Workflow.Gateway\bin\Debug\net6.0\appsettings.json
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Gateway\DynamicBox.Workflow.Gateway\bin\Debug\net6.0\configuration.development.json
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Gateway\DynamicBox.Workflow.Gateway\bin\Debug\net6.0\configuration.production.json

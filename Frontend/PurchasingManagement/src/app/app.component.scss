@@ -9,3 +9,14 @@ mat-sidenav, mat-sidenav-content{
 mat-sidenav{
   background-color: lightcoral;
 }
+
+
+.content {
+  display: flex;
+  margin: 25px 1px 6px;
+
+  padding: 0 1px 1px 1px;
+  max-width: auto;
+  flex-direction: column;
+  align-items: stretch;
+}

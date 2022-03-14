@@ -74,6 +74,13 @@ namespace DynamicBox.IdentityServer
 
 
             builder.AddDeveloperSigningCredential();
+
+            ////sonradan eklendi.
+            //services.Configure<IISOptions>(iis =>
+            //{
+            //    iis.AuthenticationDisplayName = "Windows";
+            //    iis.AutomaticAuthentication = false;
+            //});
         }
 
         public void Configure(IApplicationBuilder app)

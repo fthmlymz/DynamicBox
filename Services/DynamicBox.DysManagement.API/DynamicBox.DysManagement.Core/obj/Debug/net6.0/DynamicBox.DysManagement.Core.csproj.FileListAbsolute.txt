@@ -2,6 +2,7 @@ C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.Core\bin\Debug\net6.0\DynamicBox.DysManagement.Core.dll
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.Core\bin\Debug\net6.0\ref\DynamicBox.DysManagement.Core.dll
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.Core\bin\Debug\net6.0\DynamicBox.DysManagement.Core.pdb
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.Core\obj\Debug\net6.0\DynamicBox.DysManagement.Core.csproj.AssemblyReference.cache
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.Core\obj\Debug\net6.0\DynamicBox.DysManagement.Core.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.Core\obj\Debug\net6.0\DynamicBox.DysManagement.Core.AssemblyInfoInputs.cache
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.DysManagement.API\DynamicBox.DysManagement.Core\obj\Debug\net6.0\DynamicBox.DysManagement.Core.AssemblyInfo.cs

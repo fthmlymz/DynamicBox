@@ -9,6 +9,7 @@ using Serilog;
 using Serilog.Events;
 using Serilog.Sinks.SystemConsole.Themes;
 using System;
+using System.IO;
 using System.Linq;
 
 namespace DynamicBox.IdentityServer
@@ -81,7 +82,11 @@ namespace DynamicBox.IdentityServer
                 .UseSerilog()
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder
+                    //.UseKestrel()
+                    //.UseContentRoot(Directory.GetCurrentDirectory())
+                    //.UseIISIntegration()
+                    .UseStartup<Startup>();
                 });
     }
 }

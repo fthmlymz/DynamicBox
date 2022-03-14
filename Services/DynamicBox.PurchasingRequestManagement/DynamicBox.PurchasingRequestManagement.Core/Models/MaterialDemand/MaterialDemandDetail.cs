@@ -13,7 +13,6 @@
 
         public long ProductId { get; set; }
         public Product.Product Products { get; set; }
-
         #endregion
     }
 }

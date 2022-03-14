@@ -8,6 +8,7 @@ namespace DynamicBox.PurchasingManagement.Core.Models.Company
     {
         public string? CompanyName { get; set; }
         public string? BusinessDescription { get; set; }
+        public string BusinessCode { get; set; }
 
 
 

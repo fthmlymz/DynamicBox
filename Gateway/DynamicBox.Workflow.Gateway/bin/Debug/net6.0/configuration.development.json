@@ -1,6 +1,142 @@
 {
   "Routes": [
     {
+      "DownstreamPathTemplate": "/realms/LDAP-Auth/protocol/openid-connect/token",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/services/auth/openid-connect/token",
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "5m",
+        "PeriodTimespan": 30,
+        "Limit": 10
+      },
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+
+
+    //Material Demands
+    {
+      "DownstreamPathTemplate": "/api/materialdemands/{everythings}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 2009
+        }
+      ],
+      "UpstreamPathTemplate": "/api/services/purchasing/materialdemands/{everythings}",
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 30,
+        "Limit": 10
+      },
+      "UpstreamHttpMethod": [ "Get", "Delete"]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/MaterialDemands",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 2009
+        }
+      ],
+      "UpstreamPathTemplate": "/api/services/purchasing/{everything}",
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 30,
+        "Limit": 10
+      },
+      "UpstreamHttpMethod": [ "Get", "Post", "Put"]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/materialdemands/GetMaterialDemandsWithDetails?{everythings}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 2009
+        }
+      ],
+      "UpstreamPathTemplate": "/api/services/purchasing/materialdemands/GetMaterialDemandsWithDetails?{everythings}",
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 30,
+        "Limit": 10
+      },
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+
+    //Autoflow
+    {
+      "DownstreamPathTemplate": "/v1/workflow-definitions",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 2005
+        }
+      ],
+      "UpstreamPathTemplate": "/api/services/autoflow/workflow-list",
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "3m",
+        "PeriodTimespan": 30,
+        "Limit": 20
+      },
+      "UpstreamHttpMethod": [ "GET" ]
+    }
+
+
+
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:2001"
+  }
+}
+
+
+//http://localhost:8080/realms/LDAP-Auth/protocol/openid-connect/token
+
+
+/*
+
+      {
+      "DownstreamPathTemplate": "/realms/LDAP-Auth/protocol/openid-connect/token",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/services/auth/{everything}",
+      "UpstreamHttpMethod": [ "Post" ],
+      "UpStreamScheme": "https"
+    }
+
+
+
+
+  "Routes": [
+    {
       "DownstreamPathTemplate": "/api/{everything}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -9,14 +145,10 @@
           "Port": 2007
         }
       ],
-      "UpstreamPathTemplate": "/services/document/{everything}",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "UpstreamPathTemplate": "/services/auth/token/{everything}",
+      "UpstreamHttpMethod": [ "Post" ],
       "UpStreamScheme": "https"
     }
   ],
 
-  "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:2001"
-  }
-}
-
+*/

@@ -6,7 +6,6 @@ namespace DynamicBox.PurchasingManagement.Core.DTOs.Company
     {
         public string? CompanyName { get; set; }
         public string? CompanyDescription { get; set; }
-
-        
+        public string BusinessCode { get; set; }
     }
 }

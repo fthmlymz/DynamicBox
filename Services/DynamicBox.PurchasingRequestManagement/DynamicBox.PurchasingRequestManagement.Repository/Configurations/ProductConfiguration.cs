@@ -14,7 +14,6 @@ namespace DynamicBox.PurchasingRequestManagement.Repository.Configurations
             builder.Property(x => x.ProductName).IsRequired().HasMaxLength(200);
             builder.Property(x => x.StockNo).IsRequired();
             builder.Property(x => x.CompanyId).IsRequired();
-            builder.Property(x => x.BusinessCode).IsRequired().HasMaxLength(200);
             builder.HasOne(x => x.Company).WithMany(x => x.Products).HasForeignKey(x => x.CompanyId); //.OnDelete(DeleteBehavior.NoAction);
         }
     }

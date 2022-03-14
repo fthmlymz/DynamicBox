@@ -6,6 +6,6 @@ namespace DynamicBox.PurchasingRequestManagement.Core.Repositeries
     public interface IProductRepository: IGenericRepository<Product>
     {
         Task<List<Product>> GetProductAll();
-        Task<List<Product>> GetProductById(int id);
+        Task<List<Product>> GetProductById(long id);
     }
 }

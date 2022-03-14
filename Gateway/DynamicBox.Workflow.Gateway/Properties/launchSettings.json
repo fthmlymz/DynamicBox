@@ -12,16 +12,16 @@
     "DynamicBox.Workflow.Gateway": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": true,
+      "launchBrowser": false,
       "launchUrl": "weatherforecast",
-      "applicationUrl": "https://localhost:7128;http://localhost:5128",
+      "applicationUrl": "https://localhost:2001;http://localhost:2000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
     "IIS Express": {
       "commandName": "IISExpress",
-      "launchBrowser": true,
+      "launchBrowser": false,
       "launchUrl": "weatherforecast",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

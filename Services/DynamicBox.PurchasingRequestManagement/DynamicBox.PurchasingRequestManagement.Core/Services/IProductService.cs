@@ -6,7 +6,7 @@ namespace DynamicBox.PurchasingRequestManagement.Core.Services
     public interface IProductService
     {
         Task<CustomResponseDto<List<GetProductDto>>> GetProductAll();
-        Task<CustomResponseDto<List<GetProductDto>>> GetProductById(int id);
+        Task<CustomResponseDto<List<GetProductDto>>> GetProductById(long id);
     }
 }
 

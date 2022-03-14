@@ -1,10 +1,10 @@
-import {Component, Input, OnDestroy, OnInit} from '@angular/core';
-import {MaterialDemandDetail} from "../../../models/material-demand-detail/material-demand-detail";
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
 import {MaterialDemandService} from "../../../services/materialdemand/material-demand.service";
-import {MaterialDemandsModel} from "../../../models/material-demands/material-demands-model";
 import {ActivatedRoute} from "@angular/router";
-import {ajax} from "rxjs/ajax";
+import {
+  MaterialDemandWithDetailModel
+} from "../../../models/material-demand-with-details-models/material-demand-with-detail-model/material-demand-with-detail-model";
 
 @Component({
   selector: 'app-material-details',
@@ -13,10 +13,10 @@ import {ajax} from "rxjs/ajax";
 })
 export class MaterialDetailsComponent implements OnInit, OnDestroy {
   displayedColumns: string[] = [
-    'id', 'stockNo', 'stockName', 'total', 'price', 'materialDemandId', 'createdDate', 'updatedDate', 'businessCode'
+   'id', 'stockName' //'materialDemandId', 'productId',  'totalDemand', 'createdDate', 'updatedDate', 'materialDemandDetails'
   ];
-  materialsDetails: MaterialDemandsModel[] = []; //MaterialDemandDetail[] = [];
-  dataSource = new MatTableDataSource<MaterialDemandsModel>(this.materialsDetails);
+  materialsDetails: MaterialDemandWithDetailModel[] = [];
+  dataSource = new MatTableDataSource<MaterialDemandWithDetailModel>(this.materialsDetails);
   ajax:any;
 
   constructor(
@@ -26,16 +26,15 @@ export class MaterialDetailsComponent implements OnInit, OnDestroy {
 
   getMaterialDemandsWithDetails(id: number){
     this.demandsService.getMaterialDemandsWithDetails(id).subscribe(data => {
-      this.dataSource.data =  data.data;
-      console.log(data.data);
+      this.materialsDetails =  data.data;
+      console.log("materials",this.materialsDetails);
     });
   }
 
   ngOnInit(): void {
-    this.ajax = this.getMaterialDemandsWithDetails(23);
-
     let id = this.route.snapshot.paramMap.get("id");
-    console.log(id);
+    this.ajax = this.getMaterialDemandsWithDetails(Number(id));
+    //console.log(id);
   }
 
   //farklı sayfaya geçişlerde ajax isteğini iptal et ve server yorma

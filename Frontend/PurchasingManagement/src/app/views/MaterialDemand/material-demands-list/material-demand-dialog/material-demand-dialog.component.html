@@ -1,0 +1,56 @@
+<h1 mat-dialog-title>
+  Malzeme Talep :: <strong>{{ action }}</strong>
+</h1>
+<div class="dialog-form">
+  <form [formGroup]="ownerForm">
+
+    <!-- Workflow -> Approve Type-->
+    <mat-form-field class="dialog-full-width" appearance="fill">
+      <mat-label>Onay Tipi</mat-label>
+      <input
+        matInput
+        required
+        aria-label="Onay Tipi"
+        formControlName="workflowName"
+        [matAutocomplete]="auto"
+        [value]="material.workflowName"
+        [formControl]="workflowsCtrl">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option
+          *ngFor="let state of filteredStates | async"
+          [value]="state.displayName"
+          (onSelectionChange)="setWorkflowInfo(state)"
+        >
+          <span>{{ state.displayName }}</span> | <small>{{ state.id }}</small>
+        </mat-option>
+      </mat-autocomplete>
+      <mat-error>Bu alan gereklidir</mat-error>
+    </mat-form-field>
+
+    <!-- Description -->
+    <mat-form-field class="dialog-full-width" appearance="fill">
+      <mat-label>Açıklama</mat-label>
+      <input
+        matInput
+        aria-label="Açıklama"
+        (ngModelChange)="material.description = $event"
+        formControlName="description">
+      <mat-error>Bu alan gereklidir</mat-error>
+    </mat-form-field>
+
+    <div mat-dialog-actions>
+      <button
+        mat-button
+        (click)="doAction()"
+        mat-flat-button
+        color="primary"
+        [disabled]="!ownerForm?.valid"
+      >
+        {{ action }}
+      </button>
+      <button mat-button (click)="closeDialog()" mat-flat-button color="warn">
+        Kapat
+      </button>
+    </div>
+  </form>
+</div>

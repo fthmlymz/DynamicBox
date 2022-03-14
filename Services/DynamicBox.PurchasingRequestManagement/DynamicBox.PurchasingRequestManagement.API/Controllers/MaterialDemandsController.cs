@@ -6,8 +6,7 @@ using DynamicBox.PurchasingRequestManagement.Core.DTOs.Material.MaterialDemand;
 using DynamicBox.PurchasingRequestManagement.Core.Models.MaterialDemand;
 using DynamicBox.PurchasingRequestManagement.Core.Services;
 using Microsoft.AspNetCore.Mvc;
-
-
+using System.Diagnostics;
 
 namespace DynamicBox.PurchasingManagement.API.Controllers
 {
@@ -72,10 +71,15 @@ namespace DynamicBox.PurchasingManagement.API.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] MaterialDemandDto createMaterial)
+        public async Task<IActionResult> Create(MaterialDemandDto createMaterial)
         {
             var material = await _service.AddAsync(_mapper.Map<MaterialDemand>(createMaterial));
             var materialDto = _mapper.Map<MaterialDemandDto>(material);
+            Console.WriteLine(material);
+            Debug.WriteLine(material);
+
+            Console.WriteLine(materialDto);
+            Debug.WriteLine(materialDto);
             //return Ok(materialDto);
             return CreateActionResult(CustomResponseDto<MaterialDemandDto>.Success(201, materialDto));
         }

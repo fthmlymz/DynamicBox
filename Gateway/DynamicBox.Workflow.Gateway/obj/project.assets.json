@@ -2,55 +2,55 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "FluentValidation/9.3.0": {
+      "FluentValidation/10.3.6": {
         "type": "package",
         "compile": {
-          "lib/net5.0/FluentValidation.dll": {}
+          "lib/net6.0/FluentValidation.dll": {}
         },
         "runtime": {
-          "lib/net5.0/FluentValidation.dll": {}
+          "lib/net6.0/FluentValidation.dll": {}
         }
       },
-      "Microsoft.AspNetCore.JsonPatch/5.0.0": {
+      "Microsoft.AspNetCore.JsonPatch/6.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
-          "Newtonsoft.Json": "12.0.2"
+          "Newtonsoft.Json": "13.0.1"
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll": {}
+          "lib/net6.0/Microsoft.AspNetCore.JsonPatch.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll": {}
+          "lib/net6.0/Microsoft.AspNetCore.JsonPatch.dll": {}
         }
       },
-      "Microsoft.AspNetCore.MiddlewareAnalysis/5.0.0": {
+      "Microsoft.AspNetCore.MiddlewareAnalysis/6.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
         },
         "compile": {
-          "lib/net5.0/Microsoft.AspNetCore.MiddlewareAnalysis.dll": {}
+          "lib/net6.0/Microsoft.AspNetCore.MiddlewareAnalysis.dll": {}
         },
         "runtime": {
-          "lib/net5.0/Microsoft.AspNetCore.MiddlewareAnalysis.dll": {}
+          "lib/net6.0/Microsoft.AspNetCore.MiddlewareAnalysis.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Microsoft.AspNetCore.Mvc.NewtonsoftJson/5.0.0": {
+      "Microsoft.AspNetCore.Mvc.NewtonsoftJson/6.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.JsonPatch": "5.0.0",
-          "Newtonsoft.Json": "12.0.2",
+          "Microsoft.AspNetCore.JsonPatch": "6.0.1",
+          "Newtonsoft.Json": "13.0.1",
           "Newtonsoft.Json.Bson": "1.0.2"
         },
         "compile": {
-          "lib/net5.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll": {}
+          "lib/net6.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll": {}
         },
         "runtime": {
-          "lib/net5.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll": {}
+          "lib/net6.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -65,16 +65,19 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "Microsoft.Extensions.DiagnosticAdapter/3.1.10": {
+      "Microsoft.Extensions.DiagnosticAdapter/3.1.22": {
         "type": "package",
         "dependencies": {
           "System.Diagnostics.DiagnosticSource": "4.7.1"
@@ -86,7 +89,7 @@
           "lib/netcoreapp2.0/Microsoft.Extensions.DiagnosticAdapter.dll": {}
         }
       },
-      "Newtonsoft.Json/12.0.2": {
+      "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -107,19 +110,19 @@
           "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {}
         }
       },
-      "Ocelot/17.0.1": {
+      "Ocelot/18.0.0": {
         "type": "package",
         "dependencies": {
-          "FluentValidation": "9.3.0",
-          "Microsoft.AspNetCore.MiddlewareAnalysis": "5.0.0",
-          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "5.0.0",
-          "Microsoft.Extensions.DiagnosticAdapter": "3.1.10"
+          "FluentValidation": "10.3.6",
+          "Microsoft.AspNetCore.MiddlewareAnalysis": "6.0.1",
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "6.0.1",
+          "Microsoft.Extensions.DiagnosticAdapter": "3.1.22"
         },
         "compile": {
-          "lib/net5.0/Ocelot.dll": {}
+          "lib/net6.0/Ocelot.dll": {}
         },
         "runtime": {
-          "lib/net5.0/Ocelot.dll": {}
+          "lib/net6.0/Ocelot.dll": {}
         }
       },
       "System.Diagnostics.DiagnosticSource/4.7.1": {
@@ -134,28 +137,31 @@
     }
   },
   "libraries": {
-    "FluentValidation/9.3.0": {
-      "sha512": "C44l6Ih+YwpED/TsXfl6LIq6Z4wLXahstnr6T70uUg1Hs7/bLBKKAo9Nl0sLhVjDE8TA+fF+O3IM4nDrwabcSQ==",
+    "FluentValidation/10.3.6": {
+      "sha512": "iMd370ZDx6ydm8t7bIFdRbSKX0e42lpvCtifUSbTSXOk5iKjmgl7HU0PXBhIWQAyIRi3gCwfMI9luj8H6K+byw==",
       "type": "package",
-      "path": "fluentvalidation/9.3.0",
+      "path": "fluentvalidation/10.3.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.9.3.0.nupkg.sha512",
+        "fluentvalidation.10.3.6.nupkg.sha512",
         "fluentvalidation.nuspec",
-        "lib/net461/FluentValidation.dll",
-        "lib/net461/FluentValidation.xml",
         "lib/net5.0/FluentValidation.dll",
         "lib/net5.0/FluentValidation.xml",
+        "lib/net6.0/FluentValidation.dll",
+        "lib/net6.0/FluentValidation.xml",
         "lib/netstandard2.0/FluentValidation.dll",
-        "lib/netstandard2.0/FluentValidation.xml"
+        "lib/netstandard2.0/FluentValidation.xml",
+        "lib/netstandard2.1/FluentValidation.dll",
+        "lib/netstandard2.1/FluentValidation.xml"
       ]
     },
-    "Microsoft.AspNetCore.JsonPatch/5.0.0": {
-      "sha512": "oy/fvnBHpofNPskGcCrzZv1AhY36YHV0lyWy9NC5ye5eHvEJeJsSKjn2fNk/j1lXOuF13H9qrvZrA9zNkymy5Q==",
+    "Microsoft.AspNetCore.JsonPatch/6.0.1": {
+      "sha512": "vLgQbgudEQfGNaGyAvm+jlfLHu5Ynav8/RnhwM0QaKFjVW2crEOGm7tRHHjM5iofF8VZnEYfyvUvyK82dBej1w==",
       "type": "package",
-      "path": "microsoft.aspnetcore.jsonpatch/5.0.0",
+      "path": "microsoft.aspnetcore.jsonpatch/6.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -163,39 +169,41 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net461/Microsoft.AspNetCore.JsonPatch.dll",
         "lib/net461/Microsoft.AspNetCore.JsonPatch.xml",
+        "lib/net6.0/Microsoft.AspNetCore.JsonPatch.dll",
+        "lib/net6.0/Microsoft.AspNetCore.JsonPatch.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.xml",
-        "microsoft.aspnetcore.jsonpatch.5.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.jsonpatch.6.0.1.nupkg.sha512",
         "microsoft.aspnetcore.jsonpatch.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.MiddlewareAnalysis/5.0.0": {
-      "sha512": "7NUO/bQKjrxMunpeqaCJ1cPAxxTRjwsbRlyp7lhfR/QQMPr4hYS5mXAL+nnpumJX9kQbhaskfc6QKMm6RFz4pQ==",
+    "Microsoft.AspNetCore.MiddlewareAnalysis/6.0.1": {
+      "sha512": "qghcWvZrYsanZtVYauEWsaXarvRppbMh2lZIFPJhgGyylG/KABLDOaNG74zvwvvMS2RLv5IDJduIw9eVLYGhxw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.middlewareanalysis/5.0.0",
+      "path": "microsoft.aspnetcore.middlewareanalysis/6.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net5.0/Microsoft.AspNetCore.MiddlewareAnalysis.dll",
-        "lib/net5.0/Microsoft.AspNetCore.MiddlewareAnalysis.xml",
-        "microsoft.aspnetcore.middlewareanalysis.5.0.0.nupkg.sha512",
+        "lib/net6.0/Microsoft.AspNetCore.MiddlewareAnalysis.dll",
+        "lib/net6.0/Microsoft.AspNetCore.MiddlewareAnalysis.xml",
+        "microsoft.aspnetcore.middlewareanalysis.6.0.1.nupkg.sha512",
         "microsoft.aspnetcore.middlewareanalysis.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Mvc.NewtonsoftJson/5.0.0": {
-      "sha512": "EnGI7CGWaijTuvUxY0lncAp/q/R7HZJCm8NwqiUHxDjrEWYdC/5oOHafVgNjVpk2zLsDesyaGnJundLnw5KNVA==",
+    "Microsoft.AspNetCore.Mvc.NewtonsoftJson/6.0.1": {
+      "sha512": "UMMDrtDzY1tug3Q6RFmgtknJ65nj3IxI/iVqrRFwKDIeiiBc8DMfxS1cZPWfaGmPfVulgaa8qHvQijaLpa8p7Q==",
       "type": "package",
-      "path": "microsoft.aspnetcore.mvc.newtonsoftjson/5.0.0",
+      "path": "microsoft.aspnetcore.mvc.newtonsoftjson/6.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net5.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll",
-        "lib/net5.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.xml",
-        "microsoft.aspnetcore.mvc.newtonsoftjson.5.0.0.nupkg.sha512",
+        "lib/net6.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll",
+        "lib/net6.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.xml",
+        "microsoft.aspnetcore.mvc.newtonsoftjson.6.0.1.nupkg.sha512",
         "microsoft.aspnetcore.mvc.newtonsoftjson.nuspec"
       ]
     },
@@ -268,30 +276,35 @@
         "version.txt"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {
-      "sha512": "ORj7Zh81gC69TyvmcUm9tSzytcy8AVousi+IVRAI8nLieQjOFryRusSFh7+aLk16FN9pQNqJAiMd7BTKINK0kA==",
+    "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
+      "sha512": "xlzi2IYREJH3/m6+lUrQlujzX8wDitm4QGnUu6kUXTQAWPuZY8i+ticFJbzfqaetLA6KR/rO6Ew/HuYD+bxifg==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/5.0.0",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "buildTransitive/netcoreapp3.1/_._",
         "lib/net461/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/net461/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.abstractions.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.DiagnosticAdapter/3.1.10": {
-      "sha512": "09cu88Zv52jA/jSz8T4+P3zLQa7+7tGGBeOAXbTUVOwPAGahA7/vOAqWbPhVKSFbkERPWG87ZQldwz+KxQc8Dg==",
+    "Microsoft.Extensions.DiagnosticAdapter/3.1.22": {
+      "sha512": "/XNnZI0vTnaYS5phEw6iDmtB7zLBvdqb9mV6uHCH/DM9eXRVlHCRAE4TTG+mM/1dI+XKQJMOnzVNlD/yHSiKQQ==",
       "type": "package",
-      "path": "microsoft.extensions.diagnosticadapter/3.1.10",
+      "path": "microsoft.extensions.diagnosticadapter/3.1.22",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -302,14 +315,14 @@
         "lib/netcoreapp2.0/Microsoft.Extensions.DiagnosticAdapter.xml",
         "lib/netstandard2.0/Microsoft.Extensions.DiagnosticAdapter.dll",
         "lib/netstandard2.0/Microsoft.Extensions.DiagnosticAdapter.xml",
-        "microsoft.extensions.diagnosticadapter.3.1.10.nupkg.sha512",
+        "microsoft.extensions.diagnosticadapter.3.1.22.nupkg.sha512",
         "microsoft.extensions.diagnosticadapter.nuspec"
       ]
     },
-    "Newtonsoft.Json/12.0.2": {
-      "sha512": "rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
+    "Newtonsoft.Json/13.0.1": {
+      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "type": "package",
-      "path": "newtonsoft.json/12.0.2",
+      "path": "newtonsoft.json/13.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -328,12 +341,9 @@
         "lib/netstandard1.3/Newtonsoft.Json.xml",
         "lib/netstandard2.0/Newtonsoft.Json.dll",
         "lib/netstandard2.0/Newtonsoft.Json.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.12.0.2.nupkg.sha512",
-        "newtonsoft.json.nuspec"
+        "newtonsoft.json.13.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "Newtonsoft.Json.Bson/1.0.2": {
@@ -357,15 +367,15 @@
         "newtonsoft.json.bson.nuspec"
       ]
     },
-    "Ocelot/17.0.1": {
-      "sha512": "1I23FR6HMJ5G4Hb3lShnFyQTvCCIdSNYg7ilANsLN18bMVLpoKKb5q71nOnWoXECtTc7vUw5d9LmDNyc71J5ZQ==",
+    "Ocelot/18.0.0": {
+      "sha512": "HAde/NLh+q1Szm54p218hKrd4ceYdNZ2UrfcTBbxJpSmPtXq0ER95otSLP+fnrFLT2UULUdkRL4noDZmG1A4AQ==",
       "type": "package",
-      "path": "ocelot/17.0.1",
+      "path": "ocelot/18.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net5.0/Ocelot.dll",
-        "ocelot.17.0.1.nupkg.sha512",
+        "lib/net6.0/Ocelot.dll",
+        "ocelot.18.0.0.nupkg.sha512",
         "ocelot.nuspec"
       ]
     },
@@ -398,7 +408,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Ocelot >= 17.0.1"
+      "Ocelot >= 18.0.0"
     ]
   },
   "packageFolders": {
@@ -447,7 +457,7 @@
         "dependencies": {
           "Ocelot": {
             "target": "Package",
-            "version": "[17.0.1, )"
+            "version": "[18.0.0, )"
           }
         },
         "imports": [
