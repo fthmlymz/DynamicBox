@@ -19,8 +19,29 @@ using IdentityServerHost.Quickstart.UI;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\DynamicBox.IdentityServer\Views\_ViewImports.cshtml"
+using DynamicBox.IdentityServer.Controllers;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\DynamicBox.IdentityServer\Views\_ViewImports.cshtml"
+using DynamicBox.IdentityServer.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\DynamicBox.IdentityServer\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1153869b15d77367f0b67f72b46a84a2621a5f33", @"/Views/Account/Logout.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5a00496e1714fb62801584a343cc1019e13a800a", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0071b7600413bb53f16f53b39f243aca97f8e472", @"/Views/_ViewImports.cshtml")]
     public class Views_Account_Logout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<LogoutViewModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Logout", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -50,7 +71,7 @@ using IdentityServerHost.Quickstart.UI;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("\r\n<div class=\"logout-page\">\r\n    <div class=\"lead\">\r\n        <h1>Logout</h1>\r\n        <p>Would you like to logut of IdentityServer?</p>\r\n    </div>\r\n\r\n    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1153869b15d77367f0b67f72b46a84a2621a5f333613", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1153869b15d77367f0b67f72b46a84a2621a5f334320", async() => {
                 WriteLiteral("\r\n        <input type=\"hidden\" name=\"logoutId\"");
                 BeginWriteAttribute("value", " value=\"", 251, "\"", 274, 1);
 #nullable restore

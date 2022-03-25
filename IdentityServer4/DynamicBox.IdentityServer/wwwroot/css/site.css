@@ -22,3 +22,14 @@
       height: 100px; }
   .grants-page .card label {
     font-weight: bold; }
+
+
+
+.btn {
+    width: 75px;
+}
+
+.imageThumbnail {
+    height: 200px;
+    width: auto;
+}

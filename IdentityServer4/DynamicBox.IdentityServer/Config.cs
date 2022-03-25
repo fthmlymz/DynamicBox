@@ -1,93 +1,85 @@
-﻿using IdentityServer4;
+﻿using IdentityModel;
+using IdentityServer4;
 using IdentityServer4.Models;
+using IdentityServer4.Test;
 using System;
 using System.Collections.Generic;
+using System.Security.Claims;
 
 namespace DynamicBox.IdentityServer
 {
     public static class Config
     {
-        //Api resource tanımlama
-        public static IEnumerable<ApiResource> ApiResources => new ApiResource[]
+        #region ApiResources
+        public static IEnumerable<ApiResource> GetApiResources()
         {
-            new ApiResource("resource_elsaserver"){Scopes={ "elsa_server_fullpermission" } },
-            new ApiResource("resource_documentmanagement"){Scopes={ "documentmanagement_fullpermission" } },
-            new ApiResource("resource_purchasingmanagement"){Scopes={"purchasing_management_fullpermission"}},
-            new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
-        };
-        public static IEnumerable<IdentityResource> IdentityResources =>
-                   new IdentityResource[]
-                   {
-                       new IdentityResources.Email(),
-                       new IdentityResources.OpenId(),
-                       new IdentityResources.Profile(),
-                       new IdentityResources.Phone(),
-                       new IdentityResources.Address(),
-                       new IdentityResource(){
-                           Name="roles",
-                           DisplayName="Roles",
-                           Description= "Kullanıcı rolleri",
-                           UserClaims=new[]{"role"} }
-                   };
-
-        public static IEnumerable<ApiScope> ApiScopes =>
-            new ApiScope[]
-            {
-            new ApiScope("elsa_server_fullpermission", "Elsa Server için full erişim"),
-            new ApiScope("documentmanagement_fullpermission",  "Döküman yonetim için tam yetki"),
-            new ApiScope("purchasing_management_fullpermission", "Satın alma yönetim uygulaması tam yetki"),
-            new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
+            return new List<ApiResource>() {
+                //new ApiResource("resource_purchasing"){Scopes= {"purchasing.create", "purchasing.read", "purchasing.update", "purchasing.delete"}},
+                new ApiResource("resource_purchasing"){Scopes= {"purchasing.create", "purchasing.read", "purchasing.update", "purchasing.delete"} },
+                new ApiResource("api1", "My API", new[] { JwtClaimTypes.Subject, JwtClaimTypes.Email, JwtClaimTypes.PhoneNumber })
+                //new ApiResource("resource_purchasing", "My Roles", new[] { "role" }),
             };
-
-        public static IEnumerable<Client> Clients =>
-            new Client[] {
-                //new Client
-                //{
-                //    ClientName = "DynamicBox Workflow IdentityServer",
-                //    ClientId = "DynamicBoxWorkflow",
-                //    ClientSecrets = {new Secret("6E7179457315DB81CBFB9BFAA3C8BB729B".Sha256())},
-                //    AllowedGrantTypes= GrantTypes.ClientCredentials,
-                //    AllowedScopes =
-                //    {
-                //        "elsa_server_fullpermission",
-                //        "documentmanagement_fullpermission",
-                //        "purchasing_management_fullpermission",
-                //        IdentityServerConstants.LocalApi.ScopeName
-                //    }
-                //},
-
-                //new Client
-                //{
-                //    ClientName = "DynamicBox Workflow IdentityServer",
-                //    ClientId = "DynamicBoxWorkflowForUser",
-                //    AllowOfflineAccess=true,
-                //    ClientSecrets = {new Secret("6E7179457315DB81CBFB9BFAA3C8BB729B".Sha256())},
-                //    AllowedGrantTypes= GrantTypes.ResourceOwnerPassword,
-                //    AllowedScopes = {
-                //        IdentityServerConstants.LocalApi.ScopeName,
-                //        IdentityServerConstants.StandardScopes.Email,
-                //        IdentityServerConstants.StandardScopes.OpenId,
-                //        IdentityServerConstants.StandardScopes.Profile,
-                //        IdentityServerConstants.StandardScopes.Phone,
-                //        IdentityServerConstants.StandardScopes.Address,
-                //        IdentityServerConstants.StandardScopes.OfflineAccess, //refresh token üretebilmek için
-                //        "roles",
-
-                //        "elsa_server_fullpermission",
-                //        "documentmanagement_fullpermission",
-                //        "purchasing_management_fullpermission",
-                //    },
-                //    AccessTokenLifetime=3600, //1*60*60,
-                //    RefreshTokenExpiration=TokenExpiration.Absolute,
-                //    AbsoluteRefreshTokenLifetime=(int)(DateTime.Now.AddDays(60)-DateTime.Now).TotalSeconds,
-                //    RefreshTokenUsage = TokenUsage.ReUse
-                //},
+        }
+        #endregion
 
 
-
-                //LDAP
-                 new Client
+        #region Identity Resource
+        public static IEnumerable<IdentityResource> GetIdentityResources()
+        {
+            return new List<IdentityResource>()
+            {
+                new IdentityResources.OpenId(), //subject id, kullanıcının id numarası
+                new IdentityResources.Email(),
+                new IdentityResources.Profile(),
+                new IdentityResources.Phone(),
+                new IdentityResources.Address(),
+                //   new IdentityResource("roles", new[] { "role" })
+                new IdentityResource()
                 {
+                    Name="roles",
+                    DisplayName="Roles",
+                    Description= "Kullanıcı rolleri",
+                    UserClaims=new[]{"role"}
+                }
+            };
+        }
+        #endregion
+
+
+
+
+
+        #region Scopes
+        public static IEnumerable<ApiScope> GetApiScope()
+        {
+            return new List<ApiScope>()
+            {
+                #region Purchasing Management Permissions
+                new ApiScope("purchasing.create", "Satın Alma uygulaması yazma izni"),
+                new ApiScope("purchasing.read", "Satın Alma uygulaması okuma izni"),
+                new ApiScope("purchasing.update", "Satın Alma uygulaması güncelleme izni"),
+                new ApiScope("purchasing.delete", "Satın Alma uygulaması silme izni")
+	            #endregion
+            };
+        }
+        #endregion
+
+
+
+
+
+        #region Clients
+        public static IEnumerable<Client> GetClients()
+        {
+            return new List<Client>()
+            {
+                new Client()
+                {
+                    ClientId = "PurchasingClient",
+                    ClientSecrets = new[] { new Secret("secret".Sha256())},
+                    ClientName = "Purchasing Management",
+                    AllowedGrantTypes= GrantTypes.ResourceOwnerPassword,
+
                     Enabled = true,
                     AccessTokenType = AccessTokenType.Jwt,
                     AlwaysSendClientClaims = true,
@@ -96,32 +88,41 @@ namespace DynamicBox.IdentityServer
                     AllowAccessTokensViaBrowser = true,
                     IncludeJwtId = true,
 
-                    ClientName = "DynamicBox Workflow IdentityServer - Ldap",
-                    ClientId = "DynamicBoxWorkflowLdap",
-                    AllowOfflineAccess=true,
-                    ClientSecrets = {new Secret("6E7179457315DB81CBFB9BFAA3C8BB729B".Sha256())},
-                    AllowedGrantTypes= GrantTypes.ClientCredentials,
-                    AllowedScopes = {
+                    RedirectUris = new List<string>{$"https://localhost:2003/signin-oidc"},
+                    PostLogoutRedirectUris = new List<string>{$"https://localhost:2003/signout-callback-oidc"},//IdentityServer üzerinde logout olduğunda nereye yönlendirilecekse
+
+                     AllowedScopes = {
                         IdentityServerConstants.LocalApi.ScopeName,
                         IdentityServerConstants.StandardScopes.Email,
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
                         IdentityServerConstants.StandardScopes.Phone,
                         IdentityServerConstants.StandardScopes.Address,
-                        IdentityServerConstants.StandardScopes.OfflineAccess, //refrash token üretebilmek için
+                        IdentityServerConstants.StandardScopes.OfflineAccess, //refresh token üretebilmek için
                         "roles",
 
-                        "elsa_server_fullpermission",
-                        "documentmanagement_fullpermission",
-                        "purchasing_management_fullpermission",
+                        "purchasing.create",
+                        "purchasing.read",
+                        "purchasing.update",
+                        "purchasing.delete"
                     },
-                    AccessTokenLifetime=3600, //1*60*60,
-                    RefreshTokenExpiration=TokenExpiration.Absolute,
-                    AbsoluteRefreshTokenLifetime=(int)(DateTime.Now.AddDays(60)-DateTime.Now).TotalSeconds,
-                    RefreshTokenUsage = TokenUsage.ReUse
-                }
 
+                    AllowOfflineAccess=true, //refresh token yayınlanması için
+                    AccessTokenLifetime= 4*60*60, //3600, //1*60*60,  //3600 1 saate tekamul ediyor
+                    //Absolute kesin verilen süre sonunda ömrü biter,
+                    //Sliding=Standartı 15 gündür, 15 gün içinde istek yapılırsa refresh token süresini 15 gün daha uzatır.
+                    RefreshTokenExpiration=TokenExpiration.Absolute,
+
+
+                    AbsoluteRefreshTokenLifetime=(int)(DateTime.Now.AddDays(60)-DateTime.Now).TotalSeconds,
+
+                    //OneTimeOnly sadece bir kere kullanılabilir,
+                    //ReUse = ömrü boyunca kullanabilir
+                    RefreshTokenUsage = TokenUsage.ReUse  
+                }
             };
+        }
+        #endregion
     }
 }
 

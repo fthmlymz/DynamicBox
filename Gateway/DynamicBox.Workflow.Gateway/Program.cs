@@ -1,42 +1,57 @@
-    using Ocelot.DependencyInjection;
-    using Ocelot.Middleware;
 
-    var builder = WebApplication.CreateBuilder(args);
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Ocelot.DependencyInjection;
+using Ocelot.Middleware;
 
-
-    builder.Services.AddOcelot();
-
-    #region Cors
-    builder.Services.AddCors(options =>
-    {
-        options.AddPolicy("CorsPolicy",
-            builder => builder.WithOrigins("https://localhost:4200", "http://localhost:4200") //"https://localhost:4200", "http://localhost:4200"
-            .AllowAnyMethod()
-            .AllowAnyHeader()
-            .WithMethods("Get", "Post", "Put", "Delete", "Options"));
-    });
-    #endregion
+var builder = WebApplication.CreateBuilder(args);
 
 
-    builder.WebHost.ConfigureAppConfiguration((hostingContext, config) =>
-    {
-        config
-            .SetBasePath(hostingContext.HostingEnvironment.ContentRootPath)
-            //.AddJsonFile("appsettings.json", true, true)
-            .AddJsonFile($"configuration.{hostingContext.HostingEnvironment.EnvironmentName.ToLower()}.json", true, true)
-            .AddJsonFile("configuration.development.json")
-            .AddJsonFile($"configuration.{hostingContext.HostingEnvironment.EnvironmentName.ToLower()}.json")
-            .AddEnvironmentVariables();
-    });
+builder.Services.AddOcelot();
 
-    var app = builder.Build();
-    app.UseHttpsRedirection();
+#region Cors
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy",
+        builder => builder.WithOrigins("https://localhost:4200", "http://localhost:4200") //"https://localhost:4200", "http://localhost:4200"
+        .AllowAnyMethod()
+        .AllowAnyHeader()
+        .WithMethods("Get", "Post", "Put", "Delete", "Options"));
+});
+#endregion
 
 
-    await app.UseOcelot();
+builder.WebHost.ConfigureAppConfiguration((hostingContext, config) =>
+{
+    config
+        .SetBasePath(hostingContext.HostingEnvironment.ContentRootPath)
+        //.AddJsonFile("appsettings.json", true, true)
+        .AddJsonFile($"configuration.{hostingContext.HostingEnvironment.EnvironmentName.ToLower()}.json", true, true)
+        .AddJsonFile("configuration.development.json")
+        .AddJsonFile($"configuration.{hostingContext.HostingEnvironment.EnvironmentName.ToLower()}.json")
+        .AddEnvironmentVariables();
+});
 
-    app.UseCors("CorsPolicy");
+#region KeyCloak Server -> JWT Auth
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+    options.Authority = builder.Configuration["KeyCloakServerUrl"];
+    options.Audience = "PurchasingManagementGateway";
+});
+#endregion
 
-    //app.UseHttpsRedirection();
 
-    app.Run();
+
+var app = builder.Build();
+app.UseHttpsRedirection();
+
+
+await app.UseOcelot();
+
+app.UseCors("CorsPolicy");
+
+//app.UseHttpsRedirection();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.Run();

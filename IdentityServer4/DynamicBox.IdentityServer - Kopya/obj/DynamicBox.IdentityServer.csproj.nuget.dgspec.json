@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\malfx001\\Desktop\\Workshop\\BlokLand\\IdentityServer4\\DynamicBox.IdentityServer\\DynamicBox.IdentityServer.csproj": {}
+    "C:\\Users\\malfx001\\Desktop\\Workshop\\DynamicBox\\IdentityServer4\\DynamicBox.IdentityServer\\DynamicBox.IdentityServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\malfx001\\Desktop\\Workshop\\BlokLand\\IdentityServer4\\DynamicBox.IdentityServer\\DynamicBox.IdentityServer.csproj": {
+    "C:\\Users\\malfx001\\Desktop\\Workshop\\DynamicBox\\IdentityServer4\\DynamicBox.IdentityServer\\DynamicBox.IdentityServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\malfx001\\Desktop\\Workshop\\BlokLand\\IdentityServer4\\DynamicBox.IdentityServer\\DynamicBox.IdentityServer.csproj",
+        "projectUniqueName": "C:\\Users\\malfx001\\Desktop\\Workshop\\DynamicBox\\IdentityServer4\\DynamicBox.IdentityServer\\DynamicBox.IdentityServer.csproj",
         "projectName": "DynamicBox.IdentityServer",
-        "projectPath": "C:\\Users\\malfx001\\Desktop\\Workshop\\BlokLand\\IdentityServer4\\DynamicBox.IdentityServer\\DynamicBox.IdentityServer.csproj",
+        "projectPath": "C:\\Users\\malfx001\\Desktop\\Workshop\\DynamicBox\\IdentityServer4\\DynamicBox.IdentityServer\\DynamicBox.IdentityServer.csproj",
         "packagesPath": "C:\\Users\\malfx001\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\malfx001\\Desktop\\Workshop\\BlokLand\\IdentityServer4\\DynamicBox.IdentityServer\\obj\\",
+        "outputPath": "C:\\Users\\malfx001\\Desktop\\Workshop\\DynamicBox\\IdentityServer4\\DynamicBox.IdentityServer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -25,14 +25,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\malfx001\\Desktop\\Workshop\\LibraryPackage\\local-packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\malfx001\\Desktop\\Workshop\\BlokLand\\Shared\\DynamicBox.Workflow.Shared\\DynamicBox.Workflow.Shared.csproj": {
-                "projectPath": "C:\\Users\\malfx001\\Desktop\\Workshop\\BlokLand\\Shared\\DynamicBox.Workflow.Shared\\DynamicBox.Workflow.Shared.csproj"
+              "C:\\Users\\malfx001\\Desktop\\Workshop\\DynamicBox\\Shared\\DynamicBox.Workflow.Shared\\DynamicBox.Workflow.Shared.csproj": {
+                "projectPath": "C:\\Users\\malfx001\\Desktop\\Workshop\\DynamicBox\\Shared\\DynamicBox.Workflow.Shared\\DynamicBox.Workflow.Shared.csproj"
               }
             }
           }
@@ -47,10 +48,6 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
-            "IdentityServer.LdapExtension": {
-              "target": "Package",
-              "version": "[3.1.0, )"
-            },
             "IdentityServer4.AspNetIdentity": {
               "target": "Package",
               "version": "[4.0.0, )"
@@ -87,9 +84,17 @@
               "target": "Package",
               "version": "[3.1.5, )"
             },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[3.2.0, )"
+            },
+            "System.DirectoryServices": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             }
           },
           "imports": [
@@ -114,14 +119,14 @@
         }
       }
     },
-    "C:\\Users\\malfx001\\Desktop\\Workshop\\BlokLand\\Shared\\DynamicBox.Workflow.Shared\\DynamicBox.Workflow.Shared.csproj": {
+    "C:\\Users\\malfx001\\Desktop\\Workshop\\DynamicBox\\Shared\\DynamicBox.Workflow.Shared\\DynamicBox.Workflow.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\malfx001\\Desktop\\Workshop\\BlokLand\\Shared\\DynamicBox.Workflow.Shared\\DynamicBox.Workflow.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\malfx001\\Desktop\\Workshop\\DynamicBox\\Shared\\DynamicBox.Workflow.Shared\\DynamicBox.Workflow.Shared.csproj",
         "projectName": "DynamicBox.Workflow.Shared",
-        "projectPath": "C:\\Users\\malfx001\\Desktop\\Workshop\\BlokLand\\Shared\\DynamicBox.Workflow.Shared\\DynamicBox.Workflow.Shared.csproj",
+        "projectPath": "C:\\Users\\malfx001\\Desktop\\Workshop\\DynamicBox\\Shared\\DynamicBox.Workflow.Shared\\DynamicBox.Workflow.Shared.csproj",
         "packagesPath": "C:\\Users\\malfx001\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\malfx001\\Desktop\\Workshop\\BlokLand\\Shared\\DynamicBox.Workflow.Shared\\obj\\",
+        "outputPath": "C:\\Users\\malfx001\\Desktop\\Workshop\\DynamicBox\\Shared\\DynamicBox.Workflow.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -135,6 +140,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\malfx001\\Desktop\\Workshop\\LibraryPackage\\local-packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -163,6 +169,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

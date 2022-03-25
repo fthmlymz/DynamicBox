@@ -200,7 +200,12 @@
       "ProjectGuid": "f119a22b-394f-415b-8263-12ae4cb6427e",
       "DisplayName": "Solution Items",
       "ColorIndex": 6
+    },
+    "d10b79cc-12b2-4acc-b848-b1b6dd1e6833": {
+      "ProjectGuid": "d10b79cc-12b2-4acc-b848-b1b6dd1e6833",
+      "DisplayName": "DynamicBox.PurchasingManagement.Test",
+      "ColorIndex": 7
     }
   },
-  "NextColorIndex": 7
+  "NextColorIndex": 8
 }

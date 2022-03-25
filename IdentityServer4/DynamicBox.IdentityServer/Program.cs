@@ -57,7 +57,7 @@ namespace DynamicBox.IdentityServer
                             UserName = "fthmlymz",
                             Email = "fthmlymz@gmail.com",
                             BusinessCode = "42000"
-                        }, password: "Aa123456789*-+").Wait();
+                        }, password: "Aa123456789*-+").GetAwaiter().GetResult();
                     }
                 }
                 #endregion

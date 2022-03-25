@@ -1,6 +1,8 @@
-﻿using IdentityServer4;
-using DynamicBox.IdentityServer.Data;
+﻿using DynamicBox.IdentityServer.Data;
 using DynamicBox.IdentityServer.Models;
+using DynamicBox.IdentityServer.Services;
+using IdentityServer4;
+using IdentityServer4.Validation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -8,13 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using DynamicBox.IdentityServer.Services;
-using IdentityServer.LdapExtension.Extensions;
-using IdentityServer.LdapExtension.UserModel;
-using Microsoft.IdentityModel.Tokens;
-using System.Security.Cryptography;
-using System;
-using System.Security.Cryptography.X509Certificates;
+using System.Linq;
 
 namespace DynamicBox.IdentityServer
 {
@@ -38,10 +34,24 @@ namespace DynamicBox.IdentityServer
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("IdentityServerDbConnection")));
 
-            services.AddIdentity<ApplicationUser, IdentityRole>()
+            #region Identity Roles
+            services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+            {
+                options.Password.RequiredLength = 6;
+                options.Password.RequiredUniqueChars = 2;
+                options.Password.RequireNonAlphanumeric = false;
+            })
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
+            #endregion
 
+
+
+
+
+
+
+            #region Identity Server Configuration
             var builder = services.AddIdentityServer(options =>
             {
                 options.Events.RaiseErrorEvents = true;
@@ -49,38 +59,36 @@ namespace DynamicBox.IdentityServer
                 options.Events.RaiseFailureEvents = true;
                 options.Events.RaiseSuccessEvents = true;
                 options.EmitStaticAudienceClaim = true;
+                
             })
-                .AddInMemoryIdentityResources(Config.IdentityResources)
-                .AddInMemoryApiResources(Config.ApiResources)
-                .AddInMemoryApiScopes(Config.ApiScopes)
-                .AddInMemoryClients(Config.Clients)
+                .AddInMemoryIdentityResources(Config.GetIdentityResources())
+                .AddInMemoryApiResources(Config.GetApiResources())
+                .AddInMemoryApiScopes(Config.GetApiScope())
+                .AddInMemoryClients(Config.GetClients())
+                .AddDeveloperSigningCredential()
                 .AddAspNetIdentity<ApplicationUser>();
 
-            builder.AddResourceOwnerValidator<IdentityResourceOwnerPasswordValidator>();
-            builder.AddDeveloperSigningCredential();
-            //builder.AddLdapUsers<OpenLdapAppUser>(Configuration.GetSection("LdapServer"), UserStore.InMemory); // OpenLDAP
+            services.AddScoped<IResourceOwnerPasswordValidator, IdentityResourceOwnerPasswordValidator>();
+
+            #endregion
 
 
-            //builder.AddSigningCredential(); //LDAP doğrulama için
-            builder.AddLdapUsers<ActiveDirectoryAppUser>(Configuration.GetSection("LdapServer"), UserStore.InMemory);
+
+
+
+            //builder.AddDeveloperSigningCredential();
+
 
             services.AddAuthentication()
                 .AddGoogle(options =>
                 {
                     options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
                     options.ClientId = "DynamicBoxWorkflow";
-                    options.ClientSecret = "6E7179457315DB81CBFB9BFAA3C8BB729B";
+                    options.ClientSecret = "secret";
                 });
 
 
             builder.AddDeveloperSigningCredential();
-
-            ////sonradan eklendi.
-            //services.Configure<IISOptions>(iis =>
-            //{
-            //    iis.AuthenticationDisplayName = "Windows";
-            //    iis.AutomaticAuthentication = false;
-            //});
         }
 
         public void Configure(IApplicationBuilder app)
@@ -94,8 +102,10 @@ namespace DynamicBox.IdentityServer
             app.UseStaticFiles();
 
             app.UseRouting();
+
             app.UseIdentityServer();
             app.UseAuthorization();
+
             app.UseAuthentication();
             app.UseEndpoints(endpoints =>
             {

@@ -19,6 +19,7 @@ export class MaterialDemandService {
 
   httpHeaders = new HttpHeaders({
     'Content-Type': 'application/json',
+    Authorization: `Bearer ${localStorage.getItem('access_token')}`,
   });
 
   //GATEWAY -> GET -> get material demands 1/10

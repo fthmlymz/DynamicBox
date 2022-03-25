@@ -1,8 +1,6 @@
 ﻿using DynamicBox.IdentityServer.DTOs;
 using DynamicBox.IdentityServer.Models;
 using DynamicBox.Workflow.Shared.Dtos;
-using IdentityServer.LdapExtension.UserModel;
-using IdentityServer.LdapExtension.UserStore;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -18,12 +16,11 @@ namespace DynamicBox.IdentityServer.Controllers
     public class UserController : ControllerBase
     {
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly ILdapUserStore userStore = null;
+        //private readonly ILdapUserStore userStore = null;
 
-        public UserController(UserManager<ApplicationUser> userManager, ILdapUserStore userStore)
+        public UserController(UserManager<ApplicationUser> userManager)
         {
             _userManager = userManager;
-            this.userStore = userStore;
         }
 
         [HttpPost]

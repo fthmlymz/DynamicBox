@@ -6,28 +6,62 @@ using DynamicBox.PurchasingRequestManagement.API.Filters;
 using DynamicBox.PurchasingRequestManagement.API.MiddlewaresExtension;
 using DynamicBox.PurchasingRequestManagement.API.Modules;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using System.Reflection;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
+#region Health Check
+builder.Services.AddHealthChecks();
+#endregion
+
 builder.Services.AddControllers(options =>
 {
     options.Filters.Add(new ValidateFilterAttribute());
-    //options.Filters.Add(new AuthorizeFilter()); //t�m kontrollerde authorize attribute etkinle�tirilmi� olacak
+    //options.Filters.Add(new AuthorizeFilter()); //tum kontrollerde authorize attribute etkinle�tirilmis olacak
 }).AddFluentValidation(x =>
 {
     x.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 });
-//Filteryi ozellestir.
+//Filtereyi ozellestir.
 builder.Services.Configure<ApiBehaviorOptions>(options =>
 {
     options.SuppressModelStateInvalidFilter = true;
 });
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+#region Swagger
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "HastaTakip.API", Version = "v1" });
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer 1safsfsdfdfd\"",
+    });
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement {
+        {
+            new OpenApiSecurityScheme {
+                Reference = new OpenApiReference {
+                    Type = ReferenceType.SecurityScheme,
+                        Id = "Bearer"
+                }
+            },
+            new string[] {}
+        }
+    });
+});
+#endregion
 
 
 
@@ -43,33 +77,43 @@ builder.Services.AddCors(options =>
 #endregion
 
 
-//#region IdentityServer configuration
-//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
-//{
-//    options.Authority = builder.Configuration["IdentityServerUrl"]; //token da��tan identity server adresi verilecek
-//    options.Audience = "resource_purchasingmanagement";
-//});
-//#endregion
-
-#region Authorization
-//builder.Services.AddAuthorization(opts =>
-//{
-//    opts.AddPolicy("ReadPurchasingManagement", policy =>
-//    {
-//        policy.RequireClaim("scope", new[] { "purchasing.read" });
-//    });
-
-//    opts.AddPolicy("UpdateOrCreate", policy =>
-//    {
-//        policy.RequireClaim("scope", new[] { "purchasing.create", "purchasing.update" });
-//    });
-
-//    opts.AddPolicy("DeletePurchasing", policy =>
-//    {
-//        policy.RequireClaim("scope", new[] { "purchasing.delete" });
-//    });
-//});
+#region Identity Server 4 -> JWT Auth
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
+{
+    options.Authority = builder.Configuration["IdentityServer:Authority"];
+    options.Audience = "resource_purchasing";
+    options.RequireHttpsMetadata = false;
+    //options.TokenValidationParameters = new TokenValidationParameters
+    //{
+    //    RoleClaimType = "role" //token içindeki role al
+    //};
+});
+#region Authorization - Claims
+builder.Services.AddAuthorization(opts =>
+{
+    opts.AddPolicy("CreatePurchasingManagement", policy =>
+    {
+        policy.RequireClaim("scope", new[] { "purchasing.create" });
+    });
+    opts.AddPolicy("ReadPurchasingManagement", policy =>
+    {
+        policy.RequireClaim("scope", new[] { "purchasing.read" });
+    });
+    opts.AddPolicy("UpdatePurchasingManagement", policy =>
+    {
+        policy.RequireClaim("scope", new[] { "purchasing.update" });
+    });
+    opts.AddPolicy("DeletePurchasingManagement", policy =>
+    {
+        policy.RequireClaim("scope", new[] { "purchasing.delete" });
+    });
+});
 #endregion
+
+#endregion
+
+
+
 
 
 
@@ -110,17 +154,20 @@ if (app.Environment.IsDevelopment())
 app.UseCors("CorsPolicy");
 
 
-app.UseStaticFiles(); //api taraf�nda statik dosya tutmak i�in
+app.UseStaticFiles(); //api tarafinda statik dosya tutmak icin
 app.UseHttpsRedirection();
 
 //Custom middleware
 app.UseCustomException();
 
 
-app.UseAuthentication();
-app.UseAuthorization();
+app.UseAuthentication(); //Kimlik dogrulama
+app.UseAuthorization();  //Kimlik yetkilendirme
 
 
-app.MapControllers();
+#region Healt Check
+app.UseHealthChecks("/health");
+#endregion
+app.MapControllers().RequireAuthorization();
 
 app.Run();

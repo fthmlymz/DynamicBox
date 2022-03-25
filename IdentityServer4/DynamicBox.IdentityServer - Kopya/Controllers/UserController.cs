@@ -16,12 +16,13 @@ namespace DynamicBox.IdentityServer.Controllers
     public class UserController : ControllerBase
     {
         private readonly UserManager<ApplicationUser> _userManager;
+        //private readonly ILdapUserStore userStore = null;
 
         public UserController(UserManager<ApplicationUser> userManager)
         {
             _userManager = userManager;
         }
-        
+
         [HttpPost]
         public async Task<IActionResult> Signup(SignupDTO signupDto)
         {
@@ -40,5 +41,11 @@ namespace DynamicBox.IdentityServer.Controllers
 
             return Ok(ServiceResponse<NoContent>.Success(201));
         }
+
+
+
+
+
+
     }
 }

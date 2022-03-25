@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "0042f25e-cff2-49e3-bcfc-a0852b398b48": {
+      "ProjectGuid": "0042f25e-cff2-49e3-bcfc-a0852b398b48",
+      "DisplayName": "DynamicBox.IdentityServer",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
