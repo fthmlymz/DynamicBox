@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace DynamicBox.IdentityServer.Controllers
 {
 
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "SuperAdmin, Admin")]
     public class AdministrationController : Controller
     {
         private readonly RoleManager<IdentityRole> roleManager;

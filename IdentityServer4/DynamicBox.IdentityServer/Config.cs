@@ -2,6 +2,7 @@
 using IdentityServer4;
 using IdentityServer4.Models;
 using IdentityServer4.Test;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Security.Claims;
@@ -14,12 +15,19 @@ namespace DynamicBox.IdentityServer
         public static IEnumerable<ApiResource> GetApiResources()
         {
             return new List<ApiResource>() {
-                //new ApiResource("resource_purchasing"){Scopes= {"purchasing.create", "purchasing.read", "purchasing.update", "purchasing.delete"}},
-                new ApiResource("resource_purchasing"){Scopes= {"purchasing.create", "purchasing.read", "purchasing.update", "purchasing.delete"} },
-                new ApiResource("api1", "My API", new[] { JwtClaimTypes.Subject, JwtClaimTypes.Email, JwtClaimTypes.PhoneNumber })
+                new ApiResource("resource_purchasing"){Scopes= {"purchasing.create", "purchasing.read", "purchasing.update", "purchasing.delete"}},
+                //new ApiResource("resource_purchasing"){Scopes= {"purchasing.create", "purchasing.read", "purchasing.update", "purchasing.delete"} },
+                //new ApiResource("resource_purchasing", "My API", new[] { JwtClaimTypes.Subject, JwtClaimTypes.Email, JwtClaimTypes.PhoneNumber }),
+               // new ApiResource(IdentityConstants.ApiResources.IdentityServer, "Identity Server", new[] {JwtClaimTypes.Role, IdentityConstants.ClaimTypes.Permission})
                 //new ApiResource("resource_purchasing", "My Roles", new[] { "role" }),
             };
         }
+
+        //public static IEnumerable<ApiResource> GetApiResources => new ApiResource[]
+        //{
+        //    new ApiResource("resource_purchasing"){Scopes={ "purchasing.create", "purchasing.read", "purchasing.update", "purchasing.delete" } },
+        //    new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
+        //};
         #endregion
 
 
@@ -39,10 +47,25 @@ namespace DynamicBox.IdentityServer
                     Name="roles",
                     DisplayName="Roles",
                     Description= "Kullanıcı rolleri",
-                    UserClaims=new[]{"role"}
+                    UserClaims = { JwtClaimTypes.Role }
+                    //UserClaims=new[]{"role"}
                 }
             };
         }
+        //public static IEnumerable<IdentityResource> GetIdentityResources =>
+        //           new IdentityResource[]
+        //           {
+        //               new IdentityResources.Email(),
+        //               new IdentityResources.OpenId(),
+        //               new IdentityResources.Profile(),
+        //               new IdentityResources.Phone(),
+        //               new IdentityResources.Address(),
+        //               new IdentityResource(){
+        //                   Name="roles",
+        //                   DisplayName="Roles",
+        //                   Description= "Kullanıcı rolleri",
+        //                   UserClaims=new[]{"role"} }
+        //           };
         #endregion
 
 
@@ -59,9 +82,19 @@ namespace DynamicBox.IdentityServer
                 new ApiScope("purchasing.read", "Satın Alma uygulaması okuma izni"),
                 new ApiScope("purchasing.update", "Satın Alma uygulaması güncelleme izni"),
                 new ApiScope("purchasing.delete", "Satın Alma uygulaması silme izni")
-	            #endregion
+             #endregion
             };
         }
+
+        //public static IEnumerable<ApiScope> GetApiScope =>
+        //    new ApiScope[]
+        //    {
+        //    new ApiScope("purchasing.create", "Satın Alma uygulaması yazma izni"),
+        //    new ApiScope("purchasing.read",  "Satın Alma uygulaması okuma izni"),
+        //    new ApiScope("purchasing.update", "Satın Alma uygulaması güncelleme izni"),
+        //    new ApiScope("purchasing.delete", "Satın Alma uygulaması silme izni"),
+        //    new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
+        //    };
         #endregion
 
 
@@ -101,9 +134,10 @@ namespace DynamicBox.IdentityServer
                         IdentityServerConstants.StandardScopes.OfflineAccess, //refresh token üretebilmek için
                         "roles",
 
-                        "purchasing.create",
-                        "purchasing.read",
-                        "purchasing.update",
+                        "resource_purchasing",
+                        "purchasing.create", 
+                        "purchasing.read", 
+                        "purchasing.update", 
                         "purchasing.delete"
                     },
 
@@ -118,10 +152,56 @@ namespace DynamicBox.IdentityServer
 
                     //OneTimeOnly sadece bir kere kullanılabilir,
                     //ReUse = ömrü boyunca kullanabilir
-                    RefreshTokenUsage = TokenUsage.ReUse  
+                    RefreshTokenUsage = TokenUsage.ReUse
                 }
             };
         }
+
+        //public static IEnumerable<Client> GetClients =>
+        //    new Client[] {
+        //        //LDAP
+        //         new Client
+        //        {
+        //            Enabled = true,
+        //            AccessTokenType = AccessTokenType.Jwt,
+        //            AlwaysSendClientClaims = true,
+        //            UpdateAccessTokenClaimsOnRefresh = true,
+        //            AlwaysIncludeUserClaimsInIdToken = true,
+        //            AllowAccessTokensViaBrowser = true,
+        //            IncludeJwtId = true,
+
+        //            ClientName = "PurchasingClient",
+        //            ClientId = "PurchasingClient",
+        //            ClientSecrets = {new Secret("secret".Sha256())},
+        //            AllowedGrantTypes= GrantTypes.ResourceOwnerPassword,
+        //            AllowedScopes = {
+        //                IdentityServerConstants.LocalApi.ScopeName,
+        //                IdentityServerConstants.StandardScopes.Email,
+        //                IdentityServerConstants.StandardScopes.OpenId,
+        //                IdentityServerConstants.StandardScopes.Profile,
+        //                IdentityServerConstants.StandardScopes.Phone,
+        //                IdentityServerConstants.StandardScopes.Address,
+        //                IdentityServerConstants.StandardScopes.OfflineAccess, //refrash token üretebilmek için
+        //                "roles",
+
+        //                "resource_purchasing"
+        //            },
+
+        //            AllowOfflineAccess=true, //refresh token yayınlanması için
+        //            AccessTokenLifetime= 4*60*60, //3600, //1*60*60,  //3600 1 saate tekamul ediyor
+        //            //Absolute kesin verilen süre sonunda ömrü biter,
+        //            //Sliding=Standartı 15 gündür, 15 gün içinde istek yapılırsa refresh token süresini 15 gün daha uzatır.
+        //            RefreshTokenExpiration=TokenExpiration.Absolute,
+
+
+        //            AbsoluteRefreshTokenLifetime=(int)(DateTime.Now.AddDays(60)-DateTime.Now).TotalSeconds,
+
+        //            //OneTimeOnly sadece bir kere kullanılabilir,
+        //            //ReUse = ömrü boyunca kullanabilir
+        //            RefreshTokenUsage = TokenUsage.ReUse
+        //        }
+
+        //    };
         #endregion
     }
 }

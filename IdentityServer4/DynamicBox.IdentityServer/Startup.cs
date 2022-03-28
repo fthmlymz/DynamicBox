@@ -3,6 +3,7 @@ using DynamicBox.IdentityServer.Models;
 using DynamicBox.IdentityServer.Services;
 using IdentityServer4;
 using IdentityServer4.Validation;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -10,7 +11,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Logging;
 using System.Linq;
+using System.Reflection;
 
 namespace DynamicBox.IdentityServer
 {
@@ -34,6 +37,11 @@ namespace DynamicBox.IdentityServer
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("IdentityServerDbConnection")));
 
+
+            
+
+
+
             #region Identity Roles
             services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
@@ -47,11 +55,8 @@ namespace DynamicBox.IdentityServer
 
 
 
-
-
-
-
             #region Identity Server Configuration
+            var assemblyName = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
             var builder = services.AddIdentityServer(options =>
             {
                 options.Events.RaiseErrorEvents = true;
@@ -59,8 +64,17 @@ namespace DynamicBox.IdentityServer
                 options.Events.RaiseFailureEvents = true;
                 options.Events.RaiseSuccessEvents = true;
                 options.EmitStaticAudienceClaim = true;
-                
+
             })
+                .AddConfigurationStore(opts => //Config dosyasını db aktarmak icin
+                {
+                    opts.ConfigureDbContext = c => c.UseSqlServer(Configuration.GetConnectionString("IdentityServerDbConnection"), sqlOptions => sqlOptions.MigrationsAssembly(assemblyName));
+                })
+                .AddOperationalStore(opts => //Config dosyasını db aktarmak icin
+                {
+                    opts.ConfigureDbContext = c => c.UseSqlServer(Configuration.GetConnectionString("IdentityServerDbConnection"), sqlOptions => sqlOptions.MigrationsAssembly(assemblyName));
+                })
+                //.AddProfileService<ProfileService>()
                 .AddInMemoryIdentityResources(Config.GetIdentityResources())
                 .AddInMemoryApiResources(Config.GetApiResources())
                 .AddInMemoryApiScopes(Config.GetApiScope())
@@ -69,8 +83,14 @@ namespace DynamicBox.IdentityServer
                 .AddAspNetIdentity<ApplicationUser>();
 
             services.AddScoped<IResourceOwnerPasswordValidator, IdentityResourceOwnerPasswordValidator>();
-
             #endregion
+
+
+            ////connect/userinfo neye baktığını görmek için
+            //IdentityModelEventSource.ShowPII = true;
+
+
+
 
 
 

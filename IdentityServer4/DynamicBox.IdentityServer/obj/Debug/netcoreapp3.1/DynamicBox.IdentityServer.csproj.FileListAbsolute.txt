@@ -505,3 +505,6 @@ C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\DynamicBox.Identit
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\DynamicBox.IdentityServer\obj\Debug\netcoreapp3.1\DynamicBox.IdentityServer.dll
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\DynamicBox.IdentityServer\obj\Debug\netcoreapp3.1\DynamicBox.IdentityServer.pdb
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\DynamicBox.IdentityServer\obj\Debug\netcoreapp3.1\DynamicBox.IdentityServer.genruntimeconfig.cache
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\DynamicBox.IdentityServer\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\DynamicBox.IdentityServer\bin\Debug\netcoreapp3.1\IdentityServer4.EntityFramework.dll
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\DynamicBox.IdentityServer\bin\Debug\netcoreapp3.1\IdentityServer4.EntityFramework.Storage.dll

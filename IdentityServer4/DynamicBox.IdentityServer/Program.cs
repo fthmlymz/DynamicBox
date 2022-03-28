@@ -1,5 +1,7 @@
 ﻿using DynamicBox.IdentityServer.Data;
 using DynamicBox.IdentityServer.Models;
+using DynamicBox.IdentityServer.Seed;
+using IdentityServer4.EntityFramework.DbContexts;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -38,6 +40,17 @@ namespace DynamicBox.IdentityServer
             try
             {
                 var host = CreateHostBuilder(args).Build();
+
+                #region Config dosyasını DB ye yansıtmak icin
+                using (var serviceScope = host.Services.CreateScope())
+                {
+                    var services = serviceScope.ServiceProvider;
+                    var context = services.GetRequiredService<ConfigurationDbContext>();
+                    IdentityServerSeedData.Seed(context);
+                }
+                #endregion
+
+
 
                 #region Uygulama ilk ayağa kalktıktan sonra migrate et, kullanıcı yoksa kullanıcı oluştur.
                 //Otomatik olarak migration oluştur.
