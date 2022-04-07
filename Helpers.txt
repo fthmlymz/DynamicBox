@@ -1,0 +1,72 @@
+Bu projede resiliency uygulandý
+
+--Gateway
+    --DynamicBox.Workflow.Gateway               -- https://localhost:3000
+
+--IdentityServer
+    --DynamicBox.Admin                          -- https://localhost:2000
+    --DynamicBox.Admin.Api                      -- https://localhost:2001
+    --DynamicBox.STS.Identity                   -- https://localhost:2002
+
+
+--Services\DynamicBox.Autoflow.API
+    --DynamicBox.Autoflow.API                    -- https://localhost:3010
+
+
+--Services\DynamicBox.PurchasingRequestManagement.API
+    --DynamicBox.PurchasingRequestManagement.API  -- http://localhost:3020
+
+
+_____________________________________________________________________________
+Migrations
+
+    dotnet cli üzerinden db update komutlarý
+	dotnet ef migrations add initialCreate
+	dotnet ef database update
+
+add-migration initial
+update-database
+
+_____________________________________________________________________________
+Port Silme
+netstat -ano | findstr :2004
+taskkill /PID (listenin_numarasý yazýlacak) /F
+
+
+
+_____________________________________________________________________________
+Http Status Codes
+OK => returns the 200 status code
+NotFound => returns the 404 status code
+BadRequest => returns the 400 status code
+NoContent => returns the 204 status code
+Created, CreatedAtRoute, CreatedAtAction => returns the 201 status code
+Unauthorized => returns the 401 status code
+Forbid => returns the 403 status code
+StatusCode => returns the status code we provide as input
+
+
+100 information success
+200 success responses 
+300 redirect message
+400 client error response
+500 server erros
+
+
+
+
+
+________________________________________________________________________________________________________________________________________________________________________________
+Angular
+
+Yeni proje oluþturma: ng new PurchasingManagement   routing yapýlsýn ve scss seçilsin
+Proje çalýþtýrma    : ng serve -o
+Proje build etme    : ng build
+Component oluþturma : ng generate component home
+
+Modül oluþturma     : ng generate module home
+Ana klasör altýna Modül  oluþturma : ng generate module material-demand --flat   yazýldýðýnda direkt klasör içine oluþturur
+Servis oluþturma    : ng generate service servisadi
+Model oluþturma     : ng generate class modeladi
+________________________________________________________________________________________________________________________________________________________________________________
+

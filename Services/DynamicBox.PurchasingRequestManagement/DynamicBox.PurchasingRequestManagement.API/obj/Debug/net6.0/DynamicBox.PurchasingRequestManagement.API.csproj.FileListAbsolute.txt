@@ -15,12 +15,14 @@ C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequ
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.API\bin\Debug\net6.0\Humanizer.dll
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.API\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.API\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.API\bin\Debug\net6.0\Microsoft.Identity.Client.dll
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
@@ -72,4 +74,3 @@ C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequ
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.API\obj\Debug\net6.0\ref\DynamicBox.PurchasingRequestManagement.API.dll
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.API\obj\Debug\net6.0\DynamicBox.PurchasingRequestManagement.API.pdb
 C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.API\obj\Debug\net6.0\DynamicBox.PurchasingRequestManagement.API.genruntimeconfig.cache
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\Services\DynamicBox.PurchasingRequestManagement\DynamicBox.PurchasingRequestManagement.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll

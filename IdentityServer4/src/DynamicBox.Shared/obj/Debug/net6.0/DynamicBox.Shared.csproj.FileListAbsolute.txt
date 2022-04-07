@@ -1,0 +1,11 @@
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Shared\bin\Debug\net6.0\DynamicBox.Shared.deps.json
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Shared\bin\Debug\net6.0\DynamicBox.Shared.dll
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Shared\bin\Debug\net6.0\ref\DynamicBox.Shared.dll
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Shared\bin\Debug\net6.0\DynamicBox.Shared.pdb
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Shared\obj\Debug\net6.0\DynamicBox.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Shared\obj\Debug\net6.0\DynamicBox.Shared.AssemblyInfoInputs.cache
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Shared\obj\Debug\net6.0\DynamicBox.Shared.AssemblyInfo.cs
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Shared\obj\Debug\net6.0\DynamicBox.Shared.csproj.CoreCompileInputs.cache
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Shared\obj\Debug\net6.0\DynamicBox.Shared.dll
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Shared\obj\Debug\net6.0\ref\DynamicBox.Shared.dll
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Shared\obj\Debug\net6.0\DynamicBox.Shared.pdb

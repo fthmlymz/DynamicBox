@@ -1,0 +1,8 @@
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.Api\obj\Debug\net6.0\DynamicBox.Admin.Api.csproj.AssemblyReference.cache
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.Api\obj\Debug\net6.0\DynamicBox.Admin.Api.Resources.ApiErrorResource.resources
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.Api\obj\Debug\net6.0\DynamicBox.Admin.Api.csproj.GenerateResource.cache
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.Api\obj\Debug\net6.0\DynamicBox.Admin.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.Api\obj\Debug\net6.0\DynamicBox.Admin.Api.AssemblyInfoInputs.cache
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.Api\obj\Debug\net6.0\DynamicBox.Admin.Api.AssemblyInfo.cs
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.Api\obj\Debug\net6.0\DynamicBox.Admin.Api.csproj.CoreCompileInputs.cache
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.Api\obj\Debug\net6.0\DynamicBox.Admin.Api.MvcApplicationPartsAssemblyInfo.cache

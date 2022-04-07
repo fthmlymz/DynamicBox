@@ -1,0 +1,82 @@
+version: '3.4'
+
+services:
+  dynamicbox.admin:
+    image: skoruba-identityserver4-admin:dev
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "DynamicBox.Admin"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_dynamicbox.admin$
+    volumes:
+      - C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin:/app
+      - C:\Users\malfx001\Desktop\DynamicBox:/src
+      - C:\Users\malfx001\vsdbg\vs2017u5:/remote_debugger:rw
+#$nuget_volume_mapping_dynamicbox.admin$
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_dynamicbox.admin$ \"/app/bin/Debug/netcoreapp3.1/DynamicBox.Admin.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+  dynamicbox.admin.api:
+    image: skoruba-identityserver4-admin-api:dev
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "DynamicBox.Admin.Api"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_dynamicbox.admin.api$
+    volumes:
+      - C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.Api:/app
+      - C:\Users\malfx001\Desktop\DynamicBox:/src
+      - C:\Users\malfx001\vsdbg\vs2017u5:/remote_debugger:rw
+#$nuget_volume_mapping_dynamicbox.admin.api$
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_dynamicbox.admin.api$ \"/app/bin/Debug/netcoreapp3.1/DynamicBox.Admin.Api.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+
+  dynamicbox.sts.identity:
+    image: skoruba-identityserver4-sts-identity:dev
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "DynamicBox.STS.Identity"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_dynamicbox.sts.identity$
+    volumes:
+      - C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.STS.Identity:/app
+      - C:\Users\malfx001\Desktop\DynamicBox:/src
+      - C:\Users\malfx001\vsdbg\vs2017u5:/remote_debugger:rw
+#$nuget_volume_mapping_dynamicbox.sts.identity$
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_dynamicbox.sts.identity$ \"/app/bin/Debug/netcoreapp3.1/DynamicBox.STS.Identity.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true

@@ -1,0 +1,5 @@
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.EntityFramework.MySql\obj\Debug\net6.0\DynamicBox.Admin.EntityFramework.MySql.csproj.AssemblyReference.cache
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.EntityFramework.MySql\obj\Debug\net6.0\DynamicBox.Admin.EntityFramework.MySql.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.EntityFramework.MySql\obj\Debug\net6.0\DynamicBox.Admin.EntityFramework.MySql.AssemblyInfoInputs.cache
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.EntityFramework.MySql\obj\Debug\net6.0\DynamicBox.Admin.EntityFramework.MySql.AssemblyInfo.cs
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.EntityFramework.MySql\obj\Debug\net6.0\DynamicBox.Admin.EntityFramework.MySql.csproj.CoreCompileInputs.cache

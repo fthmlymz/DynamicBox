@@ -1,0 +1,9 @@
+﻿
+
+ConfigurationDbContext Database Yansıtmak için
+1-) add-migration Configuration -c ConfigurationDbContext
+2-) update-database -Context ConfigurationDbContext
+
+Refresh Token'ların tutulacağı GrantDbContext'i de yansıtmak için
+1-) add-migration Configuration -c PersistedGrantDbContext
+2-) update-database -Context PersistedGrantDbContext

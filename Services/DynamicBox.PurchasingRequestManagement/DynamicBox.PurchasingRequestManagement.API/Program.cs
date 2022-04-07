@@ -6,7 +6,9 @@ using DynamicBox.PurchasingRequestManagement.API.Filters;
 using DynamicBox.PurchasingRequestManagement.API.MiddlewaresExtension;
 using DynamicBox.PurchasingRequestManagement.API.Modules;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authentication.OAuth.Claims;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -78,16 +80,15 @@ builder.Services.AddCors(options =>
 
 
 #region Identity Server 4 -> JWT Auth
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
-{
-    options.Authority = builder.Configuration["IdentityServer:Authority"];
-    options.Audience = "resource_purchasing";
-    options.RequireHttpsMetadata = false;
-    //options.TokenValidationParameters = new TokenValidationParameters
-    //{
-    //    RoleClaimType = "role" //token içindeki role al
-    //};
-});
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
+                {
+                    options.Authority = builder.Configuration["IdentityServer:Authority"];
+                    options.Audience = "resource_purchasing";
+                    options.RequireHttpsMetadata = false;
+                    options.TokenValidationParameters.ValidTypes = new[] { "at+jwt" };
+                });
+
 #region Authorization - Claims
 builder.Services.AddAuthorization(opts =>
 {

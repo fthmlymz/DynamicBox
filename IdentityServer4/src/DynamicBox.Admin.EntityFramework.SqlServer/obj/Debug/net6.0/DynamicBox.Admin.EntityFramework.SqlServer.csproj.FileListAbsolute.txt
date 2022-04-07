@@ -1,0 +1,5 @@
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.EntityFramework.SqlServer\obj\Debug\net6.0\DynamicBox.Admin.EntityFramework.SqlServer.csproj.AssemblyReference.cache
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.EntityFramework.SqlServer\obj\Debug\net6.0\DynamicBox.Admin.EntityFramework.SqlServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.EntityFramework.SqlServer\obj\Debug\net6.0\DynamicBox.Admin.EntityFramework.SqlServer.AssemblyInfoInputs.cache
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.EntityFramework.SqlServer\obj\Debug\net6.0\DynamicBox.Admin.EntityFramework.SqlServer.AssemblyInfo.cs
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.EntityFramework.SqlServer\obj\Debug\net6.0\DynamicBox.Admin.EntityFramework.SqlServer.csproj.CoreCompileInputs.cache

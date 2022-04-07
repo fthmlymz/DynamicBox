@@ -1,0 +1,308 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = DynamicBox.Admin
+build_property.RootNamespace = DynamicBox.Admin
+build_property.ProjectDir = C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/ApiResource.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxBcGlSZXNvdXJjZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/ApiResourceDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxBcGlSZXNvdXJjZURlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/ApiResourceProperties.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxBcGlSZXNvdXJjZVByb3BlcnRpZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/ApiResourcePropertyDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxBcGlSZXNvdXJjZVByb3BlcnR5RGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/ApiResources.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxBcGlSZXNvdXJjZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/ApiResource/Section/Label.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxBcGlSZXNvdXJjZVxTZWN0aW9uXExhYmVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/ApiScopeDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxBcGlTY29wZURlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/ApiScopes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxBcGlTY29wZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/ApiSecretDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxBcGlTZWNyZXREZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/ApiSecrets.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxBcGlTZWNyZXRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/Client.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxDbGllbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/ClientClaimDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxDbGllbnRDbGFpbURlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/ClientClaims.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxDbGllbnRDbGFpbXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/ClientClone.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxDbGllbnRDbG9uZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/ClientDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxDbGllbnREZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/ClientProperties.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxDbGllbnRQcm9wZXJ0aWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/ClientPropertyDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxDbGllbnRQcm9wZXJ0eURlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/Clients.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxDbGllbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/ClientSecretDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxDbGllbnRTZWNyZXREZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/ClientSecrets.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxDbGllbnRTZWNyZXRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/Client/Section/ActionButtons.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxDbGllbnRcU2VjdGlvblxBY3Rpb25CdXR0b25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/Client/Section/Authentication.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxDbGllbnRcU2VjdGlvblxBdXRoZW50aWNhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/Client/Section/Basics.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxDbGllbnRcU2VjdGlvblxCYXNpY3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/Client/Section/Consent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxDbGllbnRcU2VjdGlvblxDb25zZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/Client/Section/DeviceFlow.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxDbGllbnRcU2VjdGlvblxEZXZpY2VGbG93LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/Client/Section/Label.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxDbGllbnRcU2VjdGlvblxMYWJlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/Client/Section/Name.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxDbGllbnRcU2VjdGlvblxOYW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/Client/Section/Token.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxDbGllbnRcU2VjdGlvblxUb2tlbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/Client/Settings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxDbGllbnRcU2V0dGluZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/IdentityResource.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxJZGVudGl0eVJlc291cmNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/IdentityResourceDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxJZGVudGl0eVJlc291cmNlRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/IdentityResourceProperties.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxJZGVudGl0eVJlc291cmNlUHJvcGVydGllcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/IdentityResourcePropertyDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxJZGVudGl0eVJlc291cmNlUHJvcGVydHlEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/IdentityResources.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxJZGVudGl0eVJlc291cmNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Configuration/IdentityResource/Section/Label.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdGlvblxJZGVudGl0eVJlc291cmNlXFNlY3Rpb25cTGFiZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Grant/PersistedGrant.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JhbnRcUGVyc2lzdGVkR3JhbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Grant/PersistedGrantDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JhbnRcUGVyc2lzdGVkR3JhbnREZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Grant/PersistedGrants.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JhbnRcUGVyc2lzdGVkR3JhbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Home/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Identity/Role.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlbnRpdHlcUm9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Identity/RoleClaims.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlbnRpdHlcUm9sZUNsYWltcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Identity/RoleClaimsDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlbnRpdHlcUm9sZUNsYWltc0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Identity/RoleDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlbnRpdHlcUm9sZURlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Identity/Roles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlbnRpdHlcUm9sZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Identity/RoleUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlbnRpdHlcUm9sZVVzZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Identity/Role/Section/Label.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlbnRpdHlcUm9sZVxTZWN0aW9uXExhYmVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Identity/UserChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlbnRpdHlcVXNlckNoYW5nZVBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Identity/UserClaims.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlbnRpdHlcVXNlckNsYWltcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Identity/UserClaimsDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlbnRpdHlcVXNlckNsYWltc0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Identity/UserDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlbnRpdHlcVXNlckRlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Identity/UserProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlbnRpdHlcVXNlclByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Identity/UserProviders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlbnRpdHlcVXNlclByb3ZpZGVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Identity/UserProvidersDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlbnRpdHlcVXNlclByb3ZpZGVyc0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Identity/UserRoles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlbnRpdHlcVXNlclJvbGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Identity/UserRolesDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlbnRpdHlcVXNlclJvbGVzRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Identity/Users.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlbnRpdHlcVXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Identity/User/Section/Label.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlbnRpdHlcVXNlclxTZWN0aW9uXExhYmVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Log/AuditLog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nXEF1ZGl0TG9nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Log/ErrorsLog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nXEVycm9yc0xvZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Shared/Common/ApplicationVersion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbW1vblxBcHBsaWNhdGlvblZlcnNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Shared/Common/ErrorPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbW1vblxFcnJvclBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Shared/Common/Notification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbW1vblxOb3RpZmljYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Shared/Common/Pager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbW1vblxQYWdlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Shared/Common/PagerDynamic.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbW1vblxQYWdlckR5bmFtaWMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Shared/Common/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbW1vblxTZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Shared/Common/SelectLanguage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbW1vblxTZWxlY3RMYW5ndWFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Shared/Components/IdentityServerLink/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcSWRlbnRpdHlTZXJ2ZXJMaW5rXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/malfx001/Desktop/DynamicBox/src/DynamicBox.Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

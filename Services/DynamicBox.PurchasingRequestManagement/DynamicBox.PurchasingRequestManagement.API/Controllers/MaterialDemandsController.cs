@@ -11,11 +11,12 @@ using System.Diagnostics;
 
 namespace DynamicBox.PurchasingManagement.API.Controllers
 {
+    //[Authorize(Policy = "ReadPurchasingManagement")]
+    [Authorize(Roles = "SuperAdmin, Admin, User")]
     [Route("api/[controller]")]
     [ApiController]
     public class MaterialDemandsController : CustomBaseController //ControllerBase
     {
-
         private readonly IMapper _mapper;
         private readonly IService<MaterialDemand> _service;
         private readonly ILogger<MaterialDemandsController> _logger;
@@ -40,7 +41,7 @@ namespace DynamicBox.PurchasingManagement.API.Controllers
         //}
         //[HttpGet("{page}/{pageSize}")]
         
-        [Authorize(Policy = "ReadPurchasingManagement")]
+        
         [HttpGet("{page}/{pageSize}")]
         public async Task<IActionResult> MaterialDemands(int page, int pageSize)
         {
@@ -54,7 +55,6 @@ namespace DynamicBox.PurchasingManagement.API.Controllers
 
 
         //[ServiceFilter(typeof(NotFoundFilter<MaterialDemand>))]
-        [Authorize(Policy = "ReadPurchasingManagement")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(long id)
         {
@@ -65,7 +65,6 @@ namespace DynamicBox.PurchasingManagement.API.Controllers
         }
 
 
-        [Authorize(Policy = "ReadPurchasingManagement")]
         [HttpGet("GetMaterialDemandsWithCompany")]
         public async Task<IActionResult> GetMaterialDemandsWithCompany()
         {
@@ -74,7 +73,6 @@ namespace DynamicBox.PurchasingManagement.API.Controllers
 
 
 
-        [Authorize(Policy = "CreatePurchasingManagement")]
         [HttpPost]
         public async Task<IActionResult> Create(MaterialDemandDto createMaterial)
         {
@@ -91,7 +89,6 @@ namespace DynamicBox.PurchasingManagement.API.Controllers
 
 
 
-        [Authorize(Policy = "UpdatePurchasingManagement")]
         [HttpPut]
         public async Task<IActionResult> Update([FromBody] MaterialDemandDto updateMaterial)
         {
@@ -103,7 +100,6 @@ namespace DynamicBox.PurchasingManagement.API.Controllers
 
 
         //[ServiceFilter(typeof(NotFoundFilter<MaterialDemand>))]
-        [Authorize(Policy = "DeletePurchasingManagement")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> Remove(long id)
         {
@@ -115,7 +111,6 @@ namespace DynamicBox.PurchasingManagement.API.Controllers
 
 
 
-        [Authorize(Policy = "ReadPurchasingManagement")]
         [HttpGet("GetMaterialDemandsWithDetails")]
         public async Task<IActionResult> GetMaterialDemandsWithDetails(long id)
         {

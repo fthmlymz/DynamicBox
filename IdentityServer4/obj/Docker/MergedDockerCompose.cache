@@ -1,0 +1,230 @@
+name: dockercompose17077800090986480609
+services:
+  db:
+    container_name: skoruba-identityserver4-db
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: Password_123
+    image: mcr.microsoft.com/mssql/server:2017-CU20-ubuntu-16.04
+    networks:
+      identityserverui: null
+    ports:
+    - mode: ingress
+      target: 1433
+      published: "7900"
+      protocol: tcp
+    volumes:
+    - type: volume
+      source: dbdata
+      target: /var/opt/mssql
+      volume: {}
+  dynamicbox.admin:
+    build:
+      context: C:\Users\malfx001\Desktop\DynamicBox
+      dockerfile: src/DynamicBox.Admin/Dockerfile
+    command:
+    - dotnet
+    - DynamicBox.Admin.dll
+    - /seed
+    container_name: skoruba-identityserver4-admin
+    depends_on:
+      db:
+        condition: service_started
+      dynamicbox.sts.identity:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      AdminConfiguration__IdentityAdminBaseUrl: https://admin.skoruba.local
+      AdminConfiguration__IdentityAdminRedirectUri: https://admin.skoruba.local/signin-oidc
+      AdminConfiguration__IdentityServerBaseUrl: https://sts.skoruba.local
+      AdminConfiguration__RequireHttpsMetadata: "false"
+      ConnectionStrings__AdminAuditLogDbConnection: Server=db;Database=IdentityServer4Admin;User
+        Id=sa;Password=Password_123;MultipleActiveResultSets=true
+      ConnectionStrings__AdminLogDbConnection: Server=db;Database=IdentityServer4Admin;User
+        Id=sa;Password=Password_123;MultipleActiveResultSets=true
+      ConnectionStrings__ConfigurationDbConnection: Server=db;Database=IdentityServer4Admin;User
+        Id=sa;Password=Password_123;MultipleActiveResultSets=true
+      ConnectionStrings__DataProtectionDbConnection: Server=db;Database=IdentityServer4Admin;User
+        Id=sa;Password=Password_123;MultipleActiveResultSets=true
+      ConnectionStrings__IdentityDbConnection: Server=db;Database=IdentityServer4Admin;User
+        Id=sa;Password=Password_123;MultipleActiveResultSets=true
+      ConnectionStrings__PersistedGrantDbConnection: Server=db;Database=IdentityServer4Admin;User
+        Id=sa;Password=Password_123;MultipleActiveResultSets=true
+      DockerConfiguration__UpdateCaCertificate: "true"
+      IdentityServerData__Clients__0__AllowedCorsOrigins__0: https://admin.skoruba.local
+      IdentityServerData__Clients__0__ClientUri: https://admin.skoruba.local
+      IdentityServerData__Clients__0__FrontChannelLogoutUri: https://admin.skoruba.local/signin-oidc
+      IdentityServerData__Clients__0__PostLogoutRedirectUris__0: https://admin.skoruba.local/signout-callback-oidc
+      IdentityServerData__Clients__0__RedirectUris__0: https://admin.skoruba.local/signin-oidc
+      IdentityServerData__Clients__1__RedirectUris__0: https://admin-api.skoruba.local/swagger/oauth2-redirect.html
+      Serilog__WriteTo__1__Args__connectionString: Server=db;Database=IdentityServer4Admin;User
+        Id=sa;Password=Password_123;MultipleActiveResultSets=true
+      VIRTUAL_HOST: admin.skoruba.local
+    image: skoruba-identityserver4-admin
+    networks:
+      identityserverui: null
+    volumes:
+    - type: bind
+      source: C:\Users\malfx001\Desktop\DynamicBox\shared\identitydata.json
+      target: /app/identitydata.json
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\malfx001\Desktop\DynamicBox\shared\identityserverdata.json
+      target: /app/identityserverdata.json
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\malfx001\Desktop\DynamicBox\shared\serilog.json
+      target: /app/serilog.json
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\malfx001\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\malfx001\Desktop\DynamicBox\shared\nginx\certs\cacerts.crt
+      target: /usr/local/share/ca-certificates/cacerts.crt
+      bind:
+        create_host_path: true
+  dynamicbox.admin.api:
+    build:
+      context: C:\Users\malfx001\Desktop\DynamicBox
+      dockerfile: src/DynamicBox.Admin.Api/Dockerfile
+    container_name: skoruba-identityserver4-admin-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      AdminApiConfiguration__ApiBaseUrl: https://admin-api.skoruba.local
+      AdminApiConfiguration__IdentityServerBaseUrl: https://sts.skoruba.local
+      AdminApiConfiguration__RequireHttpsMetadata: "false"
+      ConnectionStrings__AdminAuditLogDbConnection: Server=db;Database=IdentityServer4Admin;User
+        Id=sa;Password=Password_123;MultipleActiveResultSets=true
+      ConnectionStrings__AdminLogDbConnection: Server=db;Database=IdentityServer4Admin;User
+        Id=sa;Password=Password_123;MultipleActiveResultSets=true
+      ConnectionStrings__ConfigurationDbConnection: Server=db;Database=IdentityServer4Admin;User
+        Id=sa;Password=Password_123;MultipleActiveResultSets=true
+      ConnectionStrings__DataProtectionDbConnection: Server=db;Database=IdentityServer4Admin;User
+        Id=sa;Password=Password_123;MultipleActiveResultSets=true
+      ConnectionStrings__IdentityDbConnection: Server=db;Database=IdentityServer4Admin;User
+        Id=sa;Password=Password_123;MultipleActiveResultSets=true
+      ConnectionStrings__PersistedGrantDbConnection: Server=db;Database=IdentityServer4Admin;User
+        Id=sa;Password=Password_123;MultipleActiveResultSets=true
+      DockerConfiguration__UpdateCaCertificate: "true"
+      VIRTUAL_HOST: admin-api.skoruba.local
+    image: skoruba-identityserver4-admin-api
+    networks:
+      identityserverui: null
+    volumes:
+    - type: bind
+      source: C:\Users\malfx001\Desktop\DynamicBox\shared\serilog.json
+      target: /app/serilog.json
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\malfx001\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\malfx001\Desktop\DynamicBox\shared\nginx\certs\cacerts.crt
+      target: /usr/local/share/ca-certificates/cacerts.crt
+      bind:
+        create_host_path: true
+  dynamicbox.sts.identity:
+    build:
+      context: C:\Users\malfx001\Desktop\DynamicBox
+      dockerfile: src/DynamicBox.STS.Identity/Dockerfile
+    container_name: skoruba-identityserver4-sts-identity
+    depends_on:
+      db:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      AdminConfiguration__IdentityAdminBaseUrl: https://admin.skoruba.local
+      AdvancedConfiguration__IssuerUri: https://sts.skoruba.local
+      AdvancedConfiguration__PublicOrigin: https://sts.skoruba.local
+      ConnectionStrings__ConfigurationDbConnection: Server=db;Database=IdentityServer4Admin;User
+        Id=sa;Password=Password_123;MultipleActiveResultSets=true
+      ConnectionStrings__DataProtectionDbConnection: Server=db;Database=IdentityServer4Admin;User
+        Id=sa;Password=Password_123;MultipleActiveResultSets=true
+      ConnectionStrings__IdentityDbConnection: Server=db;Database=IdentityServer4Admin;User
+        Id=sa;Password=Password_123;MultipleActiveResultSets=true
+      ConnectionStrings__PersistedGrantDbConnection: Server=db;Database=IdentityServer4Admin;User
+        Id=sa;Password=Password_123;MultipleActiveResultSets=true
+      DockerConfiguration__UpdateCaCertificate: "true"
+      VIRTUAL_HOST: sts.skoruba.local
+    image: skoruba-identityserver4-sts-identity
+    networks:
+      identityserverui:
+        aliases:
+        - sts.skoruba.local
+    volumes:
+    - type: bind
+      source: C:\Users\malfx001\Desktop\DynamicBox\shared\serilog.json
+      target: /app/serilog.json
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\malfx001\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\malfx001\Desktop\DynamicBox\shared\nginx\certs\cacerts.crt
+      target: /usr/local/share/ca-certificates/cacerts.crt
+      bind:
+        create_host_path: true
+  nginx-proxy:
+    container_name: nginx
+    image: jwilder/nginx-proxy
+    networks:
+      identityserverui:
+        aliases:
+        - sts.skoruba.local
+        - admin.skoruba.local
+        - admin-api.skoruba.local
+      proxy: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "80"
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      published: "443"
+      protocol: tcp
+    restart: always
+    volumes:
+    - type: bind
+      source: /var/run/docker.sock
+      target: /tmp/docker.sock
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\malfx001\Desktop\DynamicBox\shared\nginx\vhost.d
+      target: /etc/nginx/vhost.d
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\malfx001\Desktop\DynamicBox\shared\nginx\certs
+      target: /etc/nginx/certs
+      read_only: true
+      bind:
+        create_host_path: true
+networks:
+  identityserverui:
+    name: dockercompose17077800090986480609_identityserverui
+    driver: bridge
+  proxy:
+    name: dockercompose17077800090986480609_proxy
+    driver: bridge
+volumes:
+  dbdata:
+    name: dockercompose17077800090986480609_dbdata
+    driver: local

@@ -1,0 +1,5 @@
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.EntityFramework.PostgreSQL\obj\Debug\net6.0\DynamicBox.Admin.EntityFramework.PostgreSQL.csproj.AssemblyReference.cache
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.EntityFramework.PostgreSQL\obj\Debug\net6.0\DynamicBox.Admin.EntityFramework.PostgreSQL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.EntityFramework.PostgreSQL\obj\Debug\net6.0\DynamicBox.Admin.EntityFramework.PostgreSQL.AssemblyInfoInputs.cache
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.EntityFramework.PostgreSQL\obj\Debug\net6.0\DynamicBox.Admin.EntityFramework.PostgreSQL.AssemblyInfo.cs
+C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.EntityFramework.PostgreSQL\obj\Debug\net6.0\DynamicBox.Admin.EntityFramework.PostgreSQL.csproj.CoreCompileInputs.cache
