@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "71949ab7-aba2-46ae-be59-a1d98baa179d": {
+      "ProjectGuid": "71949ab7-aba2-46ae-be59-a1d98baa179d",
+      "DisplayName": "DynamicBox.Shared",
+      "ColorIndex": 0
+    },
+    "cb266c50-c3e3-44cf-a10f-a586c5f60627": {
+      "ProjectGuid": "cb266c50-c3e3-44cf-a10f-a586c5f60627",
+      "DisplayName": "DynamicBox.STS.Identity",
+      "ColorIndex": 1
+    },
+    "8b057cb1-49c9-41d1-9112-7b552f5000cc": {
+      "ProjectGuid": "8b057cb1-49c9-41d1-9112-7b552f5000cc",
+      "DisplayName": "DynamicBox.Admin",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

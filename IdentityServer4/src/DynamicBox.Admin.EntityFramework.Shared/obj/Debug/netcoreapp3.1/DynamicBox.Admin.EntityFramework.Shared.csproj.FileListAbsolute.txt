@@ -8,13 +8,3 @@ C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.EntityFramework.Shared
 C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.EntityFramework.Shared\obj\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.Shared.dll
 C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.EntityFramework.Shared\obj\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.Shared.pdb
 C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.EntityFramework.Shared\obj\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.Shared.csproj.AssemblyReference.cache
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\src\DynamicBox.Admin.EntityFramework.Shared\bin\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.Shared.deps.json
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\src\DynamicBox.Admin.EntityFramework.Shared\bin\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.Shared.dll
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\src\DynamicBox.Admin.EntityFramework.Shared\bin\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.Shared.pdb
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\src\DynamicBox.Admin.EntityFramework.Shared\obj\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.Shared.csproj.AssemblyReference.cache
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\src\DynamicBox.Admin.EntityFramework.Shared\obj\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.Shared.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\src\DynamicBox.Admin.EntityFramework.Shared\obj\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.Shared.AssemblyInfoInputs.cache
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\src\DynamicBox.Admin.EntityFramework.Shared\obj\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.Shared.AssemblyInfo.cs
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\src\DynamicBox.Admin.EntityFramework.Shared\obj\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.Shared.csproj.CoreCompileInputs.cache
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\src\DynamicBox.Admin.EntityFramework.Shared\obj\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.Shared.dll
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\src\DynamicBox.Admin.EntityFramework.Shared\obj\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.Shared.pdb

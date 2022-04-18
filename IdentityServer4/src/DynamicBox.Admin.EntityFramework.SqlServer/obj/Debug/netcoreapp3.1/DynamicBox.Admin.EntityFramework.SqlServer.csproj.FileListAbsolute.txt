@@ -11,16 +11,3 @@ C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.EntityFramework.SqlSer
 C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.EntityFramework.SqlServer\obj\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.SqlServer.csproj.CopyComplete
 C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.EntityFramework.SqlServer\obj\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.SqlServer.dll
 C:\Users\malfx001\Desktop\DynamicBox\src\DynamicBox.Admin.EntityFramework.SqlServer\obj\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.SqlServer.pdb
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\src\DynamicBox.Admin.EntityFramework.SqlServer\bin\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.SqlServer.deps.json
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\src\DynamicBox.Admin.EntityFramework.SqlServer\bin\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.SqlServer.dll
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\src\DynamicBox.Admin.EntityFramework.SqlServer\bin\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.SqlServer.pdb
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\src\DynamicBox.Admin.EntityFramework.SqlServer\bin\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.Shared.dll
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\src\DynamicBox.Admin.EntityFramework.SqlServer\bin\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.Shared.pdb
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\src\DynamicBox.Admin.EntityFramework.SqlServer\obj\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.SqlServer.csproj.AssemblyReference.cache
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\src\DynamicBox.Admin.EntityFramework.SqlServer\obj\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.SqlServer.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\src\DynamicBox.Admin.EntityFramework.SqlServer\obj\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.SqlServer.AssemblyInfoInputs.cache
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\src\DynamicBox.Admin.EntityFramework.SqlServer\obj\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.SqlServer.AssemblyInfo.cs
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\src\DynamicBox.Admin.EntityFramework.SqlServer\obj\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.SqlServer.csproj.CoreCompileInputs.cache
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\src\DynamicBox.Admin.EntityFramework.SqlServer\obj\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.SqlServer.csproj.CopyComplete
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\src\DynamicBox.Admin.EntityFramework.SqlServer\obj\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.SqlServer.dll
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\src\DynamicBox.Admin.EntityFramework.SqlServer\obj\Debug\netcoreapp3.1\DynamicBox.Admin.EntityFramework.SqlServer.pdb

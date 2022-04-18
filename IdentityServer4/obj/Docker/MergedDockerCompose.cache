@@ -1,4 +1,4 @@
-name: dockercompose17077800090986480609
+name: dockercompose13985471507019174723
 services:
   db:
     container_name: skoruba-identityserver4-db
@@ -20,7 +20,7 @@ services:
       volume: {}
   dynamicbox.admin:
     build:
-      context: C:\Users\malfx001\Desktop\DynamicBox
+      context: C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4
       dockerfile: src/DynamicBox.Admin/Dockerfile
     command:
     - dotnet
@@ -65,17 +65,17 @@ services:
       identityserverui: null
     volumes:
     - type: bind
-      source: C:\Users\malfx001\Desktop\DynamicBox\shared\identitydata.json
+      source: C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\shared\identitydata.json
       target: /app/identitydata.json
       bind:
         create_host_path: true
     - type: bind
-      source: C:\Users\malfx001\Desktop\DynamicBox\shared\identityserverdata.json
+      source: C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\shared\identityserverdata.json
       target: /app/identityserverdata.json
       bind:
         create_host_path: true
     - type: bind
-      source: C:\Users\malfx001\Desktop\DynamicBox\shared\serilog.json
+      source: C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\shared\serilog.json
       target: /app/serilog.json
       bind:
         create_host_path: true
@@ -86,13 +86,13 @@ services:
       bind:
         create_host_path: true
     - type: bind
-      source: C:\Users\malfx001\Desktop\DynamicBox\shared\nginx\certs\cacerts.crt
+      source: C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\shared\nginx\certs\cacerts.crt
       target: /usr/local/share/ca-certificates/cacerts.crt
       bind:
         create_host_path: true
   dynamicbox.admin.api:
     build:
-      context: C:\Users\malfx001\Desktop\DynamicBox
+      context: C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4
       dockerfile: src/DynamicBox.Admin.Api/Dockerfile
     container_name: skoruba-identityserver4-admin-api
     environment:
@@ -119,7 +119,7 @@ services:
       identityserverui: null
     volumes:
     - type: bind
-      source: C:\Users\malfx001\Desktop\DynamicBox\shared\serilog.json
+      source: C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\shared\serilog.json
       target: /app/serilog.json
       bind:
         create_host_path: true
@@ -130,13 +130,13 @@ services:
       bind:
         create_host_path: true
     - type: bind
-      source: C:\Users\malfx001\Desktop\DynamicBox\shared\nginx\certs\cacerts.crt
+      source: C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\shared\nginx\certs\cacerts.crt
       target: /usr/local/share/ca-certificates/cacerts.crt
       bind:
         create_host_path: true
   dynamicbox.sts.identity:
     build:
-      context: C:\Users\malfx001\Desktop\DynamicBox
+      context: C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4
       dockerfile: src/DynamicBox.STS.Identity/Dockerfile
     container_name: skoruba-identityserver4-sts-identity
     depends_on:
@@ -164,7 +164,7 @@ services:
         - sts.skoruba.local
     volumes:
     - type: bind
-      source: C:\Users\malfx001\Desktop\DynamicBox\shared\serilog.json
+      source: C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\shared\serilog.json
       target: /app/serilog.json
       bind:
         create_host_path: true
@@ -175,7 +175,7 @@ services:
       bind:
         create_host_path: true
     - type: bind
-      source: C:\Users\malfx001\Desktop\DynamicBox\shared\nginx\certs\cacerts.crt
+      source: C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\shared\nginx\certs\cacerts.crt
       target: /usr/local/share/ca-certificates/cacerts.crt
       bind:
         create_host_path: true
@@ -207,24 +207,24 @@ services:
       bind:
         create_host_path: true
     - type: bind
-      source: C:\Users\malfx001\Desktop\DynamicBox\shared\nginx\vhost.d
+      source: C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\shared\nginx\vhost.d
       target: /etc/nginx/vhost.d
       bind:
         create_host_path: true
     - type: bind
-      source: C:\Users\malfx001\Desktop\DynamicBox\shared\nginx\certs
+      source: C:\Users\malfx001\Desktop\Workshop\DynamicBox\IdentityServer4\shared\nginx\certs
       target: /etc/nginx/certs
       read_only: true
       bind:
         create_host_path: true
 networks:
   identityserverui:
-    name: dockercompose17077800090986480609_identityserverui
+    name: dockercompose13985471507019174723_identityserverui
     driver: bridge
   proxy:
-    name: dockercompose17077800090986480609_proxy
+    name: dockercompose13985471507019174723_proxy
     driver: bridge
 volumes:
   dbdata:
-    name: dockercompose17077800090986480609_dbdata
+    name: dockercompose13985471507019174723_dbdata
     driver: local

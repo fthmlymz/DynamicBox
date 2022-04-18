@@ -18,12 +18,3 @@ C:\Users\malfx001\Desktop\Workshop\Ahl.DynamicBox\Shared\DynamicBox.Workflow.Sha
 C:\Users\malfx001\Desktop\Workshop\Ahl.DynamicBox\Shared\DynamicBox.Workflow.Shared\obj\Debug\netcoreapp3.1\DynamicBox.Workflow.Shared.csproj.CoreCompileInputs.cache
 C:\Users\malfx001\Desktop\Workshop\Ahl.DynamicBox\Shared\DynamicBox.Workflow.Shared\obj\Debug\netcoreapp3.1\DynamicBox.Workflow.Shared.dll
 C:\Users\malfx001\Desktop\Workshop\Ahl.DynamicBox\Shared\DynamicBox.Workflow.Shared\obj\Debug\netcoreapp3.1\DynamicBox.Workflow.Shared.pdb
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\Shared\DynamicBox.Workflow.Shared\bin\Debug\netcoreapp3.1\DynamicBox.Workflow.Shared.deps.json
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\Shared\DynamicBox.Workflow.Shared\bin\Debug\netcoreapp3.1\DynamicBox.Workflow.Shared.dll
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\Shared\DynamicBox.Workflow.Shared\bin\Debug\netcoreapp3.1\DynamicBox.Workflow.Shared.pdb
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\Shared\DynamicBox.Workflow.Shared\obj\Debug\netcoreapp3.1\DynamicBox.Workflow.Shared.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\Shared\DynamicBox.Workflow.Shared\obj\Debug\netcoreapp3.1\DynamicBox.Workflow.Shared.AssemblyInfoInputs.cache
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\Shared\DynamicBox.Workflow.Shared\obj\Debug\netcoreapp3.1\DynamicBox.Workflow.Shared.AssemblyInfo.cs
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\Shared\DynamicBox.Workflow.Shared\obj\Debug\netcoreapp3.1\DynamicBox.Workflow.Shared.csproj.CoreCompileInputs.cache
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\Shared\DynamicBox.Workflow.Shared\obj\Debug\netcoreapp3.1\DynamicBox.Workflow.Shared.dll
-C:\Users\malfx001\Desktop\Workshop\DynamicBox\Shared\DynamicBox.Workflow.Shared\obj\Debug\netcoreapp3.1\DynamicBox.Workflow.Shared.pdb

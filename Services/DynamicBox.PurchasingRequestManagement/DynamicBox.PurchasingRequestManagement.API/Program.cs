@@ -108,6 +108,7 @@ builder.Services.AddAuthorization(opts =>
     {
         policy.RequireClaim("scope", new[] { "purchasing.delete" });
     });
+    
 });
 #endregion
 

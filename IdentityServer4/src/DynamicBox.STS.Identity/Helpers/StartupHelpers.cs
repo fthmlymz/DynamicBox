@@ -27,8 +27,8 @@ using IdentityServer4;
 using Microsoft.AspNetCore.Authentication.AzureAD.UI;
 using Microsoft.AspNetCore.Authentication.OAuth;
 using Skoruba.IdentityServer4.Admin.EntityFramework.Interfaces;
-using DynamicBox.Admin.EntityFramework.MySql.Extensions;
-using DynamicBox.Admin.EntityFramework.PostgreSQL.Extensions;
+//using DynamicBox.Admin.EntityFramework.MySql.Extensions;
+//using DynamicBox.Admin.EntityFramework.PostgreSQL.Extensions;
 using DynamicBox.Admin.EntityFramework.Shared.Configuration;
 using DynamicBox.Admin.EntityFramework.SqlServer.Extensions;
 using Skoruba.IdentityServer4.Admin.EntityFramework.Helpers;
@@ -185,12 +185,12 @@ namespace DynamicBox.STS.Identity.Helpers
                 case DatabaseProviderType.SqlServer:
                     services.RegisterSqlServerDbContexts<TIdentityDbContext, TConfigurationDbContext, TPersistedGrantDbContext, TDataProtectionDbContext>(identityConnectionString, configurationConnectionString, persistedGrantsConnectionString, dataProtectionConnectionString);
                     break;
-                case DatabaseProviderType.PostgreSQL:
-                    services.RegisterNpgSqlDbContexts<TIdentityDbContext, TConfigurationDbContext, TPersistedGrantDbContext, TDataProtectionDbContext>(identityConnectionString, configurationConnectionString, persistedGrantsConnectionString, dataProtectionConnectionString);
-                    break;
-                case DatabaseProviderType.MySql:
-                    services.RegisterMySqlDbContexts<TIdentityDbContext, TConfigurationDbContext, TPersistedGrantDbContext, TDataProtectionDbContext>(identityConnectionString, configurationConnectionString, persistedGrantsConnectionString, dataProtectionConnectionString);
-                    break;
+                //case DatabaseProviderType.PostgreSQL:
+                //    services.RegisterNpgSqlDbContexts<TIdentityDbContext, TConfigurationDbContext, TPersistedGrantDbContext, TDataProtectionDbContext>(identityConnectionString, configurationConnectionString, persistedGrantsConnectionString, dataProtectionConnectionString);
+                //    break;
+                //case DatabaseProviderType.MySql:
+                //    services.RegisterMySqlDbContexts<TIdentityDbContext, TConfigurationDbContext, TPersistedGrantDbContext, TDataProtectionDbContext>(identityConnectionString, configurationConnectionString, persistedGrantsConnectionString, dataProtectionConnectionString);
+                //    break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(databaseProvider.ProviderType), $@"The value needs to be one of {string.Join(", ", Enum.GetNames(typeof(DatabaseProviderType)))}.");
             }

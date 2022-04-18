@@ -12,7 +12,7 @@ using System.Diagnostics;
 namespace DynamicBox.PurchasingManagement.API.Controllers
 {
     //[Authorize(Policy = "ReadPurchasingManagement")]
-    [Authorize(Roles = "SuperAdmin, Admin, User")]
+    [Authorize(Roles = "SuperAdmin, Admin, User", Policy = "okumasonuc")]
     [Route("api/[controller]")]
     [ApiController]
     public class MaterialDemandsController : CustomBaseController //ControllerBase

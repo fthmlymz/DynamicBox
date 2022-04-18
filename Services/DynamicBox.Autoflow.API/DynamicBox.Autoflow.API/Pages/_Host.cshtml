@@ -1,9 +1,12 @@
-@page "/"
-@*@using Microsoft.AspNetCore.Authorization
-@attribute [Authorize]*@
+@page 
+@using Microsoft.AspNetCore.Authorization
+
+@attribute [Authorize]
+
 @{
     var serverUrl = $"{Request.Scheme}://{Request.Host}";
 }
+
 
 
 <!DOCTYPE html>

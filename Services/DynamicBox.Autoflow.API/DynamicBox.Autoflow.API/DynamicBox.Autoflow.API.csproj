@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -14,16 +14,27 @@
 		<PackageReference Include="Autoflow.Persistence.EntityFramework.SqlServer" Version="1.0.0" />
 		<PackageReference Include="Autoflow.Server.Api" Version="1.0.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.4" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
 		<PackageReference Include="Microsoft.Extensions.Http.Polly" Version="6.0.1" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.2" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
 		<PackageReference Include="MassTransit.AspNetCore" Version="7.3.0" />
 		<PackageReference Include="MassTransit.RabbitMQ" Version="7.3.0" />
 
+
+		<PackageReference Include="Blazored.LocalStorage" Version="2.1.5" />
+		<PackageReference Include="BlazorPro.Spinkit" Version="1.2.0" />
+		<PackageReference Include="EmbeddedBlazorContent" Version="1.10.0" />
+		
 	</ItemGroup>
 
 	<ItemGroup>
 	  <ProjectReference Include="..\..\..\Shared\DynamicBox.Workflow.Shared\DynamicBox.Workflow.Shared.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Services\" />
 	</ItemGroup>
 
 </Project>

@@ -205,7 +205,22 @@
       "ProjectGuid": "d10b79cc-12b2-4acc-b848-b1b6dd1e6833",
       "DisplayName": "DynamicBox.PurchasingManagement.Test",
       "ColorIndex": 7
+    },
+    "9c5c3fcd-7a56-4222-9506-e6abbd038c9c": {
+      "ProjectGuid": "9c5c3fcd-7a56-4222-9506-e6abbd038c9c",
+      "DisplayName": "DynamicBox.Admin",
+      "ColorIndex": 8
+    },
+    "59efe961-a38c-486e-bf5d-225930de728c": {
+      "ProjectGuid": "59efe961-a38c-486e-bf5d-225930de728c",
+      "DisplayName": "DynamicBox.Admin.Api",
+      "ColorIndex": 9
+    },
+    "b6059fe0-fabd-4e79-90b1-d16ecd62da39": {
+      "ProjectGuid": "b6059fe0-fabd-4e79-90b1-d16ecd62da39",
+      "DisplayName": "DynamicBox.STS.Identity",
+      "ColorIndex": 10
     }
   },
-  "NextColorIndex": 8
+  "NextColorIndex": 11
 }
